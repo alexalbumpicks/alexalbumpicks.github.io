@@ -14,14 +14,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=DM+Mono:wght@300;400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="best-of-year.css?v=6c8408cdb7">
+<link rel="stylesheet" href="best-of-year.css?v=977774f2ba">
 </head>
 <body>
   <div class="year-page">
     <header class="year-hero">
       <!-- No back-link: the timeline is not published, and this page is the site root.
-           No hero-actions either - the edit / add / export buttons belong to editor.html. -->
-      <div class="hero-kicker">Alex's Album Picks</div>
+           No hero-actions either - the edit / add / export buttons belong to editor.html.
+
+           The English wording below is the shipped state, not a hard-coded one: bestof-reader.js
+           rewrites every string here from STRINGS[activeLang] on load. It is spelled out rather
+           than left blank so the page reads correctly for the moment before the script runs, and
+           for anything that never runs it. -->
+      <nav class="lang-nav" id="lang-nav" aria-label="Language"></nav>
+      <div class="hero-kicker" id="hero-kicker">Alex's Album Picks</div>
       <h1 id="year-title">Best Albums of the Year</h1>
       <p class="hero-dek" id="year-dek"></p>
     </header>
@@ -32,7 +38,7 @@
       <section class="year-list" id="year-list"></section>
       <aside class="year-sidebar">
         <div class="sidebar-card">
-          <div class="sidebar-label">How this ranking works</div>
+          <div class="sidebar-label" id="sidebar-label">How this ranking works</div>
           <p id="ranking-note"></p>
         </div>
       </aside>
@@ -54,7 +60,7 @@
 
   <!-- The add/edit album modal that sits here on editor.html is absent, not hidden. -->
 
-  <script src="bestof-data.js?v=d197a29880"></script>
-  <script src="bestof-reader.js?v=7feb960f63"></script>
+  <script src="bestof-data.js?v=02bf50d05d"></script>
+  <script src="bestof-reader.js?v=0efb469ec4"></script>
 </body>
 </html>

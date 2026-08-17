@@ -76,6 +76,45 @@ a {
   color: var(--accent);
 }
 
+/* Top-right of the hero, out of the way of the headline (which is capped at 11ch and never
+   reaches it). Absolute rather than a flex row with the kicker, so adding it did not have to
+   restructure a header that was already laid out. Sits above .year-hero::after, the decorative
+   circle, which is why it takes a z-index. */
+.lang-nav {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  z-index: 1;
+  display: flex;
+  gap: 6px;
+}
+
+.lang-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid var(--border2);
+  background: rgba(255, 255, 255, 0.45);
+  color: var(--text2);
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.lang-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* The current language is marked but stays a link. Making it inert would be more correct in the
+   abstract and worse in practice: it is the obvious thing to click to get back. */
+.lang-pill.is-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
 .hero-kicker {
   margin-top: 22px;
   font-family: 'DM Mono', monospace;
@@ -472,6 +511,16 @@ a {
    for blurbs written for this page. Sized as running prose rather than metadata: the measure is
    capped because a blurb spanning the full card width is unreadable, and the line-height is loose
    enough for CJK, which sets denser than Latin at the same size and needs the extra room. */
+/* Editor only - the reader never renders it, because it is a note to the author about work still
+   to do, not something a visitor has any use for. */
+.year-review-missing {
+  margin-top: 10px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--text3);
+}
+
 .year-review {
   margin-top: 14px;
   max-width: 62ch;
