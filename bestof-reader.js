@@ -57,10 +57,12 @@ function yearLink(year) {
   return `?year=${encodeURIComponent(year)}`;
 }
 
-// Years that are still being filled in, dimmed in the nav so the thin ones do not read as
-// finished. Kept as a predicate rather than a list of years because the pre-1967 stretch is a
+// Years that are still being filled in: dimmed in the nav, and their list withheld in favour of
+// a note. Kept as a predicate rather than a list of years because the pre-1967 stretch is a
 // contiguous range: adding 1958 to the data should not also require editing this file.
-// Deliberately presentational - these years sort, render and play like any other.
+// Nothing is deleted or hidden from the data - bestof-data.js still carries every album for these
+// years and the editor still shows them. This only decides what the published page puts on screen,
+// so finishing a year is a one-line change here, not a data migration.
 function isProvisional(year) {
   return year === 2025 || year < 1967;
 }
@@ -123,17 +125,32 @@ function renderYearNav() {
 
 function renderList() {
   const list = document.getElementById('year-list');
-  const yearAlbums = sortedYearAlbums(activeYear);
 
   document.getElementById('year-title').textContent = `Best Albums of ${activeYear}`;
   // The year blurb stays hidden here for the same reason as on the editor: the list is the
   // argument, and a paragraph above the number one only competes with it.
   document.getElementById('year-dek').hidden = true;
-  // Said in words on the year itself, not just implied by a dim pill in the nav - somebody who
-  // arrives on a shared link to 1962 never sees the nav state that would have explained it.
-  document.getElementById('ranking-note').textContent =
-    'Albums are ordered by hand, best first. Years I have not gone through yet fall back to rating order.'
-    + (isProvisional(activeYear) ? ' This year is still being filled in.' : '');
+  // On a provisional year the note describes the state of the year rather than how the ranking
+  // works, because there is no ranking on screen for the usual sentence to be about.
+  document.getElementById('ranking-note').textContent = isProvisional(activeYear)
+    ? 'This year has not been gone through yet. The list is held back until it is.'
+    : 'Albums are ordered by hand, best first. Years I have not gone through yet fall back to rating order.';
+
+  // A provisional year is withheld, not empty: the albums exist in the data and sort fine, but a
+  // half-finished top ten read as a finished one no matter how dim the pill in the nav was, so
+  // the list is not rendered at all. The check sits ahead of the empty-state so that a year which
+  // is both provisional and empty says the more specific of the two things.
+  if (isProvisional(activeYear)) {
+    list.innerHTML = `
+      <section class="year-empty">
+        <h2>${esc(activeYear)} is still being filled in</h2>
+        <p>I have not finished going through this year, so the ranking is not up yet. Check back.</p>
+      </section>
+    `;
+    return;
+  }
+
+  const yearAlbums = sortedYearAlbums(activeYear);
 
   if (!yearAlbums.length) {
     list.innerHTML = `
