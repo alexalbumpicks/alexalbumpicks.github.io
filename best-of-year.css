@@ -303,6 +303,23 @@ a {
   color: var(--accent);
 }
 
+/* Years still being filled in: 2025 and everything before 1967. Dimmed, not disabled - they
+   hold real albums, just thin ones (1-5 a year pre-1967, 11 in 2025 against 2026's 23), so
+   there is nothing to protect a visitor from. The dashed border carries the meaning where
+   opacity alone would not: on a low-contrast screen a 45% pill and a normal one can look
+   alike, and opacity is invisible to anyone who cannot compare it against a neighbour. */
+.year-pill.is-provisional {
+  opacity: 0.45;
+  border-style: dashed;
+}
+
+/* Full contrast once it is hovered or open. Dimming the pill for the year you are already
+   reading tells you nothing you did not just choose, and makes the page look broken. */
+.year-pill.is-provisional:hover,
+.year-pill.is-provisional.is-active {
+  opacity: 1;
+}
+
 .year-main {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
