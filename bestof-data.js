@@ -19708,7 +19708,7 @@ const BEST_OF_ENTRIES = [
       "R&B",
       "trip-hop"
     ],
-    "review": "",
+    "review": "很多人说这张R&B风格违和，但正是Motown、Nina Simone等传统R&B孕育了成名前麦当娜的音乐素养，也造就了她极其敏锐的旋律直觉。比起《情色》的概念先行，这张专辑把所有的情欲埋进双关，却丝毫不减批判的力度。专辑末尾的Sanctuary和同名曲像是深夜时分的混沌，而当长夜将尽我们来到take a bow，仿佛曲终人散帷幕落下，整夜的朦胧化作回忆",
     "context": "",
     "tracks": [],
     "yearRank": 8
@@ -20536,7 +20536,7 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Electronic"
     ],
-    "review": "",
+    "review": "确实是一锅香味刺鼻的potpourri。debit用现代的电子乐创作技法乱炖拉美舞曲节拍，传统民俗与现代科技的张弛在专辑里随处可见",
     "context": "",
     "tracks": [],
     "yearRank": 8
@@ -20557,7 +20557,7 @@ const BEST_OF_ENTRIES = [
       "Pop/R&B",
       "Singer-songwriter"
     ],
-    "review": "",
+    "review": "每一首歌都让我感到平静，这些曲子就像是被冻结在了时空里穿越了四十年，直到模仿它们的怀旧音乐也成了主流，直到旧曲泛上了新光",
     "context": "",
     "tracks": [],
     "yearRank": 5
@@ -20639,7 +20639,7 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Folk"
     ],
-    "review": "",
+    "review": "“失去的周末”借喻好莱坞经典同名电影，既象征她像电影主人公酒精成瘾一般沉湎于爱情，也是后疫情时代对蹉跎岁月的反思：那些暂别歌坛错过的机会、未果的前缘，真的就永远错过了吗？我们能否在失落后收获什么？至于音乐本身，我觉得Phoebe很聪明，她知道用音乐回应自己情感生活里的争议，和Jack Antonoff、Cameron Winter、Alex G合作跟上时代，延续Punisher里幽微处的banjo和弦乐，但这张专辑似乎有些太聪明了，以至于整张专辑都是采分点，我却没有听到她过去作品中的灵动",
     "context": "",
     "tracks": [],
     "yearRank": 13
@@ -20660,7 +20660,7 @@ const BEST_OF_ENTRIES = [
       "Pop/R&B",
       "Disco"
     ],
-    "review": "",
+    "review": "音乐充满着自我致敬的笔法，但这张专辑又怎么不是她对人生的回望。在四十年音乐生涯、无数排行榜冠单之前Madonna也曾只是一个Lower east side girl，当年许多对她重要的亲人、朋友、合作者都一一逝去了剩下她还在节拍里起舞，也许跳得快一点就能跳出悲伤",
     "context": "",
     "tracks": [],
     "yearRank": 6
