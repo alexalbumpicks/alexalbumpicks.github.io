@@ -167,6 +167,14 @@ function renderList() {
     const audio = entry.audio
       ? `<button class="year-action" type="button" data-listen="${i}" aria-expanded="${activePlayerIndex === i ? 'true' : 'false'}">${activePlayerIndex === i ? 'Hide player' : 'Listen'}</button>`
       : '';
+    // Only the albums that have one. `tagline` and `tier` were dropped from these cards because
+    // 36 and 81 entries out of 985 carried them - a field that thin reads as an inconsistency
+    // rather than a feature. `review` is thinner still today, but the difference is that these
+    // were written for this page, by hand, one album at a time. An album with nothing to say
+    // renders exactly as it did before, so the sparse case stays clean while the list fills in.
+    const review = entry.review
+      ? `<p class="year-review">${esc(entry.review)}</p>`
+      : '';
 
     return `
       <article class="year-card" style="position:relative">
@@ -179,6 +187,7 @@ function renderList() {
             <h2 class="year-album-title">${esc(entry.title)}</h2>
           </div>
           <div class="year-artist">${esc(entry.artist)}</div>
+          ${review}
           ${tags ? `<div class="year-tags">${tags}</div>` : ''}
           ${audio ? `<div class="year-actions">${audio}</div>` : ''}
         </div>

@@ -468,7 +468,18 @@ a {
   letter-spacing: 0.08em;
 }
 
-/* .year-tagline / .year-review / .year-context removed with the per-album blurbs. */
+/* .year-tagline / .year-context stay removed - they were timeline captions. .year-review is back,
+   for blurbs written for this page. Sized as running prose rather than metadata: the measure is
+   capped because a blurb spanning the full card width is unreadable, and the line-height is loose
+   enough for CJK, which sets denser than Latin at the same size and needs the extra room. */
+.year-review {
+  margin-top: 14px;
+  max-width: 62ch;
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--text2);
+  white-space: pre-wrap;
+}
 
 .year-tags {
   display: flex;
