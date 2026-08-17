@@ -5,6 +5,15 @@ Album Masterlist Lite.xlsx
 *.csv
 ~$*
 
+# The timeline view is local-only: the published site is Best of Year and nothing else.
+# These four are the whole timeline - its page, its script, its data, its stylesheet. Nothing
+# the published index.html loads is in this list, so removing them cannot affect the site.
+# To publish the timeline again, delete this block and restore the two links in index.html.
+timeline.html
+timeline.js
+data.js
+style.css
+
 # macOS
 .DS_Store
 

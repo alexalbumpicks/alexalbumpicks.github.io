@@ -17,7 +17,10 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PAGES = ['index.html', 'best-of-year.html']
+# index.html is Best of Year - it became the site root when the timeline was unpublished.
+# timeline.html is the old index, kept for local use only and excluded from the repo, so it
+# is stamped if present and skipped without complaint if you ever delete it.
+PAGES = ['index.html', 'timeline.html']
 
 # src="foo.js?v=abc"  /  href="foo.css?v=abc"  - local files only, never CDN URLs.
 REF = re.compile(r'(?P<attr>\b(?:src|href)=")(?P<file>[\w./-]+\.(?:js|css))(?:\?v=[^"]*)?(?P<end>")')

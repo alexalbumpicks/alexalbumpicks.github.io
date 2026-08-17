@@ -488,15 +488,19 @@ function renderList() {
   document.getElementById('year-dek').hidden = true;
   document.getElementById('ranking-note').textContent = isEditing
     ? 'Use the arrow buttons to move records up or down within this year. Changes save locally right away — use ⬇ bestof-data.js to write them to disk. This view has its own album list, so edits and deletions here never affect the main timeline.'
-    : 'Albums are ordered by your saved year ranking. If a year has never been ranked before, this page seeds the list from your star ratings, special tiers, and original timeline order.';
-  document.getElementById('timeline-link').href = 'index.html';
+    // The reader-facing half is written for a visitor, not for me: it used to say "your saved
+    // ranking" on a page where "your" is whoever is reading. It also advertised special tiers,
+    // which the cards stopped displaying, and the timeline order, which is no longer published.
+    : 'Albums are ordered by hand, best first. Years I have not gone through yet fall back to rating order.';
+  // `timeline-link` was assigned here. The element is gone with the sidebar card that held it,
+  // and getElementById would return null - reading .href off that throws and kills the render.
   document.body.classList.toggle('is-editing', isEditing);
 
   if (!yearAlbums.length) {
     list.innerHTML = `
       <section class="year-empty">
         <h2>No albums for ${esc(activeYear)}</h2>
-        <p>There are no album entries tied to this release year yet. Add some on the timeline and this view will populate automatically.</p>
+        <p>Nothing ranked for this year yet.</p>
       </section>
     `;
     return;
