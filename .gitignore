@@ -1,0 +1,13 @@
+# The masterlist is the private source of truth for every ranking on the site.
+# It must never be published: the site ships the derived bestof-data.js, not the scores.
+Album Masterlist Lite.xlsx
+*.xlsx
+*.csv
+~$*
+
+# macOS
+.DS_Store
+
+# Editor / local harness scratch
+.claude/
+/tmp/

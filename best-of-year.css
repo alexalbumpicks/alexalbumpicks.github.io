@@ -1,0 +1,647 @@
+:root {
+  --bg: #f5f0e7;
+  --bg2: #ede7da;
+  --bg3: #e3dccf;
+  --surface: rgba(255, 252, 246, 0.78);
+  --surface-strong: rgba(255, 252, 246, 0.92);
+  --border: rgba(40, 28, 12, 0.1);
+  --border2: rgba(40, 28, 12, 0.18);
+  --text: #1e1a11;
+  --text2: #6e6250;
+  --text3: #a39581;
+  --accent: #9a6e20;
+  --accent-soft: rgba(154, 110, 32, 0.12);
+  --shadow: 0 16px 40px rgba(38, 25, 9, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(154, 110, 32, 0.14), transparent 36%),
+    linear-gradient(180deg, #f8f3ea 0%, #f1ebdf 52%, #ebe3d4 100%);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.year-page {
+  width: min(1240px, calc(100vw - 40px));
+  margin: 0 auto;
+  padding: 40px 0 72px;
+}
+
+.year-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 36px 40px 32px;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(255, 251, 244, 0.94), rgba(241, 232, 219, 0.9));
+  box-shadow: var(--shadow);
+}
+
+.year-hero::after {
+  content: '';
+  position: absolute;
+  inset: auto -80px -120px auto;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(154, 110, 32, 0.1);
+  filter: blur(0);
+}
+
+.back-link,
+.sidebar-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text2);
+}
+
+.back-link:hover,
+.sidebar-link:hover {
+  color: var(--accent);
+}
+
+.hero-kicker {
+  margin-top: 22px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.year-hero h1 {
+  margin-top: 10px;
+  max-width: 11ch;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 9vw, 90px);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+}
+
+.hero-dek {
+  margin-top: 18px;
+  max-width: 650px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text2);
+}
+
+.hero-actions {
+  margin-top: 22px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-edit-toggle {
+  border: 1px solid var(--border2);
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--text2);
+  padding: 10px 14px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.hero-edit-toggle:hover,
+.hero-edit-toggle.is-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.hero-add-btn {
+  border: 1px solid var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 10px 16px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .15s;
+}
+.hero-add-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ── Add/edit album modal ── */
+.add-album-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(30, 26, 17, 0.55);
+  backdrop-filter: blur(3px);
+}
+.add-album-panel {
+  position: fixed; z-index: 201;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(480px, calc(100vw - 32px));
+  max-height: calc(100vh - 48px);
+  display: flex; flex-direction: column;
+  background: var(--surface-strong);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  box-shadow: 0 24px 64px rgba(30, 20, 8, 0.22);
+  overflow: hidden;
+}
+.aap-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.aap-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px; letter-spacing: .06em;
+  color: var(--text);
+}
+.aap-close {
+  background: none; border: none; cursor: pointer;
+  font-size: 16px; color: var(--text3); padding: 4px 6px;
+  transition: color .15s;
+}
+.aap-close:hover { color: var(--text); }
+.aap-body {
+  overflow-y: auto; padding: 18px 20px;
+  display: flex; flex-direction: column; gap: 14px;
+  flex: 1;
+}
+.aap-field { display: flex; flex-direction: column; gap: 5px; }
+.aap-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.aap-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--text3);
+}
+.aap-input {
+  background: rgba(255,255,255,0.5);
+  border: 1px solid var(--border2);
+  border-radius: 3px;
+  padding: 8px 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px; color: var(--text);
+  outline: none; transition: border-color .15s;
+  width: 100%;
+}
+.aap-input:focus { border-color: var(--accent); }
+.aap-textarea {
+  background: rgba(255,255,255,0.5);
+  border: 1px solid var(--border2);
+  border-radius: 3px;
+  padding: 8px 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px; color: var(--text);
+  outline: none; transition: border-color .15s;
+  resize: vertical; width: 100%;
+}
+.aap-textarea:focus { border-color: var(--accent); }
+.aap-art-row {
+  display: flex; gap: 12px; align-items: flex-start;
+}
+.aap-art-preview {
+  width: 64px; height: 64px; flex-shrink: 0;
+  border-radius: 3px; overflow: hidden;
+  background: var(--bg3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+}
+.aap-art-preview img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.aap-stars { display: flex; gap: 3px; }
+.aap-star {
+  background: none; border: none; cursor: pointer;
+  font-size: 20px; padding: 0; line-height: 1;
+  color: var(--text3); transition: color .1s;
+}
+.aap-star.on { color: var(--accent); }
+.aap-footer {
+  display: flex; align-items: center; gap: 8px;
+  padding: 14px 20px;
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.aap-btn {
+  padding: 9px 18px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
+  border-radius: 3px; cursor: pointer; border: 1px solid transparent;
+  transition: all .15s;
+}
+.aap-btn-primary {
+  background: var(--accent); color: #fff; border-color: var(--accent);
+}
+.aap-btn-primary:hover { opacity: .85; }
+.aap-btn-secondary {
+  background: none; color: var(--text2); border-color: var(--border2);
+}
+.aap-btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+.aap-btn-danger {
+  background: none; color: rgba(180,60,60,.7); border-color: rgba(180,60,60,.3);
+}
+.aap-btn-danger:hover { background: rgba(180,60,60,.08); border-color: rgba(180,60,60,.6); color: rgba(180,60,60,.9); }
+
+/* Edit / delete buttons inside the rank column — visible in edit mode */
+.year-edit-btn, .year-del-btn {
+  font-size: 13px !important;
+  padding: 2px 6px !important;
+}
+.year-del-btn {
+  color: rgba(180,60,60,.65) !important;
+  border-color: rgba(180,60,60,.25) !important;
+}
+.year-del-btn:hover {
+  color: rgba(180,60,60,.95) !important;
+  border-color: rgba(180,60,60,.55) !important;
+  background: rgba(180,60,60,.07) !important;
+}
+
+.year-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 18px 4px 0;
+}
+
+.year-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  padding: 8px 12px;
+  border: 1px solid var(--border2);
+  background: rgba(255, 255, 255, 0.45);
+  color: var(--text2);
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.year-pill:hover,
+.year-pill.is-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.year-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 24px;
+  margin-top: 24px;
+  align-items: start;
+}
+
+.year-list {
+  display: grid;
+  gap: 18px;
+}
+
+.year-card,
+.sidebar-card,
+.year-empty {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.year-card {
+  display: grid;
+  grid-template-columns: 72px 140px minmax(0, 1fr);
+  gap: 22px;
+  padding: 24px;
+}
+
+.year-rank {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.year-rank-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 54px;
+  line-height: 0.86;
+  letter-spacing: 0.03em;
+}
+
+.year-rank-meta {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text3);
+}
+
+/* The rank column is only 72px wide, but four 28px buttons in a row need 130px.
+   Flex items won't shrink below min-content, so without wrapping the last button
+   overflows into the (opaque) album art and is painted over — invisible, but still
+   there and clickable. Wrapping lays them out 2x2 (62px) inside the column. */
+.year-rank-controls {
+  display: none;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.is-local.is-editing .year-rank-controls {
+  display: flex;
+}
+
+.year-rank-btn {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--border2);
+  background: var(--surface-strong);
+  color: var(--text2);
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.year-rank-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.year-rank-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.year-art {
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #151515;
+}
+
+.year-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.year-art-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  text-align: center;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.year-copy {
+  min-width: 0;
+}
+
+/* .year-tier / .year-tier-boy removed with the badges above each title. */
+
+.year-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.year-album-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 4.4vw, 38px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.year-artist {
+  margin-top: 8px;
+  font-size: 15px;
+  color: var(--text2);
+}
+
+.year-rating {
+  margin-top: 14px;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+
+/* .year-tagline / .year-review / .year-context removed with the per-album blurbs. */
+
+.year-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.year-tag {
+  padding: 4px 8px;
+  border: 1px solid var(--border2);
+  color: var(--text2);
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.year-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.year-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border: 1px solid var(--border2);
+  background: var(--surface-strong);
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text2);
+}
+
+.year-action:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+#mini-player {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 340px;
+  z-index: 300;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.28), 0 2px 8px rgba(0, 0, 0, 0.12);
+  display: none;
+}
+
+#mini-player.visible {
+  display: block;
+  animation: mpUp 0.22s cubic-bezier(.4, 0, .2, 1);
+}
+
+@keyframes mpUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(14px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+#mini-player-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  background: #121212;
+}
+
+#mini-player-title {
+  flex: 1;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#mini-player-close {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+#mini-player-close:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.year-sidebar {
+  display: grid;
+  gap: 16px;
+  position: sticky;
+  top: 18px;
+}
+
+.sidebar-card,
+.year-empty {
+  padding: 22px;
+}
+
+.sidebar-label {
+  margin-bottom: 10px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text3);
+}
+
+.sidebar-card p,
+.year-empty p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text2);
+}
+
+.edit-only {
+  display: none;
+}
+
+.is-local .hero-actions.edit-only {
+  display: block;
+}
+
+.year-empty {
+  display: grid;
+  gap: 8px;
+}
+
+.year-empty h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  line-height: 1;
+}
+
+@media (max-width: 980px) {
+  .year-main {
+    grid-template-columns: 1fr;
+  }
+
+  .year-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 760px) {
+  .year-page {
+    width: min(100vw - 24px, 1240px);
+    padding-top: 20px;
+  }
+
+  .year-hero {
+    padding: 24px 20px 22px;
+  }
+
+  .year-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .year-rank {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .year-art {
+    width: min(100%, 220px);
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  #mini-player {
+    width: min(340px, calc(100vw - 24px));
+    bottom: 12px;
+  }
+}

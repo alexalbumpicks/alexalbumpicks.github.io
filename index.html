@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>The Indie Current — Timeline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=DM+Mono:wght@300;400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=e57d5e3a89">
+</head>
+<body>
+
+<div id="era-tint-layer"></div>
+
+<header class="site-hero" id="site-hero">
+  <!-- Crossfading background slides (one per era) -->
+  <div class="hero-slides" id="hero-slides"></div>
+  <!-- Gradient overlay -->
+  <div class="hero-overlay"></div>
+  <!-- Text content -->
+  <div class="hero-content">
+    <div class="hero-top">
+      <div class="hero-kicker" id="hero-kicker">The Indie Current</div>
+      <h1 class="hero-title" id="hero-title">Indie Music: A Timeline</h1>
+      <p class="hero-sub" id="hero-sub">Albums, events, and cultural moments — the story of indie music's shifting centre of gravity, 1991 to now.</p>
+    </div>
+    <div class="hero-bottom">
+      <div class="hero-era-info">
+        <div class="hero-era-label" id="hero-era-label"></div>
+        <div class="hero-era-years" id="hero-era-years"></div>
+        <div class="hero-era-desc"  id="hero-era-desc"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Navigation -->
+  <button class="hero-arrow hero-arrow-prev" onclick="heroPrev()" aria-label="Previous">&#8249;</button>
+  <button class="hero-arrow hero-arrow-next" onclick="heroNext()" aria-label="Next">&#8250;</button>
+  <div class="hero-dots" id="hero-dots"></div>
+  <!-- Edit -->
+  <button class="hero-edit-btn edit-only" id="header-edit-btn" onclick="toggleHeaderEdit()">✎ Edit header</button>
+</header>
+
+<div class="filter-bar">
+  <div class="filter-center">
+    <span class="filter-label">Show:</span>
+    <button class="filter-btn on" data-filter="all">All</button>
+    <button class="filter-btn on" data-filter="album">Albums</button>
+    <button class="filter-btn on" data-filter="event">Key events</button>
+  </div>
+  <div class="filter-right edit-only">
+    <button class="filter-add-btn" onclick="addEntry('album')">+ Album</button>
+    <button class="filter-add-btn" onclick="addEntry('event')">+ Event</button>
+    <button class="filter-add-btn" onclick="addEntry('note')">+ Note</button>
+    <button class="filter-add-btn" onclick="openEraListEdit()" title="Edit eras">✎ Eras</button>
+    <button class="filter-add-btn" onclick="exportCSV()" title="Export all entries as CSV">↓ CSV</button>
+    <label class="filter-add-btn" title="Import entries from CSV" style="cursor:pointer">↑ CSV<input type="file" accept=".csv" style="display:none" onchange="importCSV(this)"></label>
+    <button class="filter-add-btn" onclick="saveDataJs()" title="Download data.js (timeline only — Best of Year has its own button)" style="color:rgba(60,140,100,0.85)">⬇ data.js</button>
+    <button class="filter-add-btn" onclick="resetToDefaults()" title="Reset to built-in defaults" style="color:rgba(180,60,60,0.6)">↺ Reset</button>
+  </div>
+</div>
+
+<div class="main-wrap">
+  <div class="timeline-col" id="timeline-col"></div>
+  <aside class="detail-col" id="detail-col">
+    <div class="detail-empty" id="detail-empty">
+      <div class="detail-empty-icon">—</div>
+      <p>Click any album or event on the timeline to read more.</p>
+    </div>
+    <div class="detail-panel" id="detail-panel"></div>
+  </aside>
+</div>
+
+<!-- Mini player -->
+<div id="mini-player">
+  <div id="mini-player-bar">
+    <span style="font-size:12px;color:#1db954;flex-shrink:0">♪</span>
+    <div id="mini-player-title"></div>
+    <button id="mini-player-close" onclick="closeMiniPlayer()" title="Close">✕</button>
+  </div>
+  <iframe id="mini-player-iframe" src="" height="80"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    style="width:100%;display:block;border:none"></iframe>
+  <audio id="mini-player-audio" controls
+    style="width:100%;display:none;background:#121212;height:44px;outline:none"></audio>
+</div>
+
+<!-- Edit overlay + panel -->
+<div id="edit-overlay" class="edit-overlay"></div>
+<div id="edit-panel" class="edit-panel">
+  <div class="ep-header">
+    <div class="ep-title">Edit <span id="ep-type-label">Album</span></div>
+    <button class="ep-close" id="ep-close">✕</button>
+  </div>
+  <div class="ep-body-scroll" id="ep-body-scroll"></div>
+  <div class="ep-footer">
+    <button class="ep-btn ep-btn-danger" id="ep-delete-btn">Delete</button>
+    <div class="ep-spacer"></div>
+    <button class="ep-btn ep-btn-secondary" id="ep-cancel-btn">Cancel</button>
+    <button class="ep-btn ep-btn-primary" id="ep-save-btn">Save</button>
+  </div>
+</div>
+
+<script src="data.js?v=e17223091d"></script>
+<script src="timeline.js?v=d391592c6d"></script>
+</body>
+</html>
