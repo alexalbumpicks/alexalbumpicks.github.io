@@ -17,10 +17,10 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# index.html is Best of Year - it became the site root when the timeline was unpublished.
-# timeline.html is the old index, kept for local use only and excluded from the repo, so it
-# is stamped if present and skipped without complaint if you ever delete it.
-PAGES = ['index.html', 'timeline.html']
+# index.html is the published reader. editor.html and timeline.html are local-only and
+# gitignored - they are stamped when present and skipped without complaint if you delete them,
+# so this list works both here and in a fresh clone that has only the published files.
+PAGES = ['index.html', 'editor.html', 'timeline.html']
 
 # src="foo.js?v=abc"  /  href="foo.css?v=abc"  - local files only, never CDN URLs.
 REF = re.compile(r'(?P<attr>\b(?:src|href)=")(?P<file>[\w./-]+\.(?:js|css))(?:\?v=[^"]*)?(?P<end>")')

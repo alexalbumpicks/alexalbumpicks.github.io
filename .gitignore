@@ -5,6 +5,12 @@ Album Masterlist Lite.xlsx
 *.csv
 ~$*
 
+# The editor is local-only. index.html + bestof-reader.js are the published pair; this page
+# and its script hold the add/edit/delete/reorder/export machinery, which is kept off the
+# public site entirely rather than hidden with CSS the way it used to be.
+editor.html
+best-of-year.js
+
 # The timeline view is local-only: the published site is Best of Year and nothing else.
 # These four are the whole timeline - its page, its script, its data, its stylesheet. Nothing
 # the published index.html loads is in this list, so removing them cannot affect the site.
