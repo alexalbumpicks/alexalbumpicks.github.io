@@ -1,17 +1,43 @@
+/* Black and white, following the colour and type of treblezine.com: near-black on pure white,
+   one hairline grey for rules, one mid grey for anything secondary. The cream and gold this
+   replaced are gone rather than dimmed — a monochrome page with a leftover warm accent reads as
+   an unfinished one. #0a0a0a rather than #000 for the same reason the reference uses it: pure
+   black on pure white vibrates at large sizes.
+
+   --accent stays a variable even though it is now the same black as --text. Forty-odd rules
+   reach for it to mark a hover or a current state, and inlining it would scatter that decision
+   across all of them; keeping it named is what makes a future second look one edit.
+
+   --text3 is #767676 and not lighter because it lands on 10–11px uppercase labels, which is the
+   hardest case for contrast — it clears 4.5:1 on white by a hair. The old value was 2.6:1. */
 :root {
-  --bg: #f5f0e7;
-  --bg2: #ede7da;
-  --bg3: #e3dccf;
-  --surface: rgba(255, 252, 246, 0.78);
-  --surface-strong: rgba(255, 252, 246, 0.92);
-  --border: rgba(40, 28, 12, 0.1);
-  --border2: rgba(40, 28, 12, 0.18);
-  --text: #1e1a11;
-  --text2: #6e6250;
-  --text3: #a39581;
-  --accent: #9a6e20;
-  --accent-soft: rgba(154, 110, 32, 0.12);
-  --shadow: 0 16px 40px rgba(38, 25, 9, 0.08);
+  --bg: #ffffff;
+  --bg2: #fafafa;
+  --bg3: #f2f2f2;
+  --surface: #ffffff;
+  --surface-strong: #ffffff;
+  --border: #e9e9e9;
+  --border2: #d6d6d6;
+  --text: #0a0a0a;
+  --text2: #5a5a5a;
+  --text3: #767676;
+  --accent: #0a0a0a;
+  --accent-soft: #f2f2f2;
+  --shadow: none;
+
+  /* Treble sets headings in futura-pt and body in gill-sans-nova. Both are Adobe Fonts, licensed
+     per domain, so neither can ship on a static site. Jost is a Futura revival and Cabin a
+     humanist sans in the Gill line, which preserves the pairing — geometric display over a
+     humanist text face — without the subscription.
+
+     The CJK families are appended to both stacks rather than split out into a :lang(zh) rule,
+     because the blurbs mix scripts inside a single sentence ("延续Punisher里幽微处的banjo和弦乐").
+     Fallback is per glyph, so the Latin in a Chinese sentence still comes from Jost or Cabin and
+     only the characters those faces lack drop through. They are all system fonts on purpose: a
+     webfont covering CJK is several megabytes, which is more than this page is worth. */
+  --cjk: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', 'Source Han Sans SC';
+  --font-display: 'Jost', var(--cjk), sans-serif;
+  --font-body: 'Cabin', var(--cjk), sans-serif;
 }
 
 *,
@@ -24,15 +50,24 @@
 
 body {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top, rgba(154, 110, 32, 0.14), transparent 36%),
-    linear-gradient(180deg, #f8f3ea 0%, #f1ebdf 52%, #ebe3d4 100%);
+  background: var(--bg);
   color: var(--text);
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
 }
 
 a {
   color: inherit;
+}
+
+/* There was no focus style anywhere on the reader — every year pill, language pill and Listen
+   button is keyboard-reachable and got only the UA default ring, which was easy to lose against
+   the old cream. One rule covers all of them. :focus-visible rather than :focus so it appears for
+   the keyboard and not on every mouse click. The offset keeps it clear of the 1px borders these
+   controls already carry, which is what the ring would otherwise be mistaken for. */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .year-page {
@@ -41,29 +76,21 @@ a {
   padding: 40px 0 72px;
 }
 
+/* No panel any more: the hero is the page, so it carries a single rule underneath it instead of a
+   border, a gradient and a shadow. The decorative gold circle that used to sit bottom-right
+   (.year-hero::after) is deleted rather than recoloured — a grey blob is still a blob, and the
+   reference has nothing like it. `overflow` and `position` went with it; nothing else in here is
+   absolutely positioned except .lang-nav, which needs the containing block, so `relative` stays. */
 .year-hero {
   position: relative;
-  overflow: hidden;
-  padding: 36px 40px 32px;
-  border: 1px solid var(--border);
-  background: linear-gradient(135deg, rgba(255, 251, 244, 0.94), rgba(241, 232, 219, 0.9));
-  box-shadow: var(--shadow);
-}
-
-.year-hero::after {
-  content: '';
-  position: absolute;
-  inset: auto -80px -120px auto;
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  background: rgba(154, 110, 32, 0.1);
-  filter: blur(0);
+  padding: 4px 0 30px;
+  border-bottom: 1px solid var(--border);
 }
 
 .back-link,
 .sidebar-link {
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-display);
+  font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -78,13 +105,12 @@ a {
 
 /* Top-right of the hero, out of the way of the headline (which is capped at 11ch and never
    reaches it). Absolute rather than a flex row with the kicker, so adding it did not have to
-   restructure a header that was already laid out. Sits above .year-hero::after, the decorative
-   circle, which is why it takes a z-index. */
+   restructure a header that was already laid out. The z-index it used to need is gone with the
+   decorative circle it used to sit above. */
 .lang-nav {
   position: absolute;
-  top: 18px;
-  right: 22px;
-  z-index: 1;
+  top: 6px;
+  right: 0;
   display: flex;
   gap: 6px;
 }
@@ -94,10 +120,11 @@ a {
   align-items: center;
   padding: 5px 10px;
   border: 1px solid var(--border2);
-  background: rgba(255, 255, 255, 0.45);
+  background: var(--bg);
   color: var(--text2);
   text-decoration: none;
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-display);
+  font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.08em;
 }
@@ -108,29 +135,35 @@ a {
 }
 
 /* The current language is marked but stays a link. Making it inert would be more correct in the
-   abstract and worse in practice: it is the obvious thing to click to get back. */
+   abstract and worse in practice: it is the obvious thing to click to get back.
+   Filled solid rather than tinted: with one colour left there is no tint to reach for, and the
+   fill is what separates "this one" from "the one under your cursor". */
 .lang-pill.is-active {
   border-color: var(--accent);
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: var(--accent);
+  color: var(--bg);
 }
 
 .hero-kicker {
-  margin-top: 22px;
-  font-family: 'DM Mono', monospace;
+  margin-top: 30px;
+  font-family: var(--font-display);
+  font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--text3);
 }
 
+/* Was Playfair Display. The reference sets its titles in futura-pt-bold, so this is Jost at 700 —
+   geometric rather than serif, which is most of what makes the page read as a different one. */
 .year-hero h1 {
-  margin-top: 10px;
+  margin-top: 12px;
   max-width: 11ch;
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(48px, 9vw, 90px);
-  line-height: 0.92;
-  letter-spacing: -0.03em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(46px, 8.4vw, 82px);
+  line-height: 0.94;
+  letter-spacing: -0.035em;
 }
 
 .hero-dek {
@@ -150,10 +183,11 @@ a {
 
 .hero-edit-toggle {
   border: 1px solid var(--border2);
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--bg);
   color: var(--text2);
   padding: 10px 14px;
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-display);
+  font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -172,7 +206,8 @@ a {
   background: var(--accent-soft);
   color: var(--accent);
   padding: 10px 16px;
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-display);
+  font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -187,7 +222,7 @@ a {
 /* ── Add/edit album modal ── */
 .add-album-overlay {
   position: fixed; inset: 0; z-index: 200;
-  background: rgba(30, 26, 17, 0.55);
+  background: rgba(10, 10, 10, 0.55);
   backdrop-filter: blur(3px);
 }
 .add-album-panel {
@@ -200,7 +235,7 @@ a {
   background: var(--surface-strong);
   border: 1px solid var(--border2);
   border-radius: 6px;
-  box-shadow: 0 24px 64px rgba(30, 20, 8, 0.22);
+  box-shadow: 0 24px 64px rgba(10, 10, 10, 0.18);
   overflow: hidden;
 }
 .aap-header {
@@ -210,8 +245,9 @@ a {
   flex-shrink: 0;
 }
 .aap-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 20px; letter-spacing: .06em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px; letter-spacing: .04em; text-transform: uppercase;
   color: var(--text);
 }
 .aap-close {
@@ -228,27 +264,28 @@ a {
 .aap-field { display: flex; flex-direction: column; gap: 5px; }
 .aap-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .aap-label {
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-display);
+  font-weight: 500;
   font-size: 9px; letter-spacing: .12em; text-transform: uppercase;
   color: var(--text3);
 }
 .aap-input {
-  background: rgba(255,255,255,0.5);
+  background: var(--bg);
   border: 1px solid var(--border2);
   border-radius: 3px;
   padding: 8px 10px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 13px; color: var(--text);
   outline: none; transition: border-color .15s;
   width: 100%;
 }
 .aap-input:focus { border-color: var(--accent); }
 .aap-textarea {
-  background: rgba(255,255,255,0.5);
+  background: var(--bg);
   border: 1px solid var(--border2);
   border-radius: 3px;
   padding: 8px 10px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 13px; color: var(--text);
   outline: none; transition: border-color .15s;
   resize: vertical; width: 100%;
@@ -280,7 +317,8 @@ a {
 }
 .aap-btn {
   padding: 9px 18px;
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-display);
+  font-weight: 500;
   font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
   border-radius: 3px; cursor: pointer; border: 1px solid transparent;
   transition: all .15s;
@@ -327,28 +365,38 @@ a {
   min-width: 56px;
   padding: 8px 12px;
   border: 1px solid var(--border2);
-  background: rgba(255, 255, 255, 0.45);
+  background: var(--bg);
   color: var(--text2);
   text-decoration: none;
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-display);
+  font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.08em;
 }
 
-.year-pill:hover,
+/* Hover and current used to share one declaration, which meant the year you were reading and the
+   year under your cursor looked identical. Split: hover darkens the outline, current fills. */
+.year-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .year-pill.is-active {
   border-color: var(--accent);
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: var(--accent);
+  color: var(--bg);
 }
 
 /* Years still being filled in: 2025 and everything before 1967. Dimmed, not disabled - they
    hold real albums, just thin ones (1-5 a year pre-1967, 11 in 2025 against 2026's 23), so
    there is nothing to protect a visitor from. The dashed border carries the meaning where
-   opacity alone would not: on a low-contrast screen a 45% pill and a normal one can look
-   alike, and opacity is invisible to anyone who cannot compare it against a neighbour. */
+   opacity alone would not: on a low-contrast screen a dim pill and a normal one can look alike,
+   and opacity is invisible to anyone who cannot compare it against a neighbour.
+   0.45 was too far: the pill's entire content is the year, and at that weight on white it came
+   out around 1.9:1 — the visitor could see it was different without being able to read which
+   year it was. 0.65 still reads as held back and stays legible. */
 .year-pill.is-provisional {
-  opacity: 0.45;
+  opacity: 0.65;
   border-style: dashed;
 }
 
@@ -372,13 +420,14 @@ a {
   gap: 18px;
 }
 
+/* Flat. The shadow and the 14px backdrop blur are gone: the blur was compositing 23 cards' worth
+   of work per frame to sample a background that never moved and is now a flat white, so it cost
+   real time to produce no visible effect. What is left is the hairline. */
 .year-card,
 .sidebar-card,
 .year-empty {
   border: 1px solid var(--border);
   background: var(--surface);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(14px);
 }
 
 .year-card {
@@ -395,15 +444,21 @@ a {
   gap: 6px;
 }
 
+/* Was Bebas Neue, which is condensed caps — two digits fitted the 72px rank column easily. Jost
+   at 700 is a much wider face, so the size comes down and the tracking goes negative to keep
+   "23" inside the column. Anything larger overflows into the album art, which is opaque and
+   would paint over it. */
 .year-rank-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 54px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 42px;
   line-height: 0.86;
-  letter-spacing: 0.03em;
+  letter-spacing: -0.04em;
 }
 
 .year-rank-meta {
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-display);
+  font-weight: 500;
   font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -432,7 +487,8 @@ a {
   border: 1px solid var(--border2);
   background: var(--surface-strong);
   color: var(--text2);
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-display);
+  font-weight: 500;
   font-size: 13px;
   cursor: pointer;
 }
@@ -447,12 +503,15 @@ a {
   cursor: default;
 }
 
+/* The near-black placeholder became a light grey with the rest of the page. It shows only in the
+   moment before a cover loads — an album with no art at all gets .year-art-fallback, which paints
+   its own background from the entry. */
 .year-art {
   width: 140px;
   height: 140px;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  background: #151515;
+  border: 1px solid var(--border);
+  background: var(--bg3);
 }
 
 .year-art img {
@@ -470,7 +529,8 @@ a {
   justify-content: center;
   padding: 18px;
   text-align: center;
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-display);
+  font-weight: 500;
   font-size: 11px;
   line-height: 1.5;
 }
@@ -488,15 +548,19 @@ a {
   flex-wrap: wrap;
 }
 
+/* Jost at 700 sets noticeably heavier and wider than the Playfair this replaced, so the size
+   comes down a step and the tracking tightens. line-height goes up slightly: a geometric bold
+   with long ascenders needs more room than a serif did at the same measure. */
 .year-album-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(26px, 4.4vw, 38px);
-  line-height: 1;
-  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(24px, 3.9vw, 34px);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
 }
 
 .year-artist {
-  margin-top: 8px;
+  margin-top: 9px;
   font-size: 15px;
   color: var(--text2);
 }
@@ -515,7 +579,8 @@ a {
    to do, not something a visitor has any use for. */
 .year-review-missing {
   margin-top: 10px;
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-display);
+  font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.04em;
   color: var(--text3);
@@ -524,7 +589,7 @@ a {
 .year-review {
   margin-top: 14px;
   max-width: 62ch;
-  font-size: 14.5px;
+  font-size: 15px;
   line-height: 1.85;
   color: var(--text2);
   white-space: pre-wrap;
@@ -541,7 +606,8 @@ a {
   padding: 4px 8px;
   border: 1px solid var(--border2);
   color: var(--text2);
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-display);
+  font-weight: 500;
   font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -562,7 +628,8 @@ a {
   border: 1px solid var(--border2);
   background: var(--surface-strong);
   text-decoration: none;
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-display);
+  font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -607,7 +674,8 @@ a {
 
 #mini-player-title {
   flex: 1;
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-display);
+  font-weight: 500;
   font-size: 10px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -646,7 +714,8 @@ a {
 
 .sidebar-label {
   margin-bottom: 10px;
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-display);
+  font-weight: 500;
   font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -674,7 +743,8 @@ a {
 }
 
 .year-empty h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-display);
+  font-weight: 700;
   font-size: 36px;
   line-height: 1;
 }
