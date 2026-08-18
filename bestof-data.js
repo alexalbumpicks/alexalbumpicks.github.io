@@ -20905,6 +20905,370 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "yearRank": 7
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "The Passionate Ones",
+    "artist": "Nourished by Time",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3b/27/54/3b2754c7-1b32-2fde-d7e3-cf34a4932259/191404155172.png/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/81/86/7b/81867bc6-428a-aa94-3e00-7313d5a8d445/mzaf_6988738189202906830.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Pop/R&B"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 12
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "Essex Honey",
+    "artist": "Blood Orange",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/15/b5/61/15b56142-10d6-f9d3-f29d-e0e0d123061d/196873161457.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/27/e6/22/27e622b0-a5a1-c689-8480-eb4ef73c6da2/mzaf_5984110183972584549.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Pop/R&B"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 13
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "Bleeds",
+    "artist": "Wednesday",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/74/01/f8/7401f87c-70d9-cffe-77ce-b7fd7e8c74ae/58658.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/34/bf/a6/34bfa6d4-40e1-662e-d4e0-d910bb416af6/mzaf_124427631697130944.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Rock",
+      "Alt-Country"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 14
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "Tranquilizer",
+    "artist": "Oneohtrix Point Never",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ac/9f/b2/ac9fb264-1e54-da14-5ee3-688a53971c64/5056818805226.png/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/15/4b/9a/154b9a15-7519-1c5d-7900-98c7dc0ad89a/mzaf_5131880489689433812.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Electronic"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 15
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "Marty Supreme (Original Soundtrack)",
+    "artist": "Daniel Lopatin",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2d/23/6e/2d236e38-e4ef-59a5-dad7-d86a96d5f637/617308018387_Cover.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/48/d4/95/48d495f8-8035-53bd-8ec3-248a8f8d2abb/mzaf_609119379662887907.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Electronic"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 16
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "Through The Wall",
+    "artist": "Rochelle Jordan",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4f/78/f3/4f78f35e-822d-c967-70ce-1594b970d344/199316161663_cover.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d5/47/ac/d547ac70-610c-ec07-086b-39a26c519f1a/mzaf_6992074238114273342.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Pop/R&B",
+      "House"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 17
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "Under Tangled Silence",
+    "artist": "Djrum",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4a/2d/6f/4a2d6f89-f204-8f91-9812-f9bd203e33b0/cover.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c8/12/0f/c8120ff0-3334-4a80-cb06-d4db5b9e9313/mzaf_15017445000920128772.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Electronic"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 18
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "Instant Holograms On Metal Film",
+    "artist": "Stereolab",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/55/74/63/55746324-ab20-5e89-26a8-1e152254c514/5056818800993.png/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d3/07/1e/d3071e4d-9d45-eb6c-3358-2d7c518b0225/mzaf_9041660234770020699.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Electronic",
+      "Rock"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 19
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "Addison",
+    "artist": "Addison Rae",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/cf/4a/e3/cf4ae3c9-3420-6021-f059-cc6c87cf11b2/196872958249.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/17/23/13/17231301-ae01-a266-d4de-edafda695460/mzaf_15532092001466073733.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Pop/R&B"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 21
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "Double Infinity",
+    "artist": "Big Thief",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/40/40/53/404053dc-586e-f51c-8de9-446eef5af471/191400085077.png/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8e/08/7c/8e087c46-8fa3-efaa-b9d8-9af624489f51/mzaf_17375924636787817912.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 3,
+    "tags": [
+      "Folk"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 23
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "Baby",
+    "artist": "Dijon",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b0/0b/d3/b00bd346-7b14-da61-28b0-94d2ea03f58e/093624826873.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c4/71/87/c471875a-b95d-9f76-1546-6cc749b4f4a3/mzaf_13357277262732715673.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 3,
+    "tags": [
+      "Pop/R&B"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 24
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "NEVER ENOUGH",
+    "artist": "Turnstile",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d1/1c/28/d11c28a8-0e83-41c3-afc7-b873dd7be188/075679614896.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8d/39/1f/8d391f10-1d2e-0c6c-d637-f27a4bc669be/mzaf_17732513322746172511.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 3,
+    "tags": [
+      "Rock"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 25
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "FROM FLORIDA'S FINEST",
+    "artist": "SAILORR",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/aa/36/e2/aa36e221-2a06-6a27-30e6-673688a45690/810129978162.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2d/fd/44/2dfd4462-6839-9a44-db28-f3c28f30330c/mzaf_2251810044879653582.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 3,
+    "tags": [
+      "Pop/R&B"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 26
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "Vie",
+    "artist": "Doja Cat",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e2/a1/17/e2a11795-d6be-b735-f675-213695d73e68/196873471075.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f7/2b/f1/f72bf114-c540-a3e9-df43-9f90b4036c82/mzaf_16698746681325695462.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 3,
+    "tags": [
+      "Pop/R&B"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 27
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "Man's Best Friend",
+    "artist": "Sabrina Carpenter",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/1f/60/6e/1f606e12-c37f-4218-5e20-602286429c31/25UMGIM81699.rgb.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/79/95/2e/79952efb-dc49-6f9f-2cc5-bd37a1c4e76d/mzaf_2363836354399724138.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 3,
+    "tags": [
+      "Pop/R&B"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 28
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "I quit",
+    "artist": "HAIM",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d4/7c/61/d47c61de-0211-3820-4613-801f540456d9/196873071695.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/71/59/3b/71593b30-8bb9-6770-481f-6e63c5703242/mzaf_16591884411338847204.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 3,
+    "tags": [
+      "Pop/R&B"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 29
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "A Tropical Entropy",
+    "artist": "Nick León",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/34/ac/38/34ac38f0-4e8d-3948-e350-63b131709235/4062548116038.png/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/78/88/13/788813fd-0b3b-9970-b277-e4e5cf5366bd/mzaf_8450641999027346615.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Electronic"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 20
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "How You Been",
+    "artist": "SML",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a5/f1/2b/a5f12b20-6e19-ed72-9e99-9b276bb14568/116833.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c3/9e/09/c39e09a9-bb06-f195-6ad1-6858fd198e85/mzaf_17239036787699882331.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Jazz",
+      "Electronic"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 22
   }
 ];
 
