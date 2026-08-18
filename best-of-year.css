@@ -25,19 +25,38 @@
   --accent-soft: #f2f2f2;
   --shadow: none;
 
-  /* Treble sets headings in futura-pt and body in gill-sans-nova. Both are Adobe Fonts, licensed
-     per domain, so neither can ship on a static site. Jost is a Futura revival and Cabin a
-     humanist sans in the Gill line, which preserves the pairing — geometric display over a
-     humanist text face — without the subscription.
+  /* Three faces, three jobs — which is the point. A stretch of this page was set entirely in
+     Helvetica Neue and read as corporate; the face was not really the problem, the monoculture
+     was. Neutral body text is a virtue, but neutral body text *and* headline *and* rank numeral
+     *and* every button flattens the page into a slide deck. So:
 
-     The CJK families are appended to both stacks rather than split out into a :lang(zh) rule,
-     because the blurbs mix scripts inside a single sentence ("延续Punisher里幽微处的banjo和弦乐").
-     Fallback is per glyph, so the Latin in a Chinese sentence still comes from Jost or Cabin and
-     only the characters those faces lack drop through. They are all system fonts on purpose: a
-     webfont covering CJK is several megabytes, which is more than this page is worth. */
+       --font-display  Archivo Narrow. Condensed, so it reads as press rather than product, and
+                       the narrow figures give the 72px rank column its width back — Helvetica
+                       had squeezed the numeral down to fit.
+       --font-body     Helvetica Neue, kept. As running text it does the job and asks for no
+                       attention, which is what a blurb wants.
+       --font-meta     DM Mono. The small uppercase labels — pills, tags, buttons, kickers. A
+                       monospace here is most of what makes the page read as edited rather than
+                       generated, and it is what the page used before today.
+
+     'Helvetica Neue' is named ahead of 'Helvetica' deliberately; they are different fonts, not
+     aliases, and macOS ships both. Neue is the 1983 redesign — more even, tighter fitted. Nothing
+     downloads it, so off Apple hardware the stack falls to Arial, which is metric-compatible
+     enough that nothing reflows. The other two are webfonts and do render identically everywhere.
+
+     The CJK families are appended to each stack rather than split into a :lang(zh) rule, because
+     the blurbs mix scripts inside a single sentence ("延续Punisher里幽微处的banjo和弦乐"). Fallback
+     is per glyph, so the Latin in a Chinese sentence still comes from the Latin face and only the
+     characters it lacks drop through. They stay sans across all three: a Song serif was tried
+     against the serif display candidates and is not wanted here, since Archivo Narrow is a sans
+     and pairing it with a CJK serif would put the mismatch back. All system fonts — a webfont
+     covering CJK is several megabytes, more than this page is worth. */
   --cjk: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', 'Source Han Sans SC';
-  --font-display: 'Jost', var(--cjk), sans-serif;
-  --font-body: 'Cabin', var(--cjk), sans-serif;
+  --helvetica: 'Helvetica Neue', Helvetica, Arial;
+
+  --font-display: 'Archivo Narrow', var(--helvetica), var(--cjk), sans-serif;
+  --font-body: var(--helvetica), var(--cjk), sans-serif;
+  --font-meta: 'DM Mono', ui-monospace, var(--cjk), monospace;
 }
 
 *,
@@ -89,7 +108,7 @@ button:focus-visible {
 
 .back-link,
 .sidebar-link {
-  font-family: var(--font-display);
+  font-family: var(--font-meta);
   font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.08em;
@@ -123,7 +142,7 @@ button:focus-visible {
   background: var(--bg);
   color: var(--text2);
   text-decoration: none;
-  font-family: var(--font-display);
+  font-family: var(--font-meta);
   font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.08em;
@@ -146,7 +165,7 @@ button:focus-visible {
 
 .hero-kicker {
   margin-top: 30px;
-  font-family: var(--font-display);
+  font-family: var(--font-meta);
   font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.24em;
@@ -154,16 +173,19 @@ button:focus-visible {
   color: var(--text3);
 }
 
-/* Was Playfair Display. The reference sets its titles in futura-pt-bold, so this is Jost at 700 —
-   geometric rather than serif, which is most of what makes the page read as a different one. */
+/* Archivo Narrow is condensed, so it takes a bigger size to fill the same optical space and the
+   tracking can relax — the tight negative tracking a wide grotesque needed would close a
+   condensed face up into a wall. Note max-width is 11ch, and a ch is narrower in a condensed
+   face, so the headline wraps sooner than the number suggests. That is intentional: three short
+   stacked lines is the look, not an accident to be tuned away. */
 .year-hero h1 {
   margin-top: 12px;
   max-width: 11ch;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(46px, 8.4vw, 82px);
+  font-size: clamp(52px, 9.6vw, 96px);
   line-height: 0.94;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.02em;
 }
 
 .hero-dek {
@@ -186,7 +208,7 @@ button:focus-visible {
   background: var(--bg);
   color: var(--text2);
   padding: 10px 14px;
-  font-family: var(--font-display);
+  font-family: var(--font-meta);
   font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.08em;
@@ -206,7 +228,7 @@ button:focus-visible {
   background: var(--accent-soft);
   color: var(--accent);
   padding: 10px 16px;
-  font-family: var(--font-display);
+  font-family: var(--font-meta);
   font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.08em;
@@ -264,7 +286,7 @@ button:focus-visible {
 .aap-field { display: flex; flex-direction: column; gap: 5px; }
 .aap-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .aap-label {
-  font-family: var(--font-display);
+  font-family: var(--font-meta);
   font-weight: 500;
   font-size: 9px; letter-spacing: .12em; text-transform: uppercase;
   color: var(--text3);
@@ -317,7 +339,7 @@ button:focus-visible {
 }
 .aap-btn {
   padding: 9px 18px;
-  font-family: var(--font-display);
+  font-family: var(--font-meta);
   font-weight: 500;
   font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
   border-radius: 3px; cursor: pointer; border: 1px solid transparent;
@@ -368,7 +390,7 @@ button:focus-visible {
   background: var(--bg);
   color: var(--text2);
   text-decoration: none;
-  font-family: var(--font-display);
+  font-family: var(--font-meta);
   font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.08em;
@@ -444,20 +466,21 @@ button:focus-visible {
   gap: 6px;
 }
 
-/* Was Bebas Neue, which is condensed caps — two digits fitted the 72px rank column easily. Jost
-   at 700 is a much wider face, so the size comes down and the tracking goes negative to keep
-   "23" inside the column. Anything larger overflows into the album art, which is opaque and
-   would paint over it. */
+/* The rank column is 72px and the album art beside it is opaque, so a numeral that overruns is
+   painted over rather than clipped — invisible, which is the bad kind of broken. This number has
+   moved every time the display face has: Bebas fitted two digits at 54px, Jost forced it down to
+   42, Helvetica took it to 48. Archivo Narrow is condensed like Bebas was, so 62px fits and the
+   numeral gets to be the loud thing on the card again. Re-measure if a year ever reaches 100. */
 .year-rank-num {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 42px;
+  font-size: 62px;
   line-height: 0.86;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.01em;
 }
 
 .year-rank-meta {
-  font-family: var(--font-display);
+  font-family: var(--font-meta);
   font-weight: 500;
   font-size: 10px;
   letter-spacing: 0.08em;
@@ -487,7 +510,7 @@ button:focus-visible {
   border: 1px solid var(--border2);
   background: var(--surface-strong);
   color: var(--text2);
-  font-family: var(--font-display);
+  font-family: var(--font-meta);
   font-weight: 500;
   font-size: 13px;
   cursor: pointer;
@@ -529,7 +552,7 @@ button:focus-visible {
   justify-content: center;
   padding: 18px;
   text-align: center;
-  font-family: var(--font-display);
+  font-family: var(--font-meta);
   font-weight: 500;
   font-size: 11px;
   line-height: 1.5;
@@ -548,15 +571,15 @@ button:focus-visible {
   flex-wrap: wrap;
 }
 
-/* Jost at 700 sets noticeably heavier and wider than the Playfair this replaced, so the size
-   comes down a step and the tracking tightens. line-height goes up slightly: a geometric bold
-   with long ascenders needs more room than a serif did at the same measure. */
+/* Bigger again, for the same reason as the headline: a condensed face at 40px occupies about the
+   width a wide one does at 34, so the size buys presence rather than space. Long titles are the
+   case this helps most — they now fit on one line where they used to wrap. */
 .year-album-title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(24px, 3.9vw, 34px);
-  line-height: 1.06;
-  letter-spacing: -0.03em;
+  font-size: clamp(26px, 4.5vw, 40px);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
 }
 
 .year-artist {
@@ -579,17 +602,20 @@ button:focus-visible {
    to do, not something a visitor has any use for. */
 .year-review-missing {
   margin-top: 10px;
-  font-family: var(--font-display);
+  font-family: var(--font-meta);
   font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.04em;
   color: var(--text3);
 }
 
+/* 14.5px, not the 15px Cabin wanted: Helvetica has a noticeably larger x-height, so it sets
+   bigger than Cabin did at the same nominal size. The measure stays capped at 62ch and the
+   leading stays loose for the Chinese, which needs more room than the Latin at the same size. */
 .year-review {
   margin-top: 14px;
   max-width: 62ch;
-  font-size: 15px;
+  font-size: 14.5px;
   line-height: 1.85;
   color: var(--text2);
   white-space: pre-wrap;
@@ -606,7 +632,7 @@ button:focus-visible {
   padding: 4px 8px;
   border: 1px solid var(--border2);
   color: var(--text2);
-  font-family: var(--font-display);
+  font-family: var(--font-meta);
   font-weight: 500;
   font-size: 10px;
   letter-spacing: 0.08em;
@@ -628,7 +654,7 @@ button:focus-visible {
   border: 1px solid var(--border2);
   background: var(--surface-strong);
   text-decoration: none;
-  font-family: var(--font-display);
+  font-family: var(--font-meta);
   font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.08em;
@@ -674,7 +700,7 @@ button:focus-visible {
 
 #mini-player-title {
   flex: 1;
-  font-family: var(--font-display);
+  font-family: var(--font-meta);
   font-weight: 500;
   font-size: 10px;
   letter-spacing: 0.07em;
@@ -714,7 +740,7 @@ button:focus-visible {
 
 .sidebar-label {
   margin-bottom: 10px;
-  font-family: var(--font-display);
+  font-family: var(--font-meta);
   font-weight: 500;
   font-size: 10px;
   letter-spacing: 0.14em;
