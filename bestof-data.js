@@ -625,7 +625,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "left",
-    "yearRank": 6
+    "yearRank": 8
   },
   {
     "type": "album",
@@ -669,7 +669,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "right",
-    "yearRank": 8
+    "yearRank": 11
   },
   {
     "type": "album",
@@ -17432,7 +17432,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 5
+    "yearRank": 7
   },
   {
     "type": "album",
@@ -17453,7 +17453,71 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 7
+    "yearRank": 10
+  },
+  {
+    "type": "album",
+    "year": 1980,
+    "title": "Los Angeles",
+    "artist": "X",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a0/c4/dc/a0c4dc37-1cf1-9f5a-c80c-af6f9945d07d/192562795828.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/81/96/34/819634f2-16d9-9fb4-ba7e-636a133eaa30/mzaf_7226489568162215197.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 3,
+    "tags": [
+      "Rock",
+      "Punk"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 9
+  },
+  {
+    "type": "album",
+    "year": 1980,
+    "title": "Remain in Light",
+    "artist": "Talking Heads",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music/87/5f/5b/mzi.zzquknhm.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e0/31/66/e0316603-d04b-6d7f-06a4-322b16e2cb3d/mzaf_8848157553075282502.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Rock",
+      "Electronic",
+      "Electro-funk"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 5
+  },
+  {
+    "type": "album",
+    "year": 1980,
+    "title": "Day of Radiance",
+    "artist": "Laraaji",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/6a/aa/18/6aaa187b-1f88-cf61-52f9-8408486923ba/00077778732754.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/20/27/28/20272826-15fc-639e-c1ab-e158e6609c21/mzaf_13135867286318701588.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Experimental",
+      "New-age"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 6
   },
   {
     "type": "album",
