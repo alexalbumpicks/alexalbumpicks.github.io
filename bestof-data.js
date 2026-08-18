@@ -9077,7 +9077,7 @@ const BEST_OF_ENTRIES = [
     "artist": "Better Oblivion Community Center",
     "tagline": "",
     "art": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/84/59/b2/8459b2c1-7bc0-cd5c-774e-f5343598bf8f/656605148861.jpg/600x600bb.jpg",
-    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5f/ea/9d/5fea9d5b-0abe-1829-98cf-932917b8506f/mzaf_12836944808938442421.plus.aac.p.m4a",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d2/62/c5/d262c525-7cdc-4029-ab38-0deacb315015/mzaf_7846070134830284777.plus.aac.p.m4a",
     "tier": "",
     "artBg": "#181818",
     "artColor": "#999",
