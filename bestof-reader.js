@@ -230,9 +230,18 @@ const decadeOf = year => Math.floor(year / 10) * 10;
 // working with JavaScript off — a stylesheet that never applies .is-open would leave all 71
 // visible, which is the old behaviour rather than a broken one.
 //
-// The open decade is not in the URL. It is a view of the nav, not a place: two URLs that differ
-// only by which decade is expanded would be the same page, and the reader's state — year and
-// language — is deliberately the part that is worth linking to.
+// The open decade is still not in the URL, but it no longer needs to be: it is derived from the
+// active year, and a decade is now a link to a year rather than a control that only expands a row.
+// Clicking one lands on the last year of that decade — the most recent, which is both the one most
+// likely to be wanted and the one already sitting leftmost in the row that opens underneath.
+//
+// "Last" is read off the data, not computed as dec + 9: the 1950s stop at 1959 but the 1950s in
+// this file are 1954, 1955, 1956 and 1959, and the current decade stops wherever the data does.
+// So a decade with a gap at its end still points somewhere real.
+function lastYearOf(dec, navYears) {
+  return Math.max(...navYears.filter(year => decadeOf(year) === dec));
+}
+
 function renderYearNav() {
   const navYears = years.includes(activeYear)
     ? years
@@ -248,7 +257,11 @@ function renderYearNav() {
       const inDec = navYears.filter(year => decadeOf(year) === dec);
       const allProvisional = inDec.every(year => isProvisional(year));
       const cls = `decade-pill${dec === openDecade ? ' is-active' : ''}${allProvisional ? ' is-provisional' : ''}`;
-      return `<button class="${cls}" type="button" data-decade="${dec}" aria-expanded="${dec === openDecade ? 'true' : 'false'}">${dec}s</button>`;
+      // aria-current, not aria-expanded: activating this goes somewhere rather than unfolding
+      // something, and the row underneath opens because of where you now are, not because the
+      // control was toggled. Saying "expanded" would promise a control that stays put.
+      const current = dec === openDecade ? ' aria-current="true"' : '';
+      return `<a class="${cls}" href="${yearLink(lastYearOf(dec, navYears))}" data-decade="${dec}"${current}>${dec}s</a>`;
     })
     .join('');
 
@@ -481,22 +494,15 @@ document.getElementById('year-list').addEventListener('click', event => {
 
 document.getElementById('mini-player-close').addEventListener('click', closeMiniPlayer);
 
-// Delegated for the same reason as the list, and because it means opening a decade is a class
-// toggle rather than a re-render — the year links are already in the DOM and nothing about them
-// changes, so rebuilding them would only risk losing the active one.
-document.getElementById('year-nav').addEventListener('click', event => {
-  const btn = event.target.closest('[data-decade]');
-  if (!btn) return;
-  const dec = btn.dataset.decade;
-  document.querySelectorAll('[data-decade]').forEach(el => {
-    const on = el.dataset.decade === dec;
-    el.classList.toggle('is-active', on);
-    el.setAttribute('aria-expanded', on ? 'true' : 'false');
-  });
-  document.querySelectorAll('[data-decade-years]').forEach(el => {
-    el.classList.toggle('is-open', el.dataset.decadeYears === dec);
-  });
-});
+// The decade click handler that used to live here is gone. It toggled .is-active and .is-open by
+// hand so that opening a decade cost no re-render; now that a decade is a link to a year, the
+// navigation does that job — the new page derives openDecade from its own activeYear, so the row
+// opens on arrival. Keeping the handler as well would have set those classes for the few
+// milliseconds before the page unloaded, which is a no-op that reads as live code.
+//
+// What this trades away is browsing the nav without leaving the year you are reading. That was
+// worth having when a decade did nothing else, but it is not what the pill means any more: it now
+// answers "take me to the 1970s" rather than "show me which 1970s years exist".
 
 renderChrome();
 renderYearNav();

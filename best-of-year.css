@@ -427,10 +427,14 @@ button:focus-visible {
   display: flex;
 }
 
-/* Deliberately not a .year-pill. A decade opens a row below it and a year navigates, so they do
-   two different things and are not interchangeable — matching them would say they were. The
-   decade is the heavier of the two because it is chosen first: display face, larger, in the
-   sentence case the year pills cannot use because they are digits. */
+/* Deliberately not a .year-pill. Both navigate now — a decade goes to its last year and opens its
+   row, a year goes to itself — so the old reason they look different (one expanded, one navigated)
+   no longer holds. The distinction they carry is rank, not kind: the decade is chosen first and is
+   the heavier of the two, in the display face, larger, in the sentence case the year pills cannot
+   use because they are digits.
+   `border: 0` and `background: none` are left over from when this was a <button> and are now
+   inert; they stay because the transparent bottom border below them is load-bearing and reads
+   clearer with the reset it was written against. */
 .decade-pill {
   display: inline-flex;
   align-items: center;
@@ -441,6 +445,7 @@ button:focus-visible {
   background: none;
   color: var(--text3);
   cursor: pointer;
+  text-decoration: none;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 17px;
