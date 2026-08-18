@@ -14591,7 +14591,7 @@ const BEST_OF_ENTRIES = [
     "artist": "Amon Tobin",
     "tagline": "",
     "art": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/13/ec/3b/13ec3be8-8fa6-4819-1850-e37f28740ba6/5051083021159.png/600x600bb.jpg",
-    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2e/8e/cf/2e8ecf24-2de0-71f3-4b98-c8a704bcd4e4/mzaf_14851935641565089908.plus.aac.p.m4a",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d1/02/d1/d102d1d8-fed1-1483-0b52-b30f3490c785/mzaf_4108618986065476141.plus.aac.p.m4a",
     "tier": "",
     "artBg": "#181818",
     "artColor": "#999",
