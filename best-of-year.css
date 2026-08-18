@@ -500,9 +500,9 @@ button:focus-visible {
   color: var(--bg);
 }
 
-/* Years still being filled in: 2025 and everything before 1967. Dimmed, not disabled - they
-   hold real albums, just thin ones (1-5 a year pre-1967, 11 in 2025 against 2026's 23), so
-   there is nothing to protect a visitor from. The dashed border carries the meaning where
+/* Years still being filled in: everything before 1967. Dimmed, not disabled - they hold real
+   albums, just thin ones (1-5 a year against 20-40 for a recent one), so there is nothing to
+   protect a visitor from. The dashed border carries the meaning where
    opacity alone would not: on a low-contrast screen a dim pill and a normal one can look alike,
    and opacity is invisible to anyone who cannot compare it against a neighbour.
    0.45 was too far: the pill's entire content is the year, and at that weight on white it came

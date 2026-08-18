@@ -134,8 +134,11 @@ function langLink(lang) {
 // Nothing is deleted or hidden from the data - bestof-data.js still carries every album for these
 // years and the editor still shows them. This only decides what the published page puts on screen,
 // so finishing a year is a one-line change here, not a data migration.
+// 2025 was the one carve-out and is now published: 38 albums ranked 1-38 by hand, all with art and
+// a preview. What is left is the contiguous pre-1967 range, which is why the predicate is a
+// comparison again rather than a comparison plus a special case.
 function isProvisional(year) {
-  return year === 2025 || year < 1967;
+  return year < 1967;
 }
 
 function compareDefaultYearOrder(a, b) {
