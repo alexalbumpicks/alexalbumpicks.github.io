@@ -19452,7 +19452,7 @@ const BEST_OF_ENTRIES = [
     "artist": "ROSALÍA",
     "tagline": "",
     "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/95/ae/80/95ae8046-a6b9-e493-0def-5ae33d63f43a/196873722672.jpg/600x600bb.jpg",
-    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/37/fb/8c/37fb8c18-2dcf-4b58-0700-1f7aee6a9477/mzaf_719973323638252032.plus.aac.p.m4a",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/92/ed/09/92ed09fd-e2d0-fdf3-3633-adc2ca8fd75b/mzaf_6242627331043325594.plus.aac.p.m4a",
     "tier": "",
     "artBg": "#181818",
     "artColor": "#999",
@@ -19472,7 +19472,7 @@ const BEST_OF_ENTRIES = [
     "artist": "FKA Twigs",
     "tagline": "",
     "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ae/c8/24/aec824cf-8748-fb40-12c8-b7fb69a5ffe3/075679634382.jpg/600x600bb.jpg",
-    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b9/0e/89/b90e899d-41bb-a59c-8020-a0444db6011f/mzaf_12109561160938304172.plus.aac.p.m4a",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/07/79/62/077962eb-6dfc-41b3-77dc-1a73b1d6bc94/mzaf_12337821613740958869.plus.aac.p.m4a",
     "tier": "",
     "artBg": "#181818",
     "artColor": "#999",
@@ -19503,7 +19503,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 3
+    "yearRank": 21
   },
   {
     "type": "album",
@@ -19524,7 +19524,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 32
   },
   {
     "type": "album",
@@ -19545,7 +19545,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 5
+    "yearRank": 37
   },
   {
     "type": "album",
@@ -20305,7 +20305,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 6
+    "yearRank": 5
   },
   {
     "type": "album",
@@ -20325,7 +20325,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 7
+    "yearRank": 38
   },
   {
     "type": "album",
@@ -20820,7 +20820,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 8
+    "yearRank": 7
   },
   {
     "type": "album",
@@ -20840,7 +20840,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 9
+    "yearRank": 8
   },
   {
     "type": "album",
@@ -20860,7 +20860,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 10
+    "yearRank": 13
   },
   {
     "type": "album",
@@ -20880,7 +20880,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 11
+    "yearRank": 29
   },
   {
     "type": "album",
@@ -20924,7 +20924,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 12
+    "yearRank": 3
   },
   {
     "type": "album",
@@ -20944,7 +20944,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 13
+    "yearRank": 4
   },
   {
     "type": "album",
@@ -20965,7 +20965,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 14
+    "yearRank": 6
   },
   {
     "type": "album",
@@ -20985,7 +20985,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 15
+    "yearRank": 9
   },
   {
     "type": "album",
@@ -21005,7 +21005,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 16
+    "yearRank": 10
   },
   {
     "type": "album",
@@ -21026,7 +21026,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 17
+    "yearRank": 11
   },
   {
     "type": "album",
@@ -21046,7 +21046,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 18
+    "yearRank": 12
   },
   {
     "type": "album",
@@ -21067,7 +21067,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 19
+    "yearRank": 14
   },
   {
     "type": "album",
@@ -21087,7 +21087,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 21
+    "yearRank": 18
   },
   {
     "type": "album",
@@ -21107,7 +21107,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 23
+    "yearRank": 20
   },
   {
     "type": "album",
@@ -21127,7 +21127,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 24
+    "yearRank": 25
   },
   {
     "type": "album",
@@ -21147,7 +21147,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 25
+    "yearRank": 26
   },
   {
     "type": "album",
@@ -21167,7 +21167,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 26
+    "yearRank": 27
   },
   {
     "type": "album",
@@ -21187,7 +21187,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 27
+    "yearRank": 30
   },
   {
     "type": "album",
@@ -21207,7 +21207,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 28
+    "yearRank": 31
   },
   {
     "type": "album",
@@ -21227,7 +21227,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 29
+    "yearRank": 36
   },
   {
     "type": "album",
@@ -21247,7 +21247,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 20
+    "yearRank": 15
   },
   {
     "type": "album",
@@ -21268,7 +21268,188 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
+    "yearRank": 19
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "The Art of Loving",
+    "artist": "Olivia Dean",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/08/e2/21/08e22164-7c0b-1522-818f-e0e74f62dc49/25UMGIM69703.rgb.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/42/bb/5b/42bb5b21-2550-6205-bf3c-334b0e7d6199/mzaf_17462928687872215879.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 3,
+    "tags": [
+      "Pop/R&B"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 33
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "I'll Be Waving As You Drive Away",
+    "artist": "Hayden Pedigo",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/28/ea/7e/28ea7ed2-42bc-10c9-218f-c52e9ea790b2/184923137460_cover.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c6/bc/a4/c6bca428-c767-2bd7-47fd-473ab884ef32/mzaf_5837057212592687209.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 3,
+    "tags": [
+      "Folk"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
     "yearRank": 22
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "Goodness",
+    "artist": "feeo",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/89/e6/de/89e6dea3-70cb-9f1d-ee2b-7cd98c20edfc/191400680166.png/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9b/a6/9d/9ba69d81-9e62-345d-2681-67ce18ad2a91/mzaf_1572726208478927862.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 3,
+    "tags": [
+      "Electronic"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 23
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "Riviera",
+    "artist": "The Hellp",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/00/c1/b5/00c1b53e-d86d-ca2a-4590-6037b988948b/075679593276.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/87/bc/67/87bc672f-b6d1-6c2f-f4af-529cd6e8d119/mzaf_12584534010768465392.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 3,
+    "tags": [
+      "Electronic"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 24
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "45 Pounds",
+    "artist": "YHWH Nailgun",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/aa/f4/2c/aaf42c46-4a5d-3498-aeb2-b5d42c25f391/8721253519478.png/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7f/b8/00/7fb800b1-818d-197d-81a6-b8d83ee0524c/mzaf_8568550637128940324.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Experimental"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 16
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "MAYHEM",
+    "artist": "Lady Gaga",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/be/11/d1/be11d187-1aeb-99f3-01c5-597ed65cdb6a/25UMGIM07433.rgb.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7f/f0/f5/7ff0f508-1e7a-fefc-0c78-5bd659286525/mzaf_16241395143868251571.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 3,
+    "tags": [
+      "Pop/R&B"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 34
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "In the Earth Again",
+    "artist": "Chat Pile & Hayden Pedigo",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/29/88/75/298875f4-749c-d221-ecbd-316936a5c8ef/Cover.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f4/58/94/f4589422-cf23-5be4-59a3-ff56031b7d28/mzaf_10407651954786106556.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Rock",
+      "Metal"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 17
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "Headlights",
+    "artist": "Alex G",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/df/33/7c/df337c6f-7853-b1f8-8bd0-b4c9737fccc4/196872969757.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b9/ef/4a/b9ef4aff-8326-6889-bcdc-f49e48f0e572/mzaf_16937779774187296848.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 3,
+    "tags": [
+      "Rock"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 35
+  },
+  {
+    "type": "album",
+    "year": 2025,
+    "title": "New Threats From The Soul",
+    "artist": "Ryan Davis & the Roadhouse Band",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/63/9d/a4/639da475-51c4-16ce-7e12-5f0b26b02775/198704608896_Cover.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/11/08/78/110878a7-dafe-34d6-fc82-a3bea5ed7103/mzaf_830840866509816796.plus.aac.p.m4a",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 3,
+    "tags": [
+      "Folk"
+    ],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 28
   }
 ];
 
