@@ -82,6 +82,10 @@ const STRINGS = {
     emptyBody: 'Nothing ranked for this year yet.',
     listen: 'Listen',
     hidePlayer: 'Hide player',
+    previewTrack: 'Preview',
+    nowPlaying: 'Now playing',
+    appleMusic: 'Apple Music',
+    appleMusicTitle: entry => `Open ${entry} on Apple Music`,
     close: 'Close'
   },
   zh: {
@@ -102,6 +106,10 @@ const STRINGS = {
     emptyBody: '这一年还没有排过任何专辑。',
     listen: '试听',
     hidePlayer: '收起播放器',
+    previewTrack: '试听曲目',
+    nowPlaying: '正在播放',
+    appleMusic: 'Apple Music',
+    appleMusicTitle: entry => `在 Apple Music 上打开《${entry}》`,
     close: '关闭'
   }
 };
@@ -210,19 +218,59 @@ function renderChrome() {
     .join('');
 }
 
+const decadeOf = year => Math.floor(year / 10) * 10;
+
+// Two rows instead of one: pick a decade, then a year inside it. 71 pills wrapped to four rows
+// and the whole block had to be read to find anything, because every pill looked like every
+// other one and the only ordering cue was that they counted down. Eight decades fit one row, and
+// the second row is never longer than ten.
+//
+// Every year is still rendered. The decades that are not open are hidden in CSS rather than left
+// out of the HTML, which matters for three separate reasons: each year stays a real crawlable
+// link, switching decades needs no re-render and cannot lose the active year, and the nav keeps
+// working with JavaScript off — a stylesheet that never applies .is-open would leave all 71
+// visible, which is the old behaviour rather than a broken one.
+//
+// The open decade is not in the URL. It is a view of the nav, not a place: two URLs that differ
+// only by which decade is expanded would be the same page, and the reader's state — year and
+// language — is deliberately the part that is worth linking to.
 function renderYearNav() {
   const navYears = years.includes(activeYear)
     ? years
     : [activeYear, ...years].sort((a, b) => b - a);
-  document.getElementById('year-nav').innerHTML = navYears
-    .map(year => {
-      const cls = `year-pill${year === activeYear ? ' is-active' : ''}${isProvisional(year) ? ' is-provisional' : ''}`;
-      // The title carries the reason in words. Dimming is only legible by comparison, so on
-      // its own it says "different" without ever saying what is different about it.
-      const why = isProvisional(year) ? ` title="${esc(S.provisionalTitle)}"` : '';
-      return `<a class="${cls}" href="${yearLink(year)}"${why}>${year}</a>`;
+
+  const decades = [...new Set(navYears.map(decadeOf))].sort((a, b) => b - a);
+  const openDecade = decadeOf(activeYear);
+
+  const decadeRow = decades
+    .map(dec => {
+      // A decade counts as provisional only when every year in it is: a decade with one finished
+      // year in it is not a year I have not got to, and dimming it would say it was.
+      const inDec = navYears.filter(year => decadeOf(year) === dec);
+      const allProvisional = inDec.every(year => isProvisional(year));
+      const cls = `decade-pill${dec === openDecade ? ' is-active' : ''}${allProvisional ? ' is-provisional' : ''}`;
+      return `<button class="${cls}" type="button" data-decade="${dec}" aria-expanded="${dec === openDecade ? 'true' : 'false'}">${dec}s</button>`;
     })
     .join('');
+
+  const yearRows = decades
+    .map(dec => {
+      const pills = navYears
+        .filter(year => decadeOf(year) === dec)
+        .map(year => {
+          const cls = `year-pill${year === activeYear ? ' is-active' : ''}${isProvisional(year) ? ' is-provisional' : ''}`;
+          // The title carries the reason in words. Dimming is only legible by comparison, so on
+          // its own it says "different" without ever saying what is different about it.
+          const why = isProvisional(year) ? ` title="${esc(S.provisionalTitle)}"` : '';
+          return `<a class="${cls}" href="${yearLink(year)}"${why}>${year}</a>`;
+        })
+        .join('');
+      return `<div class="decade-years${dec === openDecade ? ' is-open' : ''}" data-decade-years="${dec}">${pills}</div>`;
+    })
+    .join('');
+
+  document.getElementById('year-nav').innerHTML =
+    `<div class="decade-row">${decadeRow}</div>${yearRows}`;
 }
 
 function renderList() {
@@ -269,6 +317,49 @@ function renderList() {
     const audio = entry.audio
       ? `<button class="year-action" type="button" data-listen="${i}" aria-expanded="${activePlayerIndex === i ? 'true' : 'false'}">${activePlayerIndex === i ? esc(S.hidePlayer) : esc(S.listen)}</button>`
       : '';
+    // The preview is a 30-second clip of one track, not the album, and until now the button gave
+    // no clue which — you pressed Listen and found out. `audioTrack` names it up front.
+    //
+    // Only the albums that have the field, like `review` above: it is resolved by matching the
+    // stored preview URL against the iTunes catalogue, and five of the 23 in 2026 are previews
+    // the catalogue will not return under any search, so they have no name to show. Those render
+    // exactly as they did before rather than showing an empty label or a guess.
+    //
+    // The label is translated, the track name is not. A song title is a proper noun and the
+    // catalogue only has the one form of it; inventing a Chinese rendering would be worse than
+    // leaving it, so `lang` marks the name as belonging to the other language when the page is
+    // Chinese, which is what tells the browser to pick the Latin font for it rather than the
+    // CJK one.
+    //
+    // Two words, because one cannot be true in both states. This said "Now playing" always, which
+    // was a lie on 22 of the 23 cards — nothing was playing. The alternative of picking a single
+    // safer word ("Preview") would be honest but wasted something: renderList already re-runs on
+    // play and on close, so the label can just follow the state at no cost.
+    //
+    // What that buys is more than accuracy. Only one preview can sound at a time, so exactly one
+    // card can ever read "Now playing" — which makes this a marker for *which* card is the one
+    // making noise, findable after you have scrolled away from it. The caption became a state
+    // indicator by being made truthful, which is usually the direction that goes.
+    const isPlaying = activePlayerIndex === i;
+    const nowPlaying = entry.audio && entry.audioTrack
+      ? `<span class="year-now-playing${isPlaying ? ' is-playing' : ''}">${esc(isPlaying ? S.nowPlaying : S.previewTrack)}: <span class="year-now-playing-track" lang="en">${esc(entry.audioTrack)}</span></span>`
+      : '';
+    // The preview answers "what does this sound like"; this answers "where do I go to hear the
+    // rest of it". They are different questions and the 30-second clip was only ever answering
+    // the first one, so the card dead-ended right at the point the reader was most interested.
+    //
+    // Apple rather than Spotify because the data is already Apple's: every `audio` URL on this
+    // page is an iTunes preview, so the album page is reachable by looking up the collection that
+    // owns the preview — an identity match on a URL already stored, not a title search that has
+    // to be trusted. The Spotify attempt went through MusicBrainz and returned nothing for even
+    // the first album, which is the difference between deriving a link and guessing one.
+    //
+    // Five of the 23 have no link for the same reason they have no track name: the preview is not
+    // in the catalogue, and neither is the album. Those cards keep the Listen button and lose
+    // nothing else, rather than carrying a button that goes somewhere wrong.
+    const appleMusic = entry.appleMusic
+      ? `<a class="year-action year-action-secondary" href="${esc(entry.appleMusic)}" target="_blank" rel="noopener noreferrer" title="${esc(S.appleMusicTitle(entry.title))}">${esc(S.appleMusic)}</a>`
+      : '';
     // Only the albums that have one. `tagline` and `tier` were dropped from these cards because
     // 36 and 81 entries out of 985 carried them - a field that thin reads as an inconsistency
     // rather than a feature. `review` is thinner still today, but the difference is that these
@@ -297,10 +388,10 @@ function renderList() {
           <div class="year-title-row">
             <h2 class="year-album-title">${esc(entry.title)}</h2>
           </div>
-          <div class="year-artist">${esc(entry.artist)}</div>
+          <div class="year-artist">${esc(entry.artist)}${entry.label ? `<span class="year-label"> · ${esc(entry.label)}</span>` : ''}</div>
           ${tags ? `<div class="year-tags">${tags}</div>` : ''}
           ${review}
-          ${audio ? `<div class="year-actions">${audio}</div>` : ''}
+          ${audio || appleMusic ? `<div class="year-actions">${audio}${appleMusic}${nowPlaying}</div>` : ''}
         </div>
       </article>
     `;
@@ -405,6 +496,23 @@ document.getElementById('year-list').addEventListener('click', event => {
 });
 
 document.getElementById('mini-player-close').addEventListener('click', closeMiniPlayer);
+
+// Delegated for the same reason as the list, and because it means opening a decade is a class
+// toggle rather than a re-render — the year links are already in the DOM and nothing about them
+// changes, so rebuilding them would only risk losing the active one.
+document.getElementById('year-nav').addEventListener('click', event => {
+  const btn = event.target.closest('[data-decade]');
+  if (!btn) return;
+  const dec = btn.dataset.decade;
+  document.querySelectorAll('[data-decade]').forEach(el => {
+    const on = el.dataset.decade === dec;
+    el.classList.toggle('is-active', on);
+    el.setAttribute('aria-expanded', on ? 'true' : 'false');
+  });
+  document.querySelectorAll('[data-decade-years]').forEach(el => {
+    el.classList.toggle('is-open', el.dataset.decadeYears === dec);
+  });
+});
 
 renderChrome();
 renderYearNav();

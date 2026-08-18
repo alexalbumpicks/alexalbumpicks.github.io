@@ -122,10 +122,13 @@ button:focus-visible {
   color: var(--accent);
 }
 
-/* Top-right of the hero, out of the way of the headline (which is capped at 11ch and never
-   reaches it). Absolute rather than a flex row with the kicker, so adding it did not have to
-   restructure a header that was already laid out. The z-index it used to need is gone with the
-   decorative circle it used to sit above. */
+/* Top-right of the hero, out of the way of the headline. The clearance is vertical, not
+   horizontal: this sits in the band above the kicker, and the headline starts below both. That
+   matters now that the headline runs full width on one line — at the 96px cap it is ~752px, which
+   would reach these pills if they shared a row with it, and does not because they do not.
+   Absolute rather than a flex row with the kicker, so adding it did not have to restructure a
+   header that was already laid out. The z-index it used to need is gone with the decorative
+   circle it used to sit above. */
 .lang-nav {
   position: absolute;
   top: 6px;
@@ -175,17 +178,31 @@ button:focus-visible {
 
 /* Archivo Narrow is condensed, so it takes a bigger size to fill the same optical space and the
    tracking can relax — the tight negative tracking a wide grotesque needed would close a
-   condensed face up into a wall. Note max-width is 11ch, and a ch is narrower in a condensed
-   face, so the headline wraps sooner than the number suggests. That is intentional: three short
-   stacked lines is the look, not an accident to be tuned away. */
+   condensed face up into a wall.
+
+   One line, both languages. The string is fully predictable — "Best Albums of NNNN" or
+   "NNNN 年度最佳专辑" — so this is sized from measured glyph advances rather than by eye. Summing
+   the Archivo Narrow Bold hmtx table and subtracting the tracking: EN is 7.69em, ZH is 7.83em
+   (four digits in Archivo Narrow plus six full-width CJK glyphs at 1em each in PingFang). ZH is
+   the wider of the two, so 7.83em is the number the size has to clear.
+
+   9.6vw was already right at every width; what forced the wrap was max-width: 11ch, and a ch is
+   narrower still in a condensed face. Dropping the cap is the whole fix. The floor comes down
+   from 52px because that is the one place the headline genuinely could not fit: at a 320px
+   viewport the hero has 256px of room and 52px would need 407px.
+
+   No white-space: nowrap. The ZH width leans on CJK glyphs being full-width in PingFang, which is
+   the rule but is not something this file can measure; if that assumption is ever wrong, wrapping
+   is a soft failure and nowrap would be a horizontal-scroll bug. text-wrap: balance means the
+   fallback splits evenly instead of orphaning the year on its own line. */
 .year-hero h1 {
   margin-top: 12px;
-  max-width: 11ch;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(52px, 9.6vw, 96px);
+  font-size: clamp(30px, 9.6vw, 96px);
   line-height: 0.94;
   letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 
 .hero-dek {
@@ -373,11 +390,85 @@ button:focus-visible {
   background: rgba(180,60,60,.07) !important;
 }
 
+/* Left as a wrapping flex row on purpose, even though the reader now puts two block rows inside
+   it. The editor shares this stylesheet and still renders a flat run of 71 pills straight into
+   #year-nav; switching this to `display: block` would drop the gap between them there and leave
+   the editor's nav spaced only by the whitespace in the markup. Instead the reader's two rows
+   take a full-width flex basis below, so they stack — and the editor's pills, which have no
+   basis, flow exactly as they did. One rule, both structures, no page-specific selector. */
 .year-nav {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  padding: 18px 4px 0;
+  padding: 18px 0 0;
+}
+
+.decade-row {
+  flex: 0 0 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Hidden rather than absent: renderYearNav writes every decade's years into the DOM and this is
+   the only thing keeping seven of the eight out of sight. That is deliberate — with the
+   stylesheet or the script gone, all 71 years are visible and every one is still a working link,
+   which is the nav as it was rather than a nav that has failed. */
+.decade-years {
+  flex: 0 0 100%;
+  display: none;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.decade-years.is-open {
+  display: flex;
+}
+
+/* Deliberately not a .year-pill. A decade opens a row below it and a year navigates, so they do
+   two different things and are not interchangeable — matching them would say they were. The
+   decade is the heavier of the two because it is chosen first: display face, larger, in the
+   sentence case the year pills cannot use because they are digits. */
+.decade-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: var(--text3);
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.01em;
+}
+
+.decade-pill:hover {
+  color: var(--accent);
+}
+
+/* Underlined rather than filled. The open decade is a heading for the row underneath it, and the
+   rule tying the two together says that better than a filled block would — a filled decade and a
+   filled year pill in the same nav would read as two things in the same state. */
+.decade-pill.is-active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* Only when every year inside it is provisional, so this is 1950s and 1960s and nothing else.
+   No dashed border here: the border is doing the open/closed job already, and a decade that was
+   both dashed and underlined would be saying two things with one line. */
+.decade-pill.is-provisional {
+  opacity: 0.65;
+}
+
+.decade-pill.is-provisional:hover,
+.decade-pill.is-provisional.is-active {
+  opacity: 1;
 }
 
 .year-pill {
@@ -437,16 +528,26 @@ button:focus-visible {
   align-items: start;
 }
 
+/* Rules, not boxes — the move borrowed from screenslate.com. Their whole layout is built from one
+   primitive, `.125rem solid #000`: 2px, pure black, never a grey hairline. There is no card
+   anywhere on that site. [role=main] carries only a left and right border, so the page reads as a
+   ruled column; list items carry border-top and the last child carries border-bottom.
+
+   That pattern fixes something specific here rather than just being a style. --surface and --bg
+   are both #ffffff, so the card had no fill to distinguish it — the 1px #e9e9e9 outline was
+   drawing a box around nothing, four lines of ink to enclose a rectangle already the colour of
+   the page. One rule between rows says the same thing with a quarter of the drawing, and says it
+   more definitely because the rule is black instead of two shades off white.
+
+   gap goes to 0 because the rule now does the separating; the padding inside each row provides
+   the air the gap used to. Padding also loses its horizontal component: with no border on the
+   sides there is nothing to inset from, so the rows sit flush with the hero above them, which
+   they never did before. */
 .year-list {
   display: grid;
-  gap: 18px;
+  gap: 0;
 }
 
-/* Flat. The shadow and the 14px backdrop blur are gone: the blur was compositing 23 cards' worth
-   of work per frame to sample a background that never moved and is now a flat white, so it cost
-   real time to produce no visible effect. What is left is the hairline. */
-.year-card,
-.sidebar-card,
 .year-empty {
   border: 1px solid var(--border);
   background: var(--surface);
@@ -456,7 +557,17 @@ button:focus-visible {
   display: grid;
   grid-template-columns: 72px 140px minmax(0, 1fr);
   gap: 22px;
-  padding: 24px;
+  padding: 28px 0;
+  border-top: 2px solid var(--text);
+}
+
+/* The hero already ends in a rule, so the first row would otherwise stack two lines 24px apart. */
+.year-card:first-child {
+  border-top: 0;
+}
+
+.year-list .year-card:last-child {
+  border-bottom: 2px solid var(--text);
 }
 
 .year-rank {
@@ -588,6 +699,17 @@ button:focus-visible {
   color: var(--text2);
 }
 
+/* Same line as the artist, one step back. The two are not equal — the artist is who you are
+   looking for and the label is context — so they are separated by weight rather than by being
+   put on separate lines, which would spend a whole row on the smaller fact. Same size as the
+   artist so the line keeps one baseline and one rhythm; only the colour moves.
+   The interpunct is written into the markup rather than a ::before, because it belongs to the
+   sentence: read aloud it is "Phoebe Bridgers, Dead Oceans", and a generated character would be
+   dropped there. */
+.year-label {
+  color: var(--text3);
+}
+
 .year-rating {
   margin-top: 14px;
   color: var(--accent);
@@ -643,7 +765,30 @@ button:focus-visible {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  align-items: center;
   margin-top: 20px;
+}
+
+/* Names the track the Listen button will play. Grey and small because it is an annotation on the
+   button, not a second control — it has to be legible without competing with the thing it
+   describes. --text3 rather than --text2 for that reason; it is the lightest grey on the page and
+   still clears 4.5:1 on white, which is checked because this is 12px text.
+   Not uppercase and not letter-spaced, unlike every other label in this family: a song title is a
+   proper noun and setting one in caps changes what it says. That also does the separating work
+   the gap alone would not — sentence case beside an uppercase button reads as a caption rather
+   than as a second button that failed to get a border. */
+.year-now-playing {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text3);
+}
+
+/* The one card that is actually sounding. Colour only — no weight change, because bolding would
+   reflow the line and make the row twitch as you click down a list. Going to full --text rather
+   than part way is the point: this is the single card in the year that is in this state, so it
+   should be findable by scanning rather than by comparison. */
+.year-now-playing.is-playing {
+  color: var(--text);
 }
 
 .year-action {
@@ -665,6 +810,17 @@ button:focus-visible {
 .year-action:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+/* Leaves the page, where Listen does not, and the two sit side by side — so they should not look
+   equally like the thing to press. Same size and type as .year-action so the row stays even; the
+   fill drops out and the border goes to the lighter --border, which reads as the secondary of a
+   pair without inventing a second button shape. Hover inherits the accent treatment above, so the
+   difference is only in the resting state: quieter until you go looking for it. */
+.year-action-secondary {
+  background: none;
+  border-color: var(--border);
+  color: var(--text3);
 }
 
 #mini-player {
@@ -726,14 +882,33 @@ button:focus-visible {
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* Screen Slate separates its right-hand column from the body with a single vertical rule
+   (.layout-sidebar-second { border-left: .125rem solid #000 }) rather than by boxing the column's
+   contents. Same idea here: one line marks the boundary between the two areas, and the cards
+   inside it stop needing outlines of their own. Between sidebar cards the rule drops to a
+   hairline — the 2px black is reserved for boundaries between areas, so that a glance can tell
+   structure from detail without a second colour. */
 .year-sidebar {
   display: grid;
-  gap: 16px;
+  gap: 0;
   position: sticky;
   top: 18px;
+  padding-left: 22px;
+  border-left: 2px solid var(--text);
 }
 
-.sidebar-card,
+.sidebar-card {
+  padding: 18px 0;
+}
+
+.sidebar-card:first-child {
+  padding-top: 0;
+}
+
+.sidebar-card + .sidebar-card {
+  border-top: 1px solid var(--border2);
+}
+
 .year-empty {
   padding: 22px;
 }
@@ -780,8 +955,15 @@ button:focus-visible {
     grid-template-columns: 1fr;
   }
 
+  /* One column below 980px: the sidebar now sits under the list rather than beside it, so a
+     vertical rule would be marking a boundary that is no longer vertical. It becomes a horizontal
+     one, which is the same statement rotated. */
   .year-sidebar {
     position: static;
+    padding-left: 0;
+    padding-top: 22px;
+    border-left: 0;
+    border-top: 2px solid var(--text);
   }
 }
 
@@ -791,14 +973,18 @@ button:focus-visible {
     padding-top: 20px;
   }
 
+  /* The 20px of side padding these two carried was there to inset content from a border that no
+     longer exists on either of them. Kept, it would indent the hero and every album row while the
+     rules above and below them ran the full width — the misalignment the rules are supposed to
+     make visible. Zero on both, so everything hangs off one left edge. */
   .year-hero {
-    padding: 24px 20px 22px;
+    padding: 24px 0 22px;
   }
 
   .year-card {
     grid-template-columns: 1fr;
     gap: 16px;
-    padding: 20px;
+    padding: 24px 0;
   }
 
   .year-rank {
