@@ -769,28 +769,6 @@ button:focus-visible {
   margin-top: 20px;
 }
 
-/* Names the track the Listen button will play. Grey and small because it is an annotation on the
-   button, not a second control — it has to be legible without competing with the thing it
-   describes. --text3 rather than --text2 for that reason; it is the lightest grey on the page and
-   still clears 4.5:1 on white, which is checked because this is 12px text.
-   Not uppercase and not letter-spaced, unlike every other label in this family: a song title is a
-   proper noun and setting one in caps changes what it says. That also does the separating work
-   the gap alone would not — sentence case beside an uppercase button reads as a caption rather
-   than as a second button that failed to get a border. */
-.year-now-playing {
-  font-size: 12px;
-  line-height: 1.4;
-  color: var(--text3);
-}
-
-/* The one card that is actually sounding. Colour only — no weight change, because bolding would
-   reflow the line and make the row twitch as you click down a list. Going to full --text rather
-   than part way is the point: this is the single card in the year that is in this state, so it
-   should be findable by scanning rather than by comparison. */
-.year-now-playing.is-playing {
-  color: var(--text);
-}
-
 .year-action {
   display: inline-flex;
   align-items: center;

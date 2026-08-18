@@ -82,8 +82,6 @@ const STRINGS = {
     emptyBody: 'Nothing ranked for this year yet.',
     listen: 'Listen',
     hidePlayer: 'Hide player',
-    previewTrack: 'Preview',
-    nowPlaying: 'Now playing',
     appleMusic: 'Apple Music',
     appleMusicTitle: entry => `Open ${entry} on Apple Music`,
     close: 'Close'
@@ -106,8 +104,6 @@ const STRINGS = {
     emptyBody: '这一年还没有排过任何专辑。',
     listen: '试听',
     hidePlayer: '收起播放器',
-    previewTrack: '试听曲目',
-    nowPlaying: '正在播放',
     appleMusic: 'Apple Music',
     appleMusicTitle: entry => `在 Apple Music 上打开《${entry}》`,
     close: '关闭'
@@ -317,33 +313,18 @@ function renderList() {
     const audio = entry.audio
       ? `<button class="year-action" type="button" data-listen="${i}" aria-expanded="${activePlayerIndex === i ? 'true' : 'false'}">${activePlayerIndex === i ? esc(S.hidePlayer) : esc(S.listen)}</button>`
       : '';
-    // The preview is a 30-second clip of one track, not the album, and until now the button gave
-    // no clue which — you pressed Listen and found out. `audioTrack` names it up front.
+    // The "Preview: <track>" caption used to live here, naming the song the button would play and
+    // flipping to "Now playing" while it played. Removed as clutter: with the Apple Music link
+    // added beside it the row had three things in it, and two of them were prose.
     //
-    // Only the albums that have the field, like `review` above: it is resolved by matching the
-    // stored preview URL against the iTunes catalogue, and five of the 23 in 2026 are previews
-    // the catalogue will not return under any search, so they have no name to show. Those render
-    // exactly as they did before rather than showing an empty label or a guess.
+    // The state half of it was already redundant — the button itself reads "Hide player" on the
+    // one card that is sounding, so which card is playing was never only knowable from the
+    // caption. What is genuinely lost is knowing *which track* before pressing, which is worth
+    // less than a row you can read at a glance.
     //
-    // The label is translated, the track name is not. A song title is a proper noun and the
-    // catalogue only has the one form of it; inventing a Chinese rendering would be worse than
-    // leaving it, so `lang` marks the name as belonging to the other language when the page is
-    // Chinese, which is what tells the browser to pick the Latin font for it rather than the
-    // CJK one.
-    //
-    // Two words, because one cannot be true in both states. This said "Now playing" always, which
-    // was a lie on 22 of the 23 cards — nothing was playing. The alternative of picking a single
-    // safer word ("Preview") would be honest but wasted something: renderList already re-runs on
-    // play and on close, so the label can just follow the state at no cost.
-    //
-    // What that buys is more than accuracy. Only one preview can sound at a time, so exactly one
-    // card can ever read "Now playing" — which makes this a marker for *which* card is the one
-    // making noise, findable after you have scrolled away from it. The caption became a state
-    // indicator by being made truthful, which is usually the direction that goes.
-    const isPlaying = activePlayerIndex === i;
-    const nowPlaying = entry.audio && entry.audioTrack
-      ? `<span class="year-now-playing${isPlaying ? ' is-playing' : ''}">${esc(isPlaying ? S.nowPlaying : S.previewTrack)}: <span class="year-now-playing-track" lang="en">${esc(entry.audioTrack)}</span></span>`
-      : '';
+    // `audioTrack` stays in the data. It cost a catalogue round-trip per album to resolve and
+    // nothing to carry, and this is a presentation decision that may well go the other way once
+    // the row is designed rather than accumulated.
     // The preview answers "what does this sound like"; this answers "where do I go to hear the
     // rest of it". They are different questions and the 30-second clip was only ever answering
     // the first one, so the card dead-ended right at the point the reader was most interested.
@@ -391,7 +372,7 @@ function renderList() {
           <div class="year-artist">${esc(entry.artist)}${entry.label ? `<span class="year-label"> · ${esc(entry.label)}</span>` : ''}</div>
           ${tags ? `<div class="year-tags">${tags}</div>` : ''}
           ${review}
-          ${audio || appleMusic ? `<div class="year-actions">${audio}${appleMusic}${nowPlaying}</div>` : ''}
+          ${audio || appleMusic ? `<div class="year-actions">${audio}${appleMusic}</div>` : ''}
         </div>
       </article>
     `;

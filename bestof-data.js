@@ -19521,7 +19521,8 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Electronic"
     ],
-    "review": "",
+    "review": "细碎且不规则的电子节拍、背景里时有时无的诡异音效，像在热带的梦里穿行",
+    "reviewEn": "Fine, irregular electronic pulses, with strange sounds drifting in and out behind them - like walking through a tropical dream.",
     "context": "",
     "tracks": [],
     "yearRank": 11
@@ -19544,7 +19545,8 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Electronic"
     ],
-    "review": "",
+    "review": "献给舞池上所有的鲜血、暴力与眼泪",
+    "reviewEn": "To all the bloodshed, violence and tears on the dancefloor.",
     "context": "",
     "tracks": [],
     "yearRank": 4
@@ -20325,7 +20327,8 @@ const BEST_OF_ENTRIES = [
       "Pop/R&B",
       "Electronic"
     ],
-    "review": "",
+    "review": "在body talk的舞池告白和honey的静水流深之后，流行乐坛好像第一次在sexistential跟上了罗宾的步伐。但我真的很喜欢专辑里的每一首歌，喜欢talk to me宣言般的自信，喜欢into the sun高昂得像是要飞向太阳的副歌。也许，这就已经足够",
+    "reviewEn": "After the dancefloor confessions of Body Talk and the still depths of Honey, Sexistential is the first time pop seems to have caught up with Robyn rather than the other way round. But I love every song on it - the declarative confidence of Talk to Me, the chorus of Into the Sun climbing like it means to reach the sun itself. Maybe that is already enough.",
     "context": "",
     "tracks": [],
     "yearRank": 20
@@ -20374,7 +20377,8 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Electronic"
     ],
-    "review": "",
+    "review": "在Boards of Canada消失的13年之间，整个世界开始追上两兄弟的脚步。当怀旧已经不再是时代之声，一度前卫的IDM变成lofi study beats，它激起的情感也被滥制的短视频音效冲淡——我们正被赶进一个以童年阴影为主题的廉价鬼怪屋。我想，boc想要通过《Inferno》告诉我们的正是如此：怀旧可以是超越体验的，它的滥用也可能是危险、甚至是阴森可怖的。你听，Arena Americanada多像是对蒸汽波的末日解构，Word Becomes Flesh又多像是对自身风格的颠覆：所有的孩童呓语消失了，只剩下再也无法辨清的字句",
+    "reviewEn": "In the thirteen years Boards of Canada were gone, the world caught up with the brothers. Nostalgia is no longer the sound of the era; the IDM that was once avant-garde has become lo-fi study beats, and the feeling it used to raise has been thinned out by mass-produced short-video sound design - we are being herded into a cheap haunted house themed on childhood dread. I think that is exactly what Inferno is here to tell us: nostalgia can be something beyond experience, and overusing it can be dangerous, even sinister. Listen to how much Arena Americanada plays like an apocalyptic deconstruction of vaporwave, and how much Word Becomes Flesh overturns their own style: the children's murmuring is all gone, and what is left can no longer be made out as words at all.",
     "context": "",
     "tracks": [],
     "yearRank": 1
@@ -20397,7 +20401,8 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Pop/R&B"
     ],
-    "review": "",
+    "review": "Olivia Rodrigo终于在她最爱的九十年代alt rock灵感池里萃炼出自己的风格。从Liz Phair的“Glory”到Smashing Pumpkins的“Disarm”，这首歌在清澈但令人不安的扫弦里氛围层层递进，弦乐的加入也仿佛为心碎添了色彩，最终在情绪的高点骤然释放；在结尾混乱的鼓声和她的尖叫里，Olivia忽然醒悟了自卑是毒—如果不能正视自己的insecurities，再多的爱也不会是解药",
+    "reviewEn": "Olivia Rodrigo has finally distilled a style of her own out of the nineties alt-rock she loves most. From Liz Phair's Glory to Smashing Pumpkins' Disarm, the song builds in layers over clean but uneasy strumming, the strings arriving like colour added to heartbreak, until it breaks open at the emotional peak; and in the chaos of drums and her own scream at the end, Olivia realises all at once that self-loathing is a poison - if you cannot face your own insecurities, no amount of love will be the cure.",
     "context": "",
     "tracks": [],
     "yearRank": 15
@@ -20466,7 +20471,8 @@ const BEST_OF_ENTRIES = [
       "Folk",
       "Pop/R&B"
     ],
-    "review": "",
+    "review": "不是不喜欢Americana，但是上张专辑的那种诡异的南部哥特美学特质这里温和太多，少了一些突如其来的时刻。用猫借喻codependency是个巧妙的想法，但同样的主题写一整张专辑，多少有些审美疲劳",
+    "reviewEn": "Not that I dislike the Americana, but the uncanny Southern Gothic streak of the last record is much gentler here, and the moments that used to arrive out of nowhere are mostly gone. Cats as a figure for codependency is a clever idea; stretched across a whole album, the one theme starts to tire.",
     "context": "",
     "tracks": [],
     "yearRank": 21
@@ -20556,7 +20562,8 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Pop/R&B"
     ],
-    "review": "",
+    "review": "比起上张专辑的古灵精怪，Grace Ives的新作品多了一层成熟的反思，这让她的音乐兼具合成器的张扬和创作人的真诚。随着indiesleaze元素回潮，我觉得她会是下一个时代很值得关注的音乐人",
+    "reviewEn": "Where the last record ran on quirk, this one adds a layer of grown-up reflection, so the synths still show off while the writing stays honest. With indie sleaze coming back round, she looks like one of the people worth watching in whatever the next era turns out to be.",
     "context": "",
     "tracks": [],
     "yearRank": 14
@@ -20650,7 +20657,8 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Pop/R&B"
     ],
-    "review": "",
+    "review": "剥去electroclash的光鲜外皮，专辑其实泛着悲伤的底色。主题上我想到的其实是Lana的born to die，那种通过列锦铺陈奢侈品影射消费文化，名利渴望背后是阶层跃迁美国梦的蜃景，挥之不去的是原生家庭的创伤（gas station），直到故事主人公最终被抑郁击垮，她想的还是要如何在葬礼上“看起来漂亮”——物质主义是如何影响一代又一代中产小镇女孩，让她们变成the worst girls in America",
+    "reviewEn": "Peel off the electroclash gloss and the record runs on sadness underneath. What it brings to mind is Lana's Born to Die: the piling up of luxury goods as a way of pointing at consumer culture, the hunger for fame standing in for the mirage of the American dream and its promise of climbing out of your class, and underneath all of it the family damage that will not go away (Gas Station). By the end the protagonist has been broken by depression and is still worrying about how to look pretty at her own funeral - this is what materialism does to one generation of small-town middle-class girls after another, and how it turns them into the worst girls in America.",
     "context": "",
     "tracks": [],
     "yearRank": 3
