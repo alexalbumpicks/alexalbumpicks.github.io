@@ -19,7 +19,10 @@ const BEST_OF_ENTRIES = [
     "artBg": "#181818",
     "artColor": "#999",
     "rating": 4,
-    "tags": [],
+    "tags": [
+      "Pop/R&B",
+      "Girl-group"
+    ],
     "review": "在Phil Spector的声墙烘托下，每一个和弦行进都是那么的盛大隆重。Ronnie Spector透亮的嗓音破墙而出，就像青春期的情绪，每刻都像是踩在令人目眩的尖端。",
     "reviewEn": "Set off by Phil Spector's wall of sound, every chord progression is grand and ceremonial. Ronnie Spector's luminous voice breaks out through the wall like an adolescent emotion, every moment of it poised on some dazzling edge.",
     "context": "",
@@ -205,7 +208,10 @@ const BEST_OF_ENTRIES = [
     "artBg": "#181818",
     "artColor": "#999",
     "rating": 4,
-    "tags": [],
+    "tags": [
+      "Rock",
+      "Protopunk"
+    ],
     "review": "",
     "context": "",
     "tracks": [],
@@ -225,7 +231,10 @@ const BEST_OF_ENTRIES = [
     "artBg": "#181818",
     "artColor": "#999",
     "rating": 5,
-    "tags": [],
+    "tags": [
+      "Rock",
+      "Singer-songwriter"
+    ],
     "review": "",
     "context": "",
     "tracks": [],
@@ -268,7 +277,10 @@ const BEST_OF_ENTRIES = [
     "artBg": "#181818",
     "artColor": "#999",
     "rating": 4,
-    "tags": [],
+    "tags": [
+      "Pop/R&B",
+      "Baroque pop"
+    ],
     "review": "",
     "context": "",
     "tracks": [],
@@ -381,7 +393,10 @@ const BEST_OF_ENTRIES = [
     "artBg": "#181818",
     "artColor": "#999",
     "rating": 5,
-    "tags": [],
+    "tags": [
+      "Rock",
+      "Krautrock"
+    ],
     "review": "",
     "context": "",
     "tracks": [],
@@ -493,7 +508,10 @@ const BEST_OF_ENTRIES = [
     "artBg": "#181818",
     "artColor": "#999",
     "rating": 4,
-    "tags": [],
+    "tags": [
+      "Electronic",
+      "Ambient"
+    ],
     "review": "音效古旧也难掩那悠长的气韵",
     "reviewEn": "The sounds are antique, and even so nothing hides how long and how far the feeling carries.",
     "context": "",
@@ -514,7 +532,10 @@ const BEST_OF_ENTRIES = [
     "artBg": "#181818",
     "artColor": "#999",
     "rating": 5,
-    "tags": [],
+    "tags": [
+      "Electronic",
+      "Ambient"
+    ],
     "review": "",
     "context": "",
     "tracks": [],
@@ -556,7 +577,10 @@ const BEST_OF_ENTRIES = [
     "artBg": "#181818",
     "artColor": "#999",
     "rating": 5,
-    "tags": [],
+    "tags": [
+      "Classical",
+      "Minimalism"
+    ],
     "review": "",
     "context": "",
     "tracks": [],
@@ -17200,27 +17224,6 @@ const BEST_OF_ENTRIES = [
   {
     "type": "album",
     "year": 1978,
-    "title": "Music for 18 Musicians",
-    "artist": "Steve Reich",
-    "tagline": "",
-    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ee/b6/d8/eeb6d89e-db8f-31a1-3311-cc62d51283a9/dj.ywsbbtvb.jpg/600x600bb.jpg",
-    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/78/e9/83/78e983e5-f2bd-6ded-b07e-6a02a9e97af6/mzaf_7643455627402227728.plus.aac.p.m4a",
-    "tier": "",
-    "artBg": "#181818",
-    "artColor": "#999",
-    "rating": 5,
-    "tags": [
-      "Classical",
-      "Minimalism"
-    ],
-    "review": "",
-    "context": "",
-    "tracks": [],
-    "yearRank": 1
-  },
-  {
-    "type": "album",
-    "year": 1978,
     "title": "Third",
     "artist": "Big Star",
     "tagline": "",
@@ -17237,7 +17240,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 2
+    "yearRank": 1
   },
   {
     "type": "album",
@@ -17257,7 +17260,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 3
+    "yearRank": 2
   },
   {
     "type": "album",
@@ -17279,7 +17282,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 3
   },
   {
     "type": "album",
@@ -17299,7 +17302,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 5
+    "yearRank": 4
   },
   {
     "type": "album",
@@ -17320,7 +17323,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 6
+    "yearRank": 5
   },
   {
     "type": "album",
@@ -17342,7 +17345,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 7
+    "yearRank": 6
   },
   {
     "type": "album",
@@ -17363,7 +17366,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 8
+    "yearRank": 7
   },
   {
     "type": "album",
@@ -17384,7 +17387,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 9
+    "yearRank": 8
   },
   {
     "type": "album",

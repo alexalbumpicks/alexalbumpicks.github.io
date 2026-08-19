@@ -207,6 +207,25 @@ TITLE_FIX = {
     # Same three-way '&'/'and'/'+' fold as Crosby, Stills & Nash above. G.amp settles it for
     # *resolving*, but the written entry carries Apple's spelling, so the sheet row needs the
     # mapping to find it again.
+    # The row that got away: without this the sheet's bare title matched nothing, the row read as
+    # new, and the build appended a second copy of a record already on the site - which is exactly
+    # what this block exists to stop, and it had already happened by the time anyone looked. The
+    # duplicate is retired at schema v48.
+    #
+    # Unlike every other mapping here, this one does not make the row import cleanly - it makes it
+    # *fail loudly*. The sheet files the album at 1978, its ECM release; the site has it at 1976,
+    # when it was recorded. So the row now finds its entry and then trips the year-mismatch branch
+    # in build2020s, which reports and skips. That is the wanted behaviour: a year disagreement is
+    # Alex's call, not the importer's, and the alternative to a printed warning is silently moving
+    # the album out of the "Origins" era or silently duplicating it again. Deliberately not in
+    # YEAR_FIX, which is only for years the release date proves wrong - 1978 is not wrong.
+    'Music for 18 Musicians':       'Reich: Music for 18 Musicians',
+    # Same shape, caught while fixing the above, and still unexploded: the site carries the short
+    # title and nothing has re-run this year set since, so the row has not had the chance to append
+    # its second copy yet. Both halves agree on 1964, so unlike Reich this one will simply match
+    # and backfill.
+    'Presenting the Fabulous Ronettes featuring Veronica':
+        'Presenting the Fabulous Ronettes',
     'Slanted and Enchanted':        'Slanted & Enchanted',
     'Beers, Steers and Queers':     'Beers, Steers + Queers',
     'Architecture And Morality':    'Architecture & Morality',
