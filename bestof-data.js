@@ -494,7 +494,8 @@ const BEST_OF_ENTRIES = [
     "artColor": "#999",
     "rating": 4,
     "tags": [],
-    "review": "",
+    "review": "音效古旧也难掩那悠长的气韵",
+    "reviewEn": "The sounds are antique, and even so nothing hides how long and how far the feeling carries.",
     "context": "",
     "tracks": [],
     "yearRank": 7
@@ -579,7 +580,8 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Post Punk"
     ],
-    "review": "",
+    "review": "Colossal Youth把一个点子做到了极致：一个心不在焉的女声，几句对世界的想法，背景里两下古早合成器，节奏吉他代偿鼓手的缺席——也许这就是后朋克的另一种极简可能性",
+    "reviewEn": "Colossal Youth takes a single idea as far as it will go: an absent-minded woman's voice, a few thoughts about the world, two strokes of an ancient synthesiser in the background, a rhythm guitar making up for the missing drummer. Perhaps this is the other minimal possibility open to post-punk.",
     "context": "",
     "tracks": [],
     "side": "right",
@@ -2050,7 +2052,8 @@ const BEST_OF_ENTRIES = [
     "artColor": "#999",
     "rating": 4,
     "tags": [],
-    "review": "",
+    "review": "是Freak folk运动的高点，却只是Joanna Newsom的起点。和Bon Iver一样，她后来的创作还会经历几次内容和形式上的迭代，但这是她的For Emma ever ago，豆芽与豆是她的Skinny love，有些艺术无可替代在于它的immediacy",
+    "reviewEn": "A high point of the Freak folk movement, and only the starting point of Joanna Newsom. Like Bon Iver, her writing would go through several more iterations of content and form, but this is her For Emma ever ago, and Sprout and the Bean is her Skinny love. Some art is irreplaceable for its immediacy.",
     "context": "",
     "tracks": [],
     "yearRank": 17
@@ -4028,7 +4031,7 @@ const BEST_OF_ENTRIES = [
     "type": "album",
     "year": 2000,
     "title": "Stankonia",
-    "artist": "Outkast",
+    "artist": "OutKast",
     "tagline": "",
     "art": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/d6/21/fb/d621fbde-c099-6794-7102-2692f10c4dbb/886448814283.jpg/600x600bb.jpg",
     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d7/20/09/d72009d6-0f15-1408-0a08-3790147dce8b/mzaf_11587486039094755220.plus.aac.p.m4a",
@@ -4583,7 +4586,7 @@ const BEST_OF_ENTRIES = [
     "type": "album",
     "year": 2003,
     "title": "Speakerboxxx/The Love Below",
-    "artist": "Outkast",
+    "artist": "OutKast",
     "tagline": "",
     "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/71/ae/6a/71ae6a46-99a6-e9d8-d7f3-41c0f2df45c4/196872579123.jpg/600x600bb.jpg",
     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6d/8b/8f/6d8b8f8e-851a-5ced-c202-cf7f7235bcf9/mzaf_8899679920886645858.plus.aac.p.m4a",
@@ -5069,7 +5072,15 @@ const BEST_OF_ENTRIES = [
       "Hip hop"
     ],
     "review": "觉得没有mixtape好（可能采样没有拿到版权？）但是真的可以想象作为出道专辑的震撼，就连单薄也仿佛成了美学风格。在MIA的y2k万花筒世界民俗志里，electroclash是她的闪光弹，她把辗转流离的苦难化作琅琅上口的唱词，锤炼成书写个人史的武器。没有MIA，不会有刚出道的Lady gaga，也不会有vroom vroom时期的Charli xcx",
-    "reviewEn": "Not as good as the mixtapes, I think (maybe the samples could not be cleared?), but you can really imagine the shock of it as a debut, where even the thinness comes to feel like an aesthetic. In M.I.A.'s y2k kaleidoscopic world ethnography, electroclash is her flashbang; she turns the suffering of being displaced into hooks you can sing along to and forges them into a weapon for writing her own history. Without M.I.A. there is no Lady Gaga at the start of her career, and no Charli xcx of the vroom vroom era.",
+    "reviewEn": "Not as good as the mixtape, I think (maybe the samples could not be cleared?), but you can really imagine the shock of it as a debut, where even the thinness comes to feel like an aesthetic. In M.I.A.'s y2k kaleidoscopic world ethnography, electroclash is her flashbang; she turns the suffering of being displaced into hooks you can sing along to and forges them into a weapon for writing her own history. Without M.I.A. there is no Lady Gaga at the start of her career, and no Charli xcx of the vroom vroom era.",
+    "reviewLinks": [
+      {
+        "zh": "mixtape",
+        "en": "mixtape",
+        "year": 2004,
+        "title": "Piracy Funds Terrorism"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 10
@@ -5519,7 +5530,8 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Pop/R&B"
     ],
-    "review": "",
+    "review": "Futuresex/lovesounds, Blackout和这张大概是流行音乐节奏型最复杂的一段时间了吧。不过Timbaland这套听多了就不想再听了！",
+    "reviewEn": "Futuresex/lovesounds, Blackout and this one are probably the stretch when pop music's rhythm patterns were at their most complicated. Though once you have heard enough of Timbaland's routine you never want to hear it again!",
     "context": "",
     "tracks": [],
     "yearRank": 14
@@ -6284,7 +6296,8 @@ const BEST_OF_ENTRIES = [
       "Folk",
       "Progressive folk"
     ],
-    "review": "",
+    "review": "《Ys》之后，Joanna Newsom做出了更宏伟更有野心的作品。\"And everywhere I tried to love you is yours again\" 一种徒劳，一种心痛，让我想起《乔万尼的房间》的结局，主人公也是这样决然地将目光投向乔万尼的寓所，仿佛所有的回忆都在这个空间里实体化。洋洋洒洒两小时CD翻了三面，竟是末尾“tried to”两词笔力最深厚：这段情真的存在过吗？",
+    "reviewEn": "After Ys, Joanna Newsom made something grander and more ambitious. \"And everywhere I tried to love you is yours again\": a futility, a heartache, and it puts me in mind of the ending of Giovanni's Room, where the narrator turns his eyes toward Giovanni's rooms with the same finality, as though every memory had taken solid form inside that space. Two sprawling hours across three sides of CD, and in the end it is the two words tried to that carry the heaviest stroke: did this love ever really exist?",
     "context": "",
     "tracks": [],
     "yearRank": 1
@@ -6516,7 +6529,8 @@ const BEST_OF_ENTRIES = [
       "Progressive folk",
       "Baroque pop"
     ],
-    "review": "",
+    "review": "实在很应景，那种年岁渐长激情褪去的苦涩和找不到方向的忧愁，好巧不巧还是在Seattle。“In that dream I could hardly contain it”，最近一次感受到这种做梦般纯粹的欣喜又是什么时候呢",
+    "reviewEn": "It fits the moment far too well: the bitterness of getting older and watching the passion drain away, the sadness of having no direction, and as luck would have it in Seattle of all places. \"In that dream I could hardly contain it\". When was the last time I felt a joy that pure, that much like a dream?",
     "context": "",
     "tracks": [],
     "yearRank": 2
@@ -6663,7 +6677,8 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Synthpop"
     ],
-    "review": "",
+    "review": "是大声做梦的声音啊。都快忘了还有这样一个时代，最好的音乐也是最外放、最振奋人心的。",
+    "reviewEn": "This is the sound of dreaming out loud. I had almost forgotten there was an era like this, when the best music was also the most outward-facing and the most stirring.",
     "context": "",
     "tracks": [],
     "yearRank": 9
@@ -6977,7 +6992,8 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Folk"
     ],
-    "review": "",
+    "review": "好适合在晴朗的秋天听啊。早期的Angel Olsen写歌太heart on a sleeve了，满纸都是激情的幻像，让我想在某些时刻融化在旋律里面。",
+    "reviewEn": "So well suited to a clear autumn. Early Angel Olsen writes far too much heart on a sleeve, the pages full of the phantoms of passion, and at certain moments it makes me want to melt into the melody.",
     "context": "",
     "tracks": [],
     "yearRank": 16
@@ -7455,7 +7471,8 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Dream pop"
     ],
-    "review": "",
+    "review": "受尽虐待的女人。做Brooklyn baby的女人。做情妇的女人。一路睡上顶端的女人。想要money power glory的女人。说到底，她们都是\"the other woman\"，而其中的ultraviolence，正是被父权制\"Other-ed\"的这个动作本身",
+    "reviewEn": "The woman who got abused. The woman who is a Brooklyn baby. The woman who is a mistress on the side. The woman who fucked her way to the top. The woman who wants money power glory. At the end of the day, they are all \"the other woman\" and the ultraviolence within is the act of being \"Other-ed\" from the patriarchy",
     "context": "",
     "tracks": [],
     "yearRank": 8
@@ -7516,7 +7533,8 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Slacker rock"
     ],
-    "review": "",
+    "review": "她和Mitski都有一个从indie悲伤女孩进化成lofi slack rocker的爆发性时刻，她是这张，Mitski是bury me。从这张开始Angel开始尝试一种层层递进的摇滚写作，也是下专转型华丽摇滚的过度。",
+    "reviewEn": "She and Mitski both have that explosive moment of turning from indie sad girl into lofi slack rocker: for her it is this record, for Mitski it is bury me. From here on Angel starts trying a kind of rock writing that builds layer on layer, which is also the crossing over to the glam turn of the next album.",
     "context": "",
     "tracks": [],
     "yearRank": 9
@@ -7660,7 +7678,8 @@ const BEST_OF_ENTRIES = [
       "Folk",
       "Americana"
     ],
-    "review": "",
+    "review": "掷地有声的头韵尾韵，回环往复的生死象征。人生是一场缓慢的疾病，Joanna Newsom选择相信爱让一切不是徒劳。想到这些深省的文字可能是写给她丈夫Andy Samberg的，又不禁想笑。无形之中也算是印证了她的观点吧",
+    "reviewEn": "Alliteration and rhyme that land with real weight, symbols of life and death circling back on themselves. Life is a slow illness, and Joanna Newsom chooses to believe that love keeps it all from being in vain. Then it occurs to you that these searching lines may have been written for her husband Andy Samberg, and you cannot help laughing. Which, without meaning to, rather proves her point.",
     "context": "",
     "tracks": [],
     "yearRank": 6
@@ -7997,7 +8016,8 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Hip-hop"
     ],
-    "review": "",
+    "review": "Atrocity exhibition 就像一场缓慢而痛苦的Panic attack，Danny Brown在这么多人的专辑里逗笑捧哏，但在这里，就连他标志性的尖笑都像是求救的信号。印象最深刻是Ain’t it funny的beats，滑稽的萨克斯是那样的令人不安，活像怪诞马戏团的freak show——音乐人用酒精和药品燃烧生命，换来的是艺术变成商品，被复制、变成可重复的娱乐。",
+    "reviewEn": "Atrocity exhibition plays like a slow and painful Panic attack. Danny Brown has been the laughing sidekick on so many other people's records, but here even his signature shriek of a laugh sounds like a call for help. What stays with me most are the beats on Ain't it funny, the comic saxophone so deeply unsettling, exactly the freak show of some grotesque circus: musicians burn their lives on alcohol and pills, and what they get back is art turned into a commodity, copied, made into repeatable entertainment.",
     "context": "",
     "tracks": [],
     "yearRank": 7
@@ -8309,7 +8329,8 @@ const BEST_OF_ENTRIES = [
       "Hip-hop",
       "Electronic"
     ],
-    "review": "",
+    "review": "《Big Fish Theory》凌厉的鼓点、尖锐的Techno节拍是Vince Staples爆红后矛盾心绪的直接写照：那个Ramona Park的小镇青年终于成了池塘里的大鱼，但名利、金钱和纵欲真的是他需要的吗？它的极大主义代表了嘻哈音乐一条可能走的路，可惜世上再无Sophie Xeon，Vince近年的作品也趋向更质朴的表达，唯有这张专辑作为彼时hiphop的一张剪影留下来",
+    "reviewEn": "The sharp drums and cutting Techno beats of Big Fish Theory are a direct picture of Vince Staples's divided mind after fame hit: the small-town kid from Ramona Park has finally become the big fish in the pond, but are reputation, money and indulgence really what he needs? Its maximalism stood for one road hip hop might have taken, but there is no Sophie Xeon in the world any more, and Vince's recent work leans toward plainer expression, leaving only this record behind as a silhouette of the hiphop of its moment.",
     "context": "",
     "tracks": [],
     "yearRank": 7
@@ -8996,7 +9017,8 @@ const BEST_OF_ENTRIES = [
       "Baroque pop",
       "Singer-songwriter"
     ],
-    "review": "",
+    "review": "当之无愧的Modern Classic！它是经典的：Karen Carpenter一般醇厚的女中音，Harry Nilsson爆发式的高昂副歌，媲美《Pet Sounds》的器乐间奏。它又是前瞻的：氛围和电子音乐在水下的碰撞，气候变暖的预警，covid-19的异兆发悲音，爱与情欲的分离，文艺作品原样复制的不可能，直指现代社会里每个人的孤独。过去的几年里我着魔了一般听这张专辑，对它的喜爱一升再升，失落时听，悲伤时听，因为it's high time, you learn to get by",
+    "reviewEn": "A Modern Classic, and it has earned every word of that. It is classic: a mezzo as full-bodied as Karen Carpenter's, choruses that break open and soar like Harry Nilsson's, instrumental passages to set beside Pet Sounds. And it looks forward: ambient and electronic music colliding underwater, a warning about a warming climate, an omen of covid-19 sounding its grief early, love split off from desire, the impossibility of copying a work of art exactly, all of it pointing straight at how alone every person is in modern society. These past few years I have listened to this record as though possessed and my love for it climbs higher and higher, listening when I am adrift, listening when I am sad, because it's high time, you learn to get by.",
     "context": "",
     "tracks": [],
     "yearRank": 4
@@ -9018,7 +9040,8 @@ const BEST_OF_ENTRIES = [
       "Pop",
       "Baroque pop"
     ],
-    "review": "",
+    "review": "Angel Olsen的音乐一直会让我想到我挚爱的Nick Drake，她早期的民谣展现了旋律的阴柔和悒郁，All Mirrors跟Ben Babbitt的合作更是把她音乐里冲突、诡异的一面托了出来。她永远知道如何给一张专辑作结：《Chance》是令人心碎的。永远有多远？为什么我们不能现在开心呢？Bridge突然安静了下来。就像起起伏伏的chamber pop抓马了一整张专辑，她终于吐露真言",
+    "reviewEn": "Angel Olsen's music always takes me back to my beloved Nick Drake; her early folk showed melody at its softest and most melancholy, and on All Mirrors the collaboration with Ben Babbitt brings out the conflicted, uncanny side of her writing. She always knows how to end a record: Chance is heartbreaking. How far away is forever? Why can't we be happy now? The bridge suddenly goes quiet. As though the chamber pop had spent a whole album rising and falling in high drama, and she finally says the true thing.",
     "context": "",
     "tracks": [],
     "yearRank": 5
@@ -10941,7 +10964,8 @@ const BEST_OF_ENTRIES = [
       "Pop/R&B",
       "Rock"
     ],
-    "review": "",
+    "review": "和前作相比Hearts aglow的音乐性确实弱了不少，但这种含蓄其实也很贴切她想表达的这种“不确定”的情绪。Natalie Mering一直很喜欢写爱情里的摇摆不定，这张专辑在内容上的探索也更进一步：渐入佳境的B面叙写了一个女人逐渐卸下防备(hearts aglow)，再到怀疑猜忌(twin flame)，最后如梦初醒(the worst is done)的全过程。果然多情的女子得到泪珠。我想惨妇音乐不过如此了吧！",
+    "reviewEn": "Set against the record before it, Hearts aglow is a good deal weaker as music, but that reticence actually suits the uncertainty she wants to express. Natalie Mering has always liked to write the wavering inside love, and here the exploration goes a step further: a B side that gets better as it goes traces the whole course of a woman lowering her guard (hearts aglow), then falling into doubt and suspicion (twin flame), and waking at last as if from a dream (the worst is done). The tender-hearted woman gets her tears, sure enough. I think sad-woman music does not get any better than this!",
     "context": "",
     "tracks": [],
     "yearRank": 23
@@ -11962,7 +11986,8 @@ const BEST_OF_ENTRIES = [
       "Electronic",
       "Folktronica"
     ],
-    "review": "",
+    "review": "掷出的剑，燃烧的心，上升的一切必将汇合。\"他飞得离太阳太近了。\"Blonde Redhead的主唱Kazu曾这样评价Sufjan，我想我也要感谢他赤裸的灵魂：永远最真诚，最勇敢，最无私地把这些切肤之痛剖出来。",
+    "reviewEn": "The blade thrown, the heart burning, everything that rises must converge. \"He flew too close to the sun.\" Kazu of Blonde Redhead once said that of Sufjan, and I think I owe his naked soul my thanks too: always the most honest, the bravest, the most selfless in cutting this pain of his own skin open for us.",
     "context": "",
     "tracks": [],
     "yearRank": 3
@@ -12118,7 +12143,8 @@ const BEST_OF_ENTRIES = [
       "Hip-hop",
       "Jazz rap"
     ],
-    "review": "",
+    "review": "是我今年听过最好听的Jazz-rap，短短28分钟展现出无限的可能性。第一首歌引用了Toni Morrison记叙black urban life的《Jazz》，昭示着这张专辑的主题表达始于爵士，却又远远不仅只是爵士乐本身",
+    "reviewEn": "The best-sounding Jazz-rap I have heard this year, showing limitless possibility in a mere 28 minutes. The opening song quotes Jazz, Toni Morrison's account of black urban life, announcing that what this record has to say begins with jazz and goes far beyond jazz itself.",
     "context": "",
     "tracks": [],
     "yearRank": 11
@@ -12585,7 +12611,8 @@ const BEST_OF_ENTRIES = [
       "Electronic",
       "Deep house"
     ],
-    "review": "",
+    "review": "高点是很高的。有无数的小细节从节拍的间隙冒出来，像迸溅的火花，作为舞曲专辑也有不少旋律上的记忆点。是非常迅速及时的多巴胺来源，深夜听得很醒神",
+    "reviewEn": "The high points are very high. Countless small details come up out of the gaps in the beat like sparks flying off, and for a dance record there are plenty of melodies that stay with you. A very fast, very timely source of dopamine, and bracing to listen to late at night.",
     "context": "",
     "tracks": [],
     "yearRank": 13
@@ -12808,7 +12835,8 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Americana"
     ],
-    "review": "",
+    "review": "反正Jeff Tweedy已经进入了人淡如菊模式，每次发新专我都会收获一点小惊喜，然后又很快地把他们都忘掉。Cate Lebon的制作是个改变的好开始，但大部分的歌还是hooked into the same groove，Wilco需要做一首特别点的歌。",
+    "reviewEn": "Jeff Tweedy has settled into a serene and unhurried mode by now; every new record hands me a small pleasant surprise and then I forget all of them just as fast. Cate Lebon's production is a good place to start changing, but most of the songs are still hooked into the same groove. Wilco needs to write one song that is genuinely out of the ordinary.",
     "context": "",
     "tracks": [],
     "yearRank": 41
@@ -12874,7 +12902,8 @@ const BEST_OF_ENTRIES = [
       "Pop/R&B",
       "Latin pop"
     ],
-    "review": "",
+    "review": "《Orquideas》是一趟从精神到身体的旅程：它从Como Asi承接前作的浓郁中引出轻快的鼓点，到Te Mata她少见的真声Bolero献唱，再在Muevete愈跳愈快的节拍声中收尾，它对传统的再演绎和流派探索的广博，无不证明着Kali Uchis是如今拉丁音乐最虔信的学生，也是她Isolation之后最完善、最有深度的作品。",
+    "reviewEn": "Orquideas is a journey from the spirit to the body: out of Como Asi, which draws a light-footed drum pattern from the richness it inherits from the last record, on to Te Mata and a rare Bolero sung in her full voice, and out on the ever-quickening beat of Muevete. Its reworking of tradition and the breadth of its reach across genres both prove Kali Uchis the most devout student Latin music has right now, and this her most complete and most searching work since Isolation.",
     "context": "",
     "tracks": [],
     "yearRank": 2
@@ -12916,7 +12945,8 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Rock"
     ],
-    "review": "",
+    "review": "作为一度复兴蓝调摇滚的代表人物，Brittany Howard很会唱、很能唱，但她的才华绝不仅仅止于“会唱”。在21年Jamie Reimagined对舞曲小试牛刀之后，《What Now》上至高能的dnb和house，下至松弛的groovy jazz，无不展现出她对风格惊人的掌控力。很难想象Alabama Shakes当年的巨大成功对如今的她可能只是印迹",
+    "reviewEn": "As the figure who once brought blues rock back, Brittany Howard can really sing, and sing hard, but her gift stops nowhere near singing. After trying her hand at dance music on Jamie Reimagined in 2021, What Now runs from high-energy dnb and house at the top end to loose, groovy jazz at the other, and shows an astonishing command of style all the way through. It is hard to imagine that the enormous success of Alabama Shakes may be no more than a trace on her now.",
     "context": "",
     "tracks": [],
     "yearRank": 7
@@ -13043,7 +13073,8 @@ const BEST_OF_ENTRIES = [
       "Electronic",
       "Folktronica"
     ],
-    "review": "",
+    "review": "喜欢Helado Negro音乐里那些忽然慢下来的诗性时刻。专辑在暗处收尾，偶尔有灵动的鼓声，背景里的浅唱和随性的几声琴弦。音乐在这里戛然而止：也许就像他说的那般，一切都是美的幻象",
+    "reviewEn": "I love the moments in Helado Negro's music where it suddenly slows into poetry. The record ends somewhere dark, with the occasional quick-witted drum, a low singing in the background and a few offhand strings. The music breaks off right there: perhaps, just as he says, all of it is a beautiful illusion.",
     "context": "",
     "tracks": [],
     "yearRank": 13
@@ -13704,7 +13735,8 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Country"
     ],
-    "review": "",
+    "review": "都说是minor Dylan但是对我来说真的很悦耳哦，果然每个伟大的美国唱作人都有一个乡村根源梦",
+    "reviewEn": "Everyone calls it minor Dylan but to my ear it really is lovely, and sure enough every great American songwriter has a dream of country roots in him.",
     "context": "",
     "tracks": [],
     "yearRank": 11
@@ -13828,7 +13860,8 @@ const BEST_OF_ENTRIES = [
       "Dream pop",
       "Slowcore"
     ],
-    "review": "",
+    "review": "开头的《Fade Into You》是黄昏，收尾的同名曲是午夜，晨昏之间的limbo，是这张专辑构筑的美国哥特式景观。有个浪漫的开头，荒芜的结尾却活像鬼片，让我想起大卫林奇的电影",
+    "reviewEn": "Fade Into You at the start is dusk, the title track that closes is midnight, and the limbo between the two is the American gothic landscape this record builds. It opens romantic and ends on a desolation that plays exactly like a horror film, which puts me in mind of the films of David Lynch.",
     "context": "",
     "tracks": [],
     "yearRank": 1
@@ -14101,7 +14134,8 @@ const BEST_OF_ENTRIES = [
       "dream pop",
       "folk rock"
     ],
-    "review": "",
+    "review": "有一半是非常典的4AD哥特仙音，另一半是标准的九十年代alt radio rock。Tanya Donnelly的声音有点像Elizabeth Fraser，在一些鬼魅的时刻我以为专辑终于要变得有趣了，结果下一首还是流行吉他...很多歌原本是为了breeders的二专准备的，风格割裂估计也和这个有关吧",
+    "reviewEn": "Half of it is textbook 4AD gothic ethereal, the other half standard nineties alt radio rock. Tanya Donnelly's voice is a little like Elizabeth Fraser's, and in a few ghostly moments I thought the record was finally about to get interesting, only for the next song to be pop guitar again... a lot of these were originally meant for the breeders' second album, which probably has something to do with how split the styles are.",
     "context": "",
     "tracks": [],
     "yearRank": 13
@@ -14798,7 +14832,7 @@ const BEST_OF_ENTRIES = [
     "type": "album",
     "year": 1998,
     "title": "Aquemini",
-    "artist": "Outkast",
+    "artist": "OutKast",
     "tagline": "",
     "art": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/09/d1/dc/09d1dccf-7ff4-02b6-9613-942a6d140452/730082605328.jpg/600x600bb.jpg",
     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/03/37/63/0337636b-1212-85a9-78c7-4da9a6339f0f/mzaf_11650986290704807659.plus.aac.p.m4a",
@@ -15615,7 +15649,8 @@ const BEST_OF_ENTRIES = [
       "Folk",
       "Singer-songwriter"
     ],
-    "review": "",
+    "review": "相见恨晚的作品，词和曲都是极好的。半路出家的Leonard Cohen指弹这时快那时慢，仿佛每一个和弦都在和你讲故事",
+    "reviewEn": "A record I only wish I had met sooner, the words and the music both wonderful. Leonard Cohen came to this late, and his fingerpicking runs fast here and slow there, as though every chord were telling you a story.",
     "context": "",
     "tracks": [],
     "yearRank": 3
@@ -15677,7 +15712,8 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Folk rock"
     ],
-    "review": "",
+    "review": "平衡了六十年代的迷幻和七十年代的jam band，所有人各玩各的却又独自美丽。已经熟稔了Stephen Stills的精巧指弹和Neil Young的随性慢摇，万万没想到最喜欢Richie Furay写的Sad Memory，有种超脱时代的动人",
+    "reviewEn": "It balances the psychedelia of the sixties against the jam band of the seventies, everyone off playing their own thing and each of them lovely alone. Stephen Stills's fine fingerpicking and Neil Young's easy slow sway were already familiar, so it came as a complete surprise that my favourite is Sad Memory, written by Richie Furay, moving in a way that stands outside its era.",
     "context": "",
     "tracks": [],
     "yearRank": 4
@@ -15996,7 +16032,8 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Singer-songwriter"
     ],
-    "review": "",
+    "review": "民谣、迷幻和室内乐，七十年代好多这种什么流派都来一把的唱作人专辑。不过技术非常过硬，Stills is clearly the Julien Baker of the group",
+    "reviewEn": "Folk, psychedelia and chamber music: the seventies were full of singer-songwriter records that take a turn at every genre going. The playing is rock solid, though. Stills is clearly the Julien Baker of the group.",
     "context": "",
     "tracks": [],
     "yearRank": 10
@@ -17029,7 +17066,8 @@ const BEST_OF_ENTRIES = [
       "Art rock",
       "Ambient"
     ],
-    "review": "",
+    "review": "谁想到50年后脱下时代滤镜听感最好的不是前面那些炫技的synthpop electrofunk而是by this river的几声和弦...看似笨拙的缓慢按下几个琴键，却已成为了如今氛围音乐的标配",
+    "reviewEn": "Who would have thought that fifty years on, with the filter of the era taken off, the best of it to the ear is not the showy synthpop and electrofunk up front but the few chords of by this river... a handful of keys pressed slowly and seemingly clumsily, and by now the standard issue of ambient music.",
     "context": "",
     "tracks": [],
     "yearRank": 6
@@ -17070,7 +17108,8 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Protopunk"
     ],
-    "review": "",
+    "review": "惊人的入时，新千年风靡一时的车库复兴从这里抄了不少作业吧！比起大家都很喜欢的《Low》，我更喜欢这里的Bowie。",
+    "reviewEn": "Startlingly current. The garage revival that swept the new millennium copied a good deal of its homework from here! Much as everyone loves Low, I prefer the Bowie on this one.",
     "context": "",
     "tracks": [],
     "yearRank": 7
@@ -18207,7 +18246,8 @@ const BEST_OF_ENTRIES = [
       "Pop",
       "Synthpop"
     ],
-    "review": "",
+    "review": "八十年代经典唱作人在合成器的诱惑下纷纷交出转型尴尬大作，Leonard Cohen是个例外。他的嗓子哑了，表达却也更自由了。声音到不了的地方，就让恬美的女声伴唱来实现吧！很美，也是”where I end and you begin”的隐喻。",
+    "reviewEn": "Lured by the synthesiser, the classic songwriters of the eighties handed in one awkward reinvention after another. Leonard Cohen is the exception. His voice had gone hoarse, and the expression had only grown freer for it. Wherever the voice cannot reach, let the sweet women's backing vocals get there instead! It is beautiful, and it is also a metaphor for \"where I end and you begin\".",
     "context": "",
     "tracks": [],
     "yearRank": 4
@@ -18229,7 +18269,8 @@ const BEST_OF_ENTRIES = [
       "Folk",
       "Alternative rock"
     ],
-    "review": "",
+    "review": "Tracy Chapman的歌声就像在吉他的和弦上跳舞，不到五分钟却写遍了原生家庭的创伤、结构性贫穷的困境和梦想破灭的无奈。得知她是queer，歌词好像又多了一层含义，“I had a feeling that I belonged, a feeling that I could be someone”坐上这辆快车离开这里吧。车且前行，下一站又在何处?",
+    "reviewEn": "Tracy Chapman's singing is like dancing along the chords of the guitar, and in under five minutes she writes her way through the damage a family does, the trap of structural poverty and the helplessness of a dream coming apart. Learning that she is queer, the words seem to take on another layer: \"I had a feeling that I belonged, a feeling that I could be someone\". Get in this fast car and leave here. The car keeps going, but where is the next stop?",
     "context": "",
     "tracks": [],
     "yearRank": 7
@@ -18415,7 +18456,8 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Dream pop"
     ],
-    "review": "",
+    "review": "Paisley Underground是八十年代朋克众多分支中非常贴近根源摇滚和迷幻乐、旋律性非常强的一支。如果它更出名、更主流，早期的朋克也许会更早的抵达电台时期的另类摇滚。脱胎于当地滚圈，Mazzy Star的第一张专辑已经形成了标志性的美学风格，但它依稀还有PU的影子，蓝调味更重，更多地致敬着六十年代经典",
+    "reviewEn": "Paisley Underground was the branch of eighties punk that sat closest to roots rock and psychedelia and carried the strongest melodies of any of them. Had it been better known, more mainstream, early punk might have arrived sooner at the alternative rock of the radio years. Born out of that local scene, Mazzy Star's first record already has the aesthetic that would become their signature, but the shadow of PU is faintly on it still, the blues run heavier, and it pays more of its respects to the classics of the sixties.",
     "context": "",
     "tracks": [],
     "yearRank": 3
@@ -19132,7 +19174,8 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Slowcore"
     ],
-    "review": "",
+    "review": "无形的声浪里，一点点坠入虚空",
+    "reviewEn": "Inside a formless wave of sound, falling little by little into the void.",
     "context": "",
     "tracks": [],
     "yearRank": 9
@@ -19513,7 +19556,8 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Piano rock"
     ],
-    "review": "",
+    "review": "Fiona Apple和Jon Brion的合作是独一无二的：工业风的节拍和变速的鼓点就像芜杂的心绪，也只有她才能轻松驾驭并配上蓝调风的topline。前五首写尽了那一步步抽离割舍的痛，唱片翻个面吃点甜头，立马就变成心甘情愿再次犯错、姿态卑微的痴情女孩了，sad but 我懂她",
+    "reviewEn": "The collaboration between Fiona Apple and Jon Brion is one of a kind: the industrial beats and shifting drum tempos are like a mind in disarray, and only she could ride them so easily and lay a bluesy topline over the top. The first five songs write out every step of the pain of pulling away and letting go, then you turn the record over for something sweeter and she is straight back to the lovestruck girl, willing to make the same mistake again, carrying herself humbly. sad but I understand her.",
     "context": "",
     "tracks": [],
     "yearRank": 3
