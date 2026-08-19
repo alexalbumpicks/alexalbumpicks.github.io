@@ -2054,6 +2054,14 @@ const BEST_OF_ENTRIES = [
     "tags": [],
     "review": "是Freak folk运动的高点，却只是Joanna Newsom的起点。和Bon Iver一样，她后来的创作还会经历几次内容和形式上的迭代，但这是她的For Emma ever ago，豆芽与豆是她的Skinny love，有些艺术无可替代在于它的immediacy",
     "reviewEn": "A high point of the Freak folk movement, and only the starting point of Joanna Newsom. Like Bon Iver, her writing would go through several more iterations of content and form, but this is her For Emma ever ago, and Sprout and the Bean is her Skinny love. Some art is irreplaceable for its immediacy.",
+    "reviewLinks": [
+      {
+        "zh": "For Emma ever ago",
+        "en": "For Emma ever ago",
+        "year": 2007,
+        "title": "For Emma, Forever Ago"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 17
@@ -5532,6 +5540,20 @@ const BEST_OF_ENTRIES = [
     ],
     "review": "Futuresex/lovesounds, Blackout和这张大概是流行音乐节奏型最复杂的一段时间了吧。不过Timbaland这套听多了就不想再听了！",
     "reviewEn": "Futuresex/lovesounds, Blackout and this one are probably the stretch when pop music's rhythm patterns were at their most complicated. Though once you have heard enough of Timbaland's routine you never want to hear it again!",
+    "reviewLinks": [
+      {
+        "zh": "Futuresex/lovesounds",
+        "en": "Futuresex/lovesounds",
+        "year": 2006,
+        "title": "FutureSex/LoveSounds"
+      },
+      {
+        "zh": "Blackout",
+        "en": "Blackout",
+        "year": 2007,
+        "title": "Blackout"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 14
@@ -6298,6 +6320,14 @@ const BEST_OF_ENTRIES = [
     ],
     "review": "《Ys》之后，Joanna Newsom做出了更宏伟更有野心的作品。\"And everywhere I tried to love you is yours again\" 一种徒劳，一种心痛，让我想起《乔万尼的房间》的结局，主人公也是这样决然地将目光投向乔万尼的寓所，仿佛所有的回忆都在这个空间里实体化。洋洋洒洒两小时CD翻了三面，竟是末尾“tried to”两词笔力最深厚：这段情真的存在过吗？",
     "reviewEn": "After Ys, Joanna Newsom made something grander and more ambitious. \"And everywhere I tried to love you is yours again\": a futility, a heartache, and it puts me in mind of the ending of Giovanni's Room, where the narrator turns his eyes toward Giovanni's rooms with the same finality, as though every memory had taken solid form inside that space. Two sprawling hours across three sides of CD, and in the end it is the two words tried to that carry the heaviest stroke: did this love ever really exist?",
+    "reviewLinks": [
+      {
+        "zh": "《Ys》",
+        "en": "Ys",
+        "year": 2006,
+        "title": "Ys"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 1
@@ -7535,6 +7565,14 @@ const BEST_OF_ENTRIES = [
     ],
     "review": "她和Mitski都有一个从indie悲伤女孩进化成lofi slack rocker的爆发性时刻，她是这张，Mitski是bury me。从这张开始Angel开始尝试一种层层递进的摇滚写作，也是下专转型华丽摇滚的过度。",
     "reviewEn": "She and Mitski both have that explosive moment of turning from indie sad girl into lofi slack rocker: for her it is this record, for Mitski it is bury me. From here on Angel starts trying a kind of rock writing that builds layer on layer, which is also the crossing over to the glam turn of the next album.",
+    "reviewLinks": [
+      {
+        "zh": "bury me",
+        "en": "bury me",
+        "year": 2014,
+        "title": "Bury Me At Makeout Creek"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 9
@@ -10966,6 +11004,14 @@ const BEST_OF_ENTRIES = [
     ],
     "review": "和前作相比Hearts aglow的音乐性确实弱了不少，但这种含蓄其实也很贴切她想表达的这种“不确定”的情绪。Natalie Mering一直很喜欢写爱情里的摇摆不定，这张专辑在内容上的探索也更进一步：渐入佳境的B面叙写了一个女人逐渐卸下防备(hearts aglow)，再到怀疑猜忌(twin flame)，最后如梦初醒(the worst is done)的全过程。果然多情的女子得到泪珠。我想惨妇音乐不过如此了吧！",
     "reviewEn": "Set against the record before it, Hearts aglow is a good deal weaker as music, but that reticence actually suits the uncertainty she wants to express. Natalie Mering has always liked to write the wavering inside love, and here the exploration goes a step further: a B side that gets better as it goes traces the whole course of a woman lowering her guard (hearts aglow), then falling into doubt and suspicion (twin flame), and waking at last as if from a dream (the worst is done). The tender-hearted woman gets her tears, sure enough. I think sad-woman music does not get any better than this!",
+    "reviewLinks": [
+      {
+        "zh": "前作",
+        "en": "the record before it",
+        "year": 2019,
+        "title": "Titanic Rising"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 23
@@ -12904,6 +12950,14 @@ const BEST_OF_ENTRIES = [
     ],
     "review": "《Orquideas》是一趟从精神到身体的旅程：它从Como Asi承接前作的浓郁中引出轻快的鼓点，到Te Mata她少见的真声Bolero献唱，再在Muevete愈跳愈快的节拍声中收尾，它对传统的再演绎和流派探索的广博，无不证明着Kali Uchis是如今拉丁音乐最虔信的学生，也是她Isolation之后最完善、最有深度的作品。",
     "reviewEn": "Orquideas is a journey from the spirit to the body: out of Como Asi, which draws a light-footed drum pattern from the richness it inherits from the last record, on to Te Mata and a rare Bolero sung in her full voice, and out on the ever-quickening beat of Muevete. Its reworking of tradition and the breadth of its reach across genres both prove Kali Uchis the most devout student Latin music has right now, and this her most complete and most searching work since Isolation.",
+    "reviewLinks": [
+      {
+        "zh": "Isolation",
+        "en": "Isolation",
+        "year": 2018,
+        "title": "Isolation"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 2
@@ -17110,6 +17164,14 @@ const BEST_OF_ENTRIES = [
     ],
     "review": "惊人的入时，新千年风靡一时的车库复兴从这里抄了不少作业吧！比起大家都很喜欢的《Low》，我更喜欢这里的Bowie。",
     "reviewEn": "Startlingly current. The garage revival that swept the new millennium copied a good deal of its homework from here! Much as everyone loves Low, I prefer the Bowie on this one.",
+    "reviewLinks": [
+      {
+        "zh": "《Low》",
+        "en": "Low",
+        "year": 1977,
+        "title": "Low"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 7
