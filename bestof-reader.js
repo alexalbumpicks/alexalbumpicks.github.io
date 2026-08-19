@@ -210,12 +210,12 @@ let activePlayerIndex = null;
 function albumSlug(entry) {
   const norm = value => String(value || '')
     .normalize('NFKD')
-    // Latin combining marks only, then recompose. entryKey() stops after the strip, which is a
-    // bug it happens to get away with: NFKD splits a voiced kana into its base plus U+3099, the
-    // dakuten. U+3099 is outside this range, but it is a mark rather than a letter, so the
-    // /[^\p{L}\p{N}]/ below deletes it - and every voiced kana folds together with its unvoiced
-    // base. Recomposing puts the dakuten back before anything is stripped, so an acute accent
-    // still folds away while the kana survives intact.
+    // Latin combining marks only, then recompose - entryKey() does the same, and the two are
+    // meant to stay in step. Stripping without recomposing loses a voiced kana: NFKD splits one
+    // into its base plus U+3099, the dakuten. U+3099 is outside this range, but it is a mark
+    // rather than a letter, so the /[^\p{L}\p{N}]/ below deletes it - and every voiced kana
+    // folds together with its unvoiced base. Recomposing puts the dakuten back before anything
+    // is stripped, so an acute accent still folds away while the kana survives intact.
     .replace(/[\u0300-\u036f]/g, '')
     .normalize('NFC')
     .toLowerCase()

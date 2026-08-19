@@ -4040,7 +4040,8 @@ const BEST_OF_ENTRIES = [
       "Hip-hop",
       "Southern rap"
     ],
-    "review": "",
+    "review": "应付离婚、交赡养费的疲惫，互联网时代失业的阴影，让《Stankonia》硬是充满了中年危机的郁闷；Big boi和Andre仿佛在比试着谁能把唱词说得更烫嘴，仿佛说唱更快些，就能追上曾经的自己。想听Gangster shit？现实生活也一样艰难！随着专辑进入后半程，音乐也越来越实验，在drum&bass的鼓点里迷失，在psychedelic funk的幻影里买醉……在梦里可以永远年轻，永远做certified lover boy，这何曾不是男人的自我陶醉",
+    "reviewEn": "The weariness of getting through a divorce and paying alimony, the shadow of unemployment in the internet age, leave Stankonia stubbornly full of midlife-crisis gloom; Big boi and Andre sound like they are competing over who can make the words scald his mouth more, as though rapping a little faster could catch them up with who they used to be. Want Gangster shit? Real life is every bit as hard! As the record moves into its second half the music turns more and more experimental, losing itself in drum&bass patterns, drinking itself under in the phantoms of psychedelic funk... in dreams you can be young forever, be a certified lover boy forever, and what is that if not a man flattering himself.",
     "context": "",
     "tracks": [],
     "yearRank": 8
@@ -4319,7 +4320,8 @@ const BEST_OF_ENTRIES = [
       "Pop/R&B",
       "Soul"
     ],
-    "review": "",
+    "review": "标题取得极巧。“Songs In A Minor”既对应Alicia Keys钢琴出身的学院背景，又点出她的超越年龄的早慧——她独立写歌、制作，再加上音乐里浓厚的根源文化，也难怪获得格莱美的肯定。其实除去The Life，这张专辑并没有太多新灵魂标志性的放克鼓点：她的强项是传统灵魂、蓝调和新派嘻哈节拍的融合，以及Alicia因年轻而强烈的心声。",
+    "reviewEn": "The title is chosen with real wit. Songs In A Minor answers to the conservatory background of a pianist and at the same time points to a precocity beyond her years: she wrote and produced on her own, and with roots culture running so thick through the music it is no wonder the Grammys came calling. In truth, The Life aside, the record does not have many of the funk drum patterns that mark out neo soul: her strength is the fusion of traditional soul, blues and a newer hip hop beat, and the feeling in Alicia's voice that is all the stronger for how young she is.",
     "context": "",
     "tracks": [],
     "yearRank": 16
@@ -4360,7 +4362,8 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Pop/R&B"
     ],
-    "review": "",
+    "review": "从这张同名专辑开始，Britney Spears开始从流水线量产的teen pop挣脱出来，为音乐换上个性的底色，让我们看到她迅速发展的艺术人格和清晰的创作脉络：如果说Anticipating的dance pop是她对Janet的致敬，I Run Away的Electronica是从Madonna手里接棒，那合作Neptunes的Slave 4 U则完全是属于新时代的音乐。当我们看到她VMA上与蛇共舞，在这首歌闪烁的节拍里自如摇曳——就像她在歌里唱得那样，Cinderella's got to go.",
+    "reviewEn": "From this self-titled record on, Britney Spears starts to pull free of assembly-line teen pop and give the music a colour of her own, letting us watch an artistic persona develop fast and a clear line of writing come through: if the dance pop of Anticipating is her tribute to Janet, and the Electronica of I Run Away takes the baton from Madonna, then Slave 4 U, made with the Neptunes, belongs wholly to a new era. When we watch her dance with the snake at the VMAs, swaying easily inside that song's flickering beat, it is exactly as she sings it: Cinderella's got to go.",
     "context": "",
     "tracks": [],
     "yearRank": 13
@@ -12891,7 +12894,8 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Electronic"
     ],
-    "review": "",
+    "review": "今年最惊艳的听觉体验之一，就像在漆黑中跳舞。Agua pa' fantasmas是全专的centerpiece，虚空中的噪音一点点凝聚成节拍，第一次感觉Reggaeton也可以如此轻盈又有力量。音乐关乎Pinochet暴政下的血泪，放在如今却也一如既往的时兴。",
+    "reviewEn": "One of the most stunning listening experiences of the year, like dancing in total darkness. Agua pa' fantasmas is the centerpiece of the record, noise out of the void gathering little by little into a beat, and the first time Reggaeton has felt to me this light and this forceful at once. The music is about the blood and tears of Pinochet's tyranny, and set down in the present it is as timely as it ever was.",
     "context": "",
     "tracks": [],
     "yearRank": 4
