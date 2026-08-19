@@ -4008,7 +4008,7 @@ const BEST_OF_ENTRIES = [
     "title": "Lift Yr. Skinny Fists Like Antennas to Heaven!",
     "artist": "Godspeed You! Black Emperor",
     "tagline": "",
-    "art": "https://cdn-images.dzcdn.net/images/cover/07233456848667f2233fef5f307d5d28/500x500-000000-80-0-0.jpg",
+    "art": "https://coverartarchive.org/release-group/3822abb6-ca53-3ae1-a4ec-7718cb321e9b/front-500",
     "audio": "",
     "tier": "",
     "artBg": "#181818",
@@ -4018,7 +4018,8 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Post rock"
     ],
-    "review": "",
+    "review": "古典乐般的恢弘。第三乐章吉他的失真像是在哭泣，第四乐章五分多钟那个jumpscare即便多少次听都会被吓一跳，像是灵魂的速度从静止骤然开到一百二十迈。“they don't sleep on the beaches anymore”，就像第一章那个祥和、宁静的主旋律转瞬即逝，我们也从温暖、受保护的童年里被生拽了出来，丢进了这个无情的世界",
+    "reviewEn": "Grand the way classical music is grand. The guitar distortion in the third movement sounds like weeping, and the jumpscare five minutes or so into the fourth still startles me however many times I have heard it, as though the soul went from a standstill to a hundred and twenty miles an hour in one go. \"they don't sleep on the beaches anymore\": just as that peaceful, tranquil main melody of the first movement is gone in a moment, we too are dragged bodily out of a warm and sheltered childhood and dropped into this pitiless world.",
     "context": "",
     "tracks": [],
     "yearRank": 7
@@ -4062,7 +4063,8 @@ const BEST_OF_ENTRIES = [
       "Pop rock",
       "Singer-songwriter"
     ],
-    "review": "",
+    "review": "从任何一个角度来看，Aimee Mann的音乐好像都称不上新潮：比起九十年代末浩荡的Lilith Fair之声，她的音乐显得太温和；她歌词里的那种爱后的遍体鳞伤，在彼时光亮的teen pop里又找不到位置。但她张弛有度的pop rock，丝丝入扣的riff，处处充满对人性体察的写作，都让《Bachelor No.2》成为新千年独立唱作人的范本。",
+    "reviewEn": "From any angle at all, Aimee Mann's music hardly counts as fashionable: set against the vast Lilith Fair sound of the late nineties it comes off too gentle, and the being-hurt-all-over of love's aftermath in her lyrics had nowhere to sit inside the bright teen pop of the day. But her pop rock, which knows exactly when to pull tight and when to let go, her closely worked riffs, and writing that is everywhere alert to human nature, all make Bachelor No.2 the template for the independent singer-songwriter of the new millennium.",
     "context": "",
     "tracks": [],
     "yearRank": 10
@@ -4105,7 +4107,8 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Alternative rock"
     ],
-    "review": "",
+    "review": "Polly Jean的出道单曲Dress讲了一个女人为了取悦男人穿上衣服的故事，而在十年后的this is love里，她看着男人脱下衣服取悦自己。来自城市的爱情故事来得快下头也快，激情褪去后是她最好的几首ballad",
+    "reviewEn": "Polly Jean's debut single Dress told the story of a woman putting a dress on to please a man; ten years later, on this is love, she watches a man take his clothes off to please her. Love stories out of the city arrive fast and go off just as fast, and what is left once the heat drains out of them is a few of the best ballads she ever wrote.",
     "context": "",
     "tracks": [],
     "yearRank": 13
