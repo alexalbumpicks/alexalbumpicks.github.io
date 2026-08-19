@@ -748,6 +748,48 @@ button:focus-visible {
   white-space: pre-wrap;
 }
 
+/* An album named inside a blurb, linking to that album's own card. Underlined rather than
+   coloured: the page has one accent and it is the same black as the text, so a colour would have
+   to be invented here for this one thing. An underline offset far enough to clear the descenders
+   reads as a link in running prose without breaking the line's colour, and this is the one part
+   of the paragraph that is not Alex's writing, so it should be quiet. */
+.year-review-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--border2);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color 0.15s ease, color 0.15s ease;
+}
+
+.year-review-link:hover {
+  color: var(--text);
+  text-decoration-color: var(--text);
+}
+
+/* The card a cross-link sent you to. Every card already has a rule above it, so the emphasis is a
+   bar down the left of the row rather than a border: it marks one row without adding a second
+   horizontal line to a list built out of horizontal lines. It fades, because it answers "which
+   one" on arrival and has nothing to say after that. */
+.year-card.is-linked-to {
+  animation: year-card-linked 2.4s ease-out forwards;
+}
+
+@keyframes year-card-linked {
+  0%   { box-shadow: inset 3px 0 0 var(--text); }
+  60%  { box-shadow: inset 3px 0 0 var(--text); }
+  100% { box-shadow: inset 3px 0 0 transparent; }
+}
+
+/* Someone who has asked for less motion still needs to know which row they were sent to, so the
+   bar stays and only the fade is dropped. */
+@media (prefers-reduced-motion: reduce) {
+  .year-card.is-linked-to {
+    animation: none;
+    box-shadow: inset 3px 0 0 var(--text);
+  }
+}
+
 .year-tags {
   display: flex;
   flex-wrap: wrap;

@@ -84,6 +84,7 @@ const STRINGS = {
     hidePlayer: 'Hide player',
     appleMusic: 'Apple Music',
     appleMusicTitle: entry => `Open ${entry} on Apple Music`,
+    crossLinkTitle: (title, year) => `Go to ${title} (${year})`,
     close: 'Close'
   },
   zh: {
@@ -106,6 +107,7 @@ const STRINGS = {
     hidePlayer: '收起播放器',
     appleMusic: 'Apple Music',
     appleMusicTitle: entry => `在 Apple Music 上打开《${entry}》`,
+    crossLinkTitle: (title, year) => `跳转到 ${year} 年的《${title}》`,
     close: '关闭'
   }
 };
@@ -191,6 +193,98 @@ const activeLang = LANGS.includes(requestedLang) ? requestedLang : DEFAULT_LANG;
 const S = STRINGS[activeLang];
 
 let activePlayerIndex = null;
+
+// --- cross-links between blurbs ----------------------------------------------------------------
+// When a blurb names another album that is in the file, the name becomes a link to that album's
+// card. The pairs are curated in the data, in `reviewLinks`, rather than detected from the prose;
+// the reasoning is written up in tmp/add_review_links.py, but the short of it is that the Chinese
+// uses translated titles (《女英雄》 for Pure Heroine) so a title matcher finds none of them, and
+// matching the other way round lights up Music, Star, Album, Post, Play and Grace as ordinary
+// English words. Alex's text is never rewritten - this only decides where anchors go around it.
+
+// A card's own id, and the fragment a link to it points at. Derived the same way as entryKey():
+// NFKD, strip combining marks, then keep letters and digits of any script, so a CJK title folds
+// to its own characters rather than to the empty string every other CJK title also folds to.
+// Artist is in the key because year+title alone is not unique across the file in principle, and
+// an id that collides silently sends the reader to the wrong record.
+function albumSlug(entry) {
+  const norm = value => String(value || '')
+    .normalize('NFKD')
+    // Latin combining marks only, then recompose. entryKey() stops after the strip, which is a
+    // bug it happens to get away with: NFKD splits a voiced kana into its base plus U+3099, the
+    // dakuten. U+3099 is outside this range, but it is a mark rather than a letter, so the
+    // /[^\p{L}\p{N}]/ below deletes it - and every voiced kana folds together with its unvoiced
+    // base. Recomposing puts the dakuten back before anything is stripped, so an acute accent
+    // still folds away while the kana survives intact.
+    .replace(/[\u0300-\u036f]/g, '')
+    .normalize('NFC')
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]/gu, '');
+  return `album-${entry.year}-${norm(entry.title)}-${norm(entry.artist)}`;
+}
+
+// year|title -> entry, for resolving a link's target. Built once; renderList runs on every play
+// and close, and rebuilding a 1015-entry index inside the map callback would be 36 times per
+// render for no reason.
+const ALBUMS_BY_YEAR_TITLE = new Map();
+ENTRIES.forEach(entry => {
+  if (entry.type === 'album') ALBUMS_BY_YEAR_TITLE.set(`${entry.year}|${entry.title}`, entry);
+});
+
+// Escapes first, then splices anchors into the escaped string. Doing it the other way round -
+// linking the raw text and escaping after - would escape the markup we just added, and linking
+// the raw text and *not* escaping would put unescaped blurb text on the page.
+//
+// Every step here fails closed. A surface string that is missing, or that appears more than once,
+// is skipped rather than guessed at: no link at all is a smaller error than a link on the wrong
+// words in someone else's writing. Same for a target that is not in the file, and for a target in
+// a provisional year, whose list is withheld - the link would land on a page with no card to
+// scroll to.
+function linkifyReview(text, entry) {
+  const html = esc(text);
+  const spans = [];
+
+  (entry.reviewLinks || []).forEach(link => {
+    const surface = activeLang === 'en' ? link.en : link.zh;
+    if (!surface) return;
+    const target = ALBUMS_BY_YEAR_TITLE.get(`${link.year}|${link.title}`);
+    if (!target || isProvisional(target.year)) return;
+    // An entry linking to itself would render a link that goes nowhere the reader is not already.
+    if (target === entry) return;
+    const needle = esc(surface);
+    const at = html.indexOf(needle);
+    if (at === -1) return;
+    if (html.indexOf(needle, at + needle.length) !== -1) return;
+    spans.push({ at, end: at + needle.length, target });
+  });
+
+  if (!spans.length) return html;
+
+  // Collected as offsets and spliced in one pass, rather than replaced one at a time, because a
+  // later replace() can otherwise match inside the markup an earlier one inserted.
+  spans.sort((a, b) => a.at - b.at);
+  const kept = [];
+  spans.forEach(span => {
+    // Overlapping surfaces would nest one anchor inside another. Keep the earlier, drop the rest.
+    if (!kept.length || span.at >= kept[kept.length - 1].end) kept.push(span);
+  });
+
+  let out = '';
+  let cursor = 0;
+  kept.forEach(span => {
+    // encodeURIComponent on the fragment only: the id attribute keeps the raw slug, which is
+    // legal in HTML5 and is what getElementById is handed after decoding on the way back in.
+    const href = `${yearLink(span.target.year)}#${encodeURIComponent(albumSlug(span.target))}`;
+    out += html.slice(cursor, span.at)
+      + `<a class="year-review-link" href="${esc(href)}"`
+      + ` title="${esc(S.crossLinkTitle(span.target.title, span.target.year))}">`
+      + html.slice(span.at, span.end)
+      + '</a>';
+    cursor = span.end;
+  });
+  return out + html.slice(cursor);
+}
+
 
 // The bits of chrome that live in index.html rather than being generated here. Setting them from
 // JS means index.html carries one language's wording as its shipped state and this rewrites it;
@@ -371,12 +465,15 @@ function renderList() {
     // selection and for a screen reader picking a voice.
     const reviewText = activeLang === 'en' ? (entry.reviewEn || entry.review) : entry.review;
     const reviewLang = activeLang === 'en' && !entry.reviewEn ? 'zh-Hans' : S.htmlLang;
+    // Not esc()'d again: linkifyReview escapes internally and returns HTML. Everything it emits
+    // is either an escaped slice of the blurb or an anchor it assembled out of escaped parts, so
+    // no blurb text reaches the page unescaped - escaping the result would show the tags.
     const review = reviewText
-      ? `<p class="year-review" lang="${reviewLang}">${esc(reviewText)}</p>`
+      ? `<p class="year-review" lang="${reviewLang}">${linkifyReview(reviewText, entry)}</p>`
       : '';
 
     return `
-      <article class="year-card" style="position:relative">
+      <article class="year-card" id="${esc(albumSlug(entry))}" style="position:relative">
         <div class="year-rank">
           <div class="year-rank-num">${i + 1}</div>
         </div>
@@ -504,6 +601,49 @@ document.getElementById('mini-player-close').addEventListener('click', closeMini
 // worth having when a decade did nothing else, but it is not what the pill means any more: it now
 // answers "take me to the 1970s" rather than "show me which 1970s years exist".
 
+// Arriving from a cross-link. The browser's own fragment handling cannot do this: the cards do
+// not exist when the document is parsed, so by the time renderList creates the element with that
+// id the browser has already looked for it, not found it, and given up.
+//
+// The card is centred rather than put at the top of the viewport because the anchor lands on a
+// list, and a row flush against the top edge reads as the first row of the year. Centred, the
+// rows above it are visible and its rank number is legible as a position within the year.
+//
+// The highlight is set on the element rather than left to :target so that it survives renderList
+// replacing the innerHTML when the mini player opens and closes, and so it can be styled as a
+// fading emphasis rather than a permanent state - :target would keep the card marked for as long
+// as the fragment stayed in the address bar.
+function focusLinkedAlbum() {
+  const id = decodeURIComponent((window.location.hash || '').replace(/^#/, ''));
+  if (!id) return;
+  const card = document.getElementById(id);
+  // A fragment naming an album that is not in this year, or not in the file at all, is ignored
+  // rather than corrected: the year requested still renders, which is the more useful failure.
+  if (!card) return;
+  // Only ever one card marked. On a same-year jump the previous one is still marked, and two
+  // highlighted rows says "these two" rather than "this one".
+  document.querySelectorAll('.year-card.is-linked-to')
+    .forEach(el => el.classList.remove('is-linked-to'));
+  // Removing and re-adding a class in the same frame does not restart a CSS animation - the
+  // browser never sees the element without it. Reading offsetWidth forces the reflow that makes
+  // the removal take effect, so a second jump to the same card animates again instead of sitting
+  // there already faded out.
+  void card.offsetWidth;
+  card.classList.add('is-linked-to');
+  // The CSS drops the fade under prefers-reduced-motion; the scroll has to be asked separately,
+  // since a smooth scroll the length of a year's list is the larger of the two movements.
+  const still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  card.scrollIntoView({ block: 'center', behavior: still ? 'auto' : 'smooth' });
+}
+
+// A link to an album in the year already on screen changes the fragment and nothing else - no
+// navigation, no reload, so nothing above this line runs a second time. Without this the one
+// same-year link in the data (1979 Anonym naming This Heat, also 1979) would jump with the
+// browser's own fragment handling and arrive with no highlight and no centring, which looks like
+// the link half-worked. Also covers the back button returning to a fragment.
+window.addEventListener('hashchange', focusLinkedAlbum);
+
 renderChrome();
 renderYearNav();
 renderList();
+focusLinkedAlbum();

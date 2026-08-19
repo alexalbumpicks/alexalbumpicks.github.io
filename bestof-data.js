@@ -14140,6 +14140,14 @@ const BEST_OF_ENTRIES = [
     ],
     "review": "很少有一张出道专辑能如此的fully-formed，但《Grace》做到了。和他同样早逝的父亲一样，Jeff Buckley的音乐充满了抑郁暗沉的旋律，却充满着激情，婉转并律动上丝丝入扣，在他极具表现力的嗓音下，留下的是心痛那刻最真实的感受。（强弱起伏的编排，词曲里的心碎，高昂的vocals，都非常明显地影响了一年后发行的《the bends》）",
     "reviewEn": "Very few debut albums arrive this fully formed, but Grace does. Like his father, who died just as young, Jeff Buckley wrote melodies that are dark and depressive and yet full of passion, supple and locked tightly into the groove; under that hugely expressive voice, what is left is the truest feeling of the moment a heart breaks. (The swells and falls of the arrangements, the heartbreak in the writing, the soaring vocals - all of it very obviously fed into The Bends a year later.)",
+    "reviewLinks": [
+      {
+        "zh": "《the bends》",
+        "en": "The Bends",
+        "year": 1995,
+        "title": "The Bends"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 3
@@ -17396,6 +17404,14 @@ const BEST_OF_ENTRIES = [
     ],
     "review": "很多地方让我想到同年发行的this heat首专，同时又有很多新古典主义钢琴片段。如果说1979年的《Anonym》是噪音实验版的Erik Satie，那Junko Tange在1981年的下一张作品《Divin》则可以说是以律动主导的proto-techno。最诡异的是，在留下这两张世界实验音乐史的开创性作品后，Tange在1982年后从这个世界上完完全全的消失了。再也没人听说过她的消息。",
     "reviewEn": "A lot of it puts me in mind of This Heat's debut from the same year, and there are stretches of neoclassical piano besides. If Anonym in 1979 is Erik Satie rewritten as a noise experiment, then Divin, Junko Tange's next record in 1981, is proto-techno led by its pulse. The strangest part: having left behind two records that opened up the history of experimental music worldwide, Tange disappeared from the world completely after 1982. Nobody has heard anything of her since.",
+    "reviewLinks": [
+      {
+        "zh": "this heat",
+        "en": "This Heat's debut",
+        "year": 1979,
+        "title": "This Heat"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 5
@@ -19704,6 +19720,26 @@ const BEST_OF_ENTRIES = [
     ],
     "review": "如果《女英雄》和《狂想曲》是那些最强烈的情感和早熟到残忍的领悟，那《太阳能》和《Virgin》则是关于成年生活那些无解的命题，以及迷茫和不确定里也可以获得力量。Lorde本不应是我们实现情感投射的容器，当她不再需要做一代人的精神领袖，她开始找到真正的自己——这是她的重生。",
     "reviewEn": "If Pure Heroine and Melodrama were the most intense feelings and the understanding that came cruelly early, then Solar Power and Virgin are about the questions of adult life that have no answer, and about how there is strength to be found inside confusion and uncertainty too. Lorde was never meant to be a vessel for us to project onto; once she no longer had to be a generation's spiritual leader, she began to find who she actually is - this is her rebirth.",
+    "reviewLinks": [
+      {
+        "zh": "《女英雄》",
+        "en": "Pure Heroine",
+        "year": 2013,
+        "title": "Pure Heroine"
+      },
+      {
+        "zh": "《狂想曲》",
+        "en": "Melodrama",
+        "year": 2017,
+        "title": "Melodrama"
+      },
+      {
+        "zh": "《太阳能》",
+        "en": "Solar Power",
+        "year": 2021,
+        "title": "Solar Power"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 10
@@ -19968,6 +20004,14 @@ const BEST_OF_ENTRIES = [
     ],
     "review": "很多人说这张R&B风格违和，但正是Motown、Nina Simone等传统R&B孕育了成名前麦当娜的音乐素养，也造就了她极其敏锐的旋律直觉。比起《情色》的概念先行，这张专辑把所有的情欲埋进双关，却丝毫不减批判的力度。专辑末尾的Sanctuary和同名曲像是深夜时分的混沌，而当长夜将尽我们来到take a bow，仿佛曲终人散帷幕落下，整夜的朦胧化作回忆",
     "reviewEn": "People say the R&B turn does not suit her, but it was Motown and Nina Simone - that older R&B tradition - that formed Madonna's musicianship before she was famous, and gave her such a sharp instinct for melody. Where Erotica led with its concept, this record buries all its desire in wordplay and loses none of the critique for it. Sanctuary and the title track at the end are the disorder of the small hours; and as the long night thins out we arrive at Take a Bow, the curtain coming down on an empty house, a whole blurred night turning into memory.",
+    "reviewLinks": [
+      {
+        "zh": "《情色》",
+        "en": "Erotica",
+        "year": 1992,
+        "title": "Erotica"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 8
@@ -20510,6 +20554,14 @@ const BEST_OF_ENTRIES = [
     ],
     "review": "事到如今，midnights都显得像是生涯高光了",
     "reviewEn": "At this point midnights feels like a career highlight.",
+    "reviewLinks": [
+      {
+        "zh": "midnights",
+        "en": "midnights",
+        "year": 2022,
+        "title": "Midnights"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 38
@@ -20582,6 +20634,20 @@ const BEST_OF_ENTRIES = [
     ],
     "review": "在body talk的舞池告白和honey的静水流深之后，流行乐坛好像第一次在sexistential跟上了罗宾的步伐。但我真的很喜欢专辑里的每一首歌，喜欢talk to me宣言般的自信，喜欢into the sun高昂得像是要飞向太阳的副歌。也许，这就已经足够",
     "reviewEn": "After the dancefloor confessions of Body Talk and the still depths of Honey, Sexistential is the first time pop seems to have caught up with Robyn rather than the other way round. But I love every song on it - the declarative confidence of Talk to Me, the chorus of Into the Sun climbing like it means to reach the sun itself. Maybe that is already enough.",
+    "reviewLinks": [
+      {
+        "zh": "body talk",
+        "en": "Body Talk",
+        "year": 2010,
+        "title": "Body Talk"
+      },
+      {
+        "zh": "honey",
+        "en": "Honey",
+        "year": 2018,
+        "title": "Honey"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 20
@@ -20726,6 +20792,14 @@ const BEST_OF_ENTRIES = [
     ],
     "review": "不是不喜欢Americana，但是上张专辑的那种诡异的南部哥特美学特质这里温和太多，少了一些突如其来的时刻。用猫借喻codependency是个巧妙的想法，但同样的主题写一整张专辑，多少有些审美疲劳",
     "reviewEn": "Not that I dislike the Americana, but the uncanny Southern Gothic streak of the last record is much gentler here, and the moments that used to arrive out of nowhere are mostly gone. Cats as a figure for codependency is a clever idea; stretched across a whole album, the one theme starts to tire.",
+    "reviewLinks": [
+      {
+        "zh": "上张专辑",
+        "en": "the last record",
+        "year": 2023,
+        "title": "The Land Is Inhospitable and So Are We"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 21
@@ -20912,6 +20986,14 @@ const BEST_OF_ENTRIES = [
     ],
     "review": "剥去electroclash的光鲜外皮，专辑其实泛着悲伤的底色。主题上我想到的其实是Lana的born to die，那种通过列锦铺陈奢侈品影射消费文化，名利渴望背后是阶层跃迁美国梦的蜃景，挥之不去的是原生家庭的创伤（gas station），直到故事主人公最终被抑郁击垮，她想的还是要如何在葬礼上“看起来漂亮”——物质主义是如何影响一代又一代中产小镇女孩，让她们变成the worst girls in America",
     "reviewEn": "Peel off the electroclash gloss and the record runs on sadness underneath. What it brings to mind is Lana's Born to Die: the piling up of luxury goods as a way of pointing at consumer culture, the hunger for fame standing in for the mirage of the American dream and its promise of climbing out of your class, and underneath all of it the family damage that will not go away (Gas Station). By the end the protagonist has been broken by depression and is still worrying about how to look pretty at her own funeral - this is what materialism does to one generation of small-town middle-class girls after another, and how it turns them into the worst girls in America.",
+    "reviewLinks": [
+      {
+        "zh": "born to die",
+        "en": "Born to Die",
+        "year": 2012,
+        "title": "Born to Die: The Paradise Edition"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 3
@@ -20960,6 +21042,14 @@ const BEST_OF_ENTRIES = [
     ],
     "review": "“失去的周末”借喻好莱坞经典同名电影，既象征她像电影主人公酒精成瘾一般沉湎于爱情，也是后疫情时代对蹉跎岁月的反思：那些暂别歌坛错过的机会、未果的前缘，真的就永远错过了吗？我们能否在失落后收获什么？至于音乐本身，我觉得Phoebe很聪明，她知道用音乐回应自己情感生活里的争议，和Jack Antonoff、Cameron Winter、Alex G合作跟上时代，延续Punisher里幽微处的banjo和弦乐，但这张专辑似乎有些太聪明了，以至于整张专辑都是采分点，我却没有听到她过去作品中的灵动",
     "reviewEn": "The title borrows from the Hollywood classic: she is as sunk into love as that film's protagonist is into drink, and the phrase doubles as a post-pandemic reckoning with wasted years. The opportunities missed while she was away from music, the connections that never resolved - are they really gone for good? Is there anything to be gathered from the losing? As for the music, Phoebe is clever. She knows how to answer the controversies of her private life in song, she keeps current by working with Jack Antonoff, Cameron Winter and Alex G, and she carries on the banjo and strings that ran quietly under Punisher. But the record may be too clever: the whole thing is engineered to score, and I never hear the lightness of her earlier work.",
+    "reviewLinks": [
+      {
+        "zh": "Punisher",
+        "en": "Punisher",
+        "year": 2020,
+        "title": "Punisher"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 13
