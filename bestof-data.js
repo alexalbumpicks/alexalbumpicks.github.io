@@ -1038,6 +1038,7 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Goth rock"
     ],
+    "sensitive": "obsession curdling into violence",
     "review": "",
     "context": "",
     "tracks": [],
@@ -5660,6 +5661,7 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Experimental"
     ],
+    "sensitive": "corpses, atrocity and dread rendered in close detail",
     "review": "",
     "context": "",
     "tracks": [],
@@ -7424,6 +7426,7 @@ const BEST_OF_ENTRIES = [
       "Experimental Rock",
       "Post Rock"
     ],
+    "sensitive": "two hours of sustained overwhelm; sexual and violent imagery",
     "review": "",
     "context": "",
     "tracks": [],
@@ -17819,7 +17822,28 @@ const BEST_OF_ENTRIES = [
       "Experimental",
       "New-age"
     ],
-    "review": "",
+    "review": "1980年是Brian Eno创作井喷的一年：同年前有《氛围2》后有remain in light，这张由当时还不太出名的Laraaji客座演奏的新世纪风格作品倒是显得不太为人知晓。感觉Laraaji非常擅长这种基于一个motif循环往复的即兴演奏模式，比起强律动的dance，个人更喜欢的是透过声音效果器的、迷雾一般的meditation。（以及好像也为Big Thief的Double Infinity提供了一些context）",
+    "reviewEn": "1980 was the year Brian Eno's output erupted: Ambient 2 came earlier the same year, Remain in Light after it, and this new age record, with the then little-known Laraaji guesting, is the one that stayed obscure. Laraaji is very good at this kind of improvisation, built on a single motif turning over and over, and next to the heavily rhythmic dance I prefer the meditation, fogged over by the effects units. (It also seems to give some context to Big Thief's Double Infinity)",
+    "reviewLinks": [
+      {
+        "zh": "《氛围2》",
+        "en": "Ambient 2",
+        "year": 1980,
+        "title": "Ambient 2"
+      },
+      {
+        "zh": "remain in light",
+        "en": "Remain in Light",
+        "year": 1980,
+        "title": "Remain in Light"
+      },
+      {
+        "zh": "Double Infinity",
+        "en": "Double Infinity",
+        "year": 2025,
+        "title": "Double Infinity"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 6
@@ -18100,6 +18124,7 @@ const BEST_OF_ENTRIES = [
       "Experimental",
       "Industrial"
     ],
+    "sensitive": "violence and domination, at punishing volume",
     "review": "",
     "context": "",
     "tracks": [],
@@ -20398,6 +20423,7 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Experimental"
     ],
+    "sensitive": "deliberately punishing sludge; nihilism and despair throughout",
     "review": "",
     "context": "",
     "tracks": [],
@@ -20626,6 +20652,7 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Hip-hop"
     ],
+    "sensitive": "violence, paranoia and drugs at maximum abrasion",
     "review": "",
     "context": "",
     "tracks": [],
