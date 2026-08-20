@@ -25,6 +25,12 @@
   --accent-soft: #f2f2f2;
   --shadow: none;
 
+  /* The one colour on an otherwise monochrome page, which is the whole reason it reads as a
+     warning at all — on a black-and-white sheet any hue is a shout. #b3261e and not a brighter
+     red for the reason in the --text3 note above: this lands on an 11px uppercase label, the
+     hardest case for contrast, and clears 6.3:1 on white where #f00 manages 4.0 and fails. */
+  --sensitive: #b3261e;
+
   /* Three faces, three jobs — which is the point. A stretch of this page was set entirely in
      Helvetica Neue and read as corporate; the face was not really the problem, the monoculture
      was. Neutral body text is a virtue, but neutral body text *and* headline *and* rank numeral
@@ -575,6 +581,30 @@ button:focus-visible {
   border-bottom: 2px solid var(--text);
 }
 
+/* Top-right of the card, hung off the inline position:relative the article already carries.
+   Absolute rather than a cell in the grid: the card is a three-column grid whose last column is
+   the copy, and a fourth column for a badge that four albums in a thousand will ever show would
+   cost every other row a track it does not use.
+
+   top matches the card's own 28px padding so the badge sits on the same optical line as the rank
+   numeral and the top edge of the sleeve, rather than floating above them.
+
+   Deliberately not a pill. Bordered and filled it competes with .year-tag, which sits a few
+   millimetres below carrying genre — and the two say completely different kinds of thing. Bare
+   red text is quieter than the tags while being the only colour on the page, which is the right
+   ordering: noticed on the second pass, not the first. */
+.year-sensitive {
+  position: absolute;
+  top: 28px;
+  right: 0;
+  font-family: var(--font-meta);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sensitive);
+}
+
 .year-rank {
   display: flex;
   flex-direction: column;
@@ -1010,6 +1040,12 @@ button:focus-visible {
     grid-template-columns: 1fr;
     gap: 16px;
     padding: 24px 0;
+  }
+
+  /* Follows the card's padding down from 28. The rank row is a few characters wide here, so the
+     badge shares that line with it instead of colliding. */
+  .year-sensitive {
+    top: 24px;
   }
 
   .year-rank {

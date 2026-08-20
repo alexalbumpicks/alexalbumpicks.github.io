@@ -85,7 +85,18 @@ const STRINGS = {
     appleMusic: 'Apple Music',
     appleMusicTitle: entry => `Open ${entry} on Apple Music`,
     crossLinkTitle: (title, year) => `Go to ${title} (${year})`,
-    close: 'Close'
+    close: 'Close',
+    // The badge is the whole of what a reader sees. The `sensitive` field on the entry holds a
+    // reason, and that reason is deliberately NOT rendered anywhere: a visitor who wants to know
+    // what is in a record can find out the way anyone finds anything out, and a tooltip spelling
+    // out the worst of it would be more specific than the badge it explains, which defeats the
+    // point of a badge this vague.
+    //
+    // The reason is kept in the data because it does a second job that has nothing to do with the
+    // reader — it keeps the author honest. A boolean can be set on a feeling and never questioned;
+    // a sentence has to be defensible, and it has to describe something in the RECORD. That is
+    // what keeps this off artists rather than on albums.
+    sensitive: 'sensitive content'
   },
   zh: {
     label: '中文',
@@ -108,7 +119,10 @@ const STRINGS = {
     appleMusic: 'Apple Music',
     appleMusicTitle: entry => `在 Apple Music 上打开《${entry}》`,
     crossLinkTitle: (title, year) => `跳转到 ${year} 年的《${title}》`,
-    close: '关闭'
+    close: '关闭',
+    // Not a translation of the English - 慎入 is what a Chinese reader would actually be told, and
+    // it carries the "approach at your own discretion" sense that `sensitive content` only implies.
+    sensitive: '慎入'
   }
 };
 
@@ -474,6 +488,7 @@ function renderList() {
 
     return `
       <article class="year-card" id="${esc(albumSlug(entry))}" style="position:relative">
+        ${entry.sensitive ? `<div class="year-sensitive">${esc(S.sensitive)}</div>` : ''}
         <div class="year-rank">
           <div class="year-rank-num">${i + 1}</div>
         </div>

@@ -6015,6 +6015,7 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Rock"
     ],
+    "sensitive": "suicide and death throughout",
     "review": "",
     "context": "",
     "tracks": [],
@@ -17603,6 +17604,7 @@ const BEST_OF_ENTRIES = [
       "Electronic",
       "Industrial"
     ],
+    "sensitive": "a pleasant surface over sexual coercion and suicide",
     "review": "",
     "context": "",
     "tracks": [],
@@ -18248,6 +18250,7 @@ const BEST_OF_ENTRIES = [
       "Industrial",
       "Hardcore punk"
     ],
+    "sensitive": "lyrics dwell on child abuse, murder and arson; abrasive by design",
     "review": "",
     "context": "",
     "tracks": [],
