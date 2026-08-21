@@ -60,6 +60,23 @@
   --cjk: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', 'Source Han Sans SC';
   --helvetica: 'Helvetica Neue', Helvetica, Arial;
 
+  /* A fourth face, for one job: the lyric pull quote. The note above says the page stays sans and
+     that a CJK serif would put a mismatch back — that still holds for the three faces it is about,
+     and this is the case it does not cover. A lyric is the only text on the card that is neither
+     Alex writing nor page furniture; it is someone else's words, quoted. A serif is the oldest
+     available way to say that, and it says it without a label.
+
+     The mismatch argument actually inverts here. It was about pairing a CJK serif with a Latin
+     sans; this pairs a CJK serif with a Latin serif, which is the match, so --cjk-serif is a Song
+     face rather than the PingFang stack. A Chinese lyric then sets in Song, as it should.
+
+     All system fonts, no new download — same reasoning as the note above. Iowan Old Style and
+     Charter ship on macOS and are genuine text serifs; Palatino Linotype and Georgia cover
+     Windows. Every one of them has a real italic, so nothing here is synthesised. */
+  --cjk-serif: 'Songti SC', 'Source Han Serif SC', 'Noto Serif SC', SimSun, serif;
+  --font-quote: 'Iowan Old Style', Charter, 'Palatino Linotype', Palatino, Georgia,
+                'Times New Roman', var(--cjk-serif), serif;
+
   --font-display: 'Archivo Narrow', var(--helvetica), var(--cjk), sans-serif;
   --font-body: var(--helvetica), var(--cjk), sans-serif;
   --font-meta: 'DM Mono', ui-monospace, var(--cjk), monospace;
@@ -776,6 +793,72 @@ button:focus-visible {
   line-height: 1.85;
   color: var(--text2);
   white-space: pre-wrap;
+}
+
+/* A lyric pulled out above the blurb. Set in the display face, italic and a size up from the
+   review, so it reads as a different KIND of text rather than a louder version of the same one:
+   the review is Alex writing about the record, the lyric is the record talking. Archivo Narrow
+   carries a real italic (the family is loaded with its ital axis), so this is a drawn italic and
+   not a browser oblique.
+
+   Colour is --text, not the --text2 the review uses. The quote is short and it sits above a long
+   grey paragraph; at the review's grey it would read as a caption to the blurb instead of as an
+   epigraph to it.
+
+   No quotation marks. At this size, in italic, indented behind a rule, the form already says
+   `quotation`, and glyph quotes on top of that is belt and braces. The rule does the same job the
+   marks would, and keeps the left edge of the card intact.
+
+   pre-wrap so a lyric written across two lines stays across two lines. */
+/* The measure lives on the figure rather than the quote, so the quote and its attribution share
+   one right edge for the caption to align to. */
+.year-lyric-block {
+  margin-top: 16px;
+  max-width: 52ch;
+}
+
+.year-lyric {
+  padding-left: 14px;
+  border-left: 2px solid var(--border2);
+  font-family: var(--font-quote);
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text);
+  white-space: pre-wrap;
+}
+
+/* The song, not the album - the album is already the title at the top of this card, so repeating
+   it would say nothing. Meta face and uppercase to match the tags, because this is metadata about
+   the quote rather than part of it. No `from`, no dash: a title set small directly under a
+   quotation is read as its attribution without being told, and a label word would be one more
+   string to translate for no gain. */
+/* Right-aligned against the figure's measure, which is the standing form for an attribution under
+   a pulled quote: the eye finishes the quotation and finds the source where the line ends.
+
+   No longer uppercase or letter-spaced. Those belong to the tags and pills, where the text is a
+   category; this is a song title in quotation marks, and a title is set as it is written. The
+   marks are in the markup rather than a ::before/::after pair so they survive being copied. */
+.year-lyric-song {
+  margin-top: 7px;
+  text-align: right;
+  font-family: var(--font-quote);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text3);
+}
+
+/* Editor only. A cross-link the reader will refuse to draw - target missing, target in a
+   provisional year, or an entry linked to itself. The reader fails closed and shows plain text,
+   which is right for a visitor and wrong for the person who can fix it: a link into 1966 resolves
+   perfectly at write time and then quietly does nothing forever. Struck through and dotted so it
+   reads as "this is a link that is not working" rather than as emphasis; the reason is in the
+   title attribute. Never shipped - bestof-reader.js has no such class. */
+.year-review-link-dead {
+  text-decoration: line-through underline dotted;
+  text-decoration-color: var(--sensitive);
+  text-underline-offset: 3px;
+  cursor: help;
 }
 
 /* An album named inside a blurb, linking to that album's own card. Underlined rather than

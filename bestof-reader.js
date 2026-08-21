@@ -486,6 +486,18 @@ function renderList() {
       ? `<p class="year-review" lang="${reviewLang}">${linkifyReview(reviewText, entry)}</p>`
       : '';
 
+    // A lyric from the record, above the blurb. Not run through linkifyReview: the cross-link
+    // matcher works on surfaces Alex chose inside his own prose, and a lyric is someone else's
+    // words - a band name that happens to appear in one is a coincidence, not a reference.
+    // Escaped, never translated. The words are the record's, so they are the same in both
+    // languages, exactly like the album title above them.
+    const lyric = entry.lyric && entry.lyric.text
+      ? `<figure class="year-lyric-block">
+          <blockquote class="year-lyric">${esc(entry.lyric.text)}</blockquote>
+          ${entry.lyric.song ? `<figcaption class="year-lyric-song">&quot;${esc(entry.lyric.song)}&quot;</figcaption>` : ''}
+        </figure>`
+      : '';
+
     return `
       <article class="year-card" id="${esc(albumSlug(entry))}" style="position:relative">
         ${entry.sensitive ? `<div class="year-sensitive">${esc(S.sensitive)}</div>` : ''}
@@ -499,6 +511,7 @@ function renderList() {
           </div>
           <div class="year-artist">${esc(entry.artist)}${entry.label ? `<span class="year-label"> · ${esc(entry.label)}</span>` : ''}</div>
           ${tags ? `<div class="year-tags">${tags}</div>` : ''}
+          ${lyric}
           ${review}
           ${audio || appleMusic ? `<div class="year-actions">${audio}${appleMusic}</div>` : ''}
         </div>

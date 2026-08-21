@@ -26,3 +26,6 @@ style.css
 # Editor / local harness scratch
 .claude/
 /tmp/
+
+# Exported bestof-data.js waiting to be installed by tools/pull.py
+drop/*.js

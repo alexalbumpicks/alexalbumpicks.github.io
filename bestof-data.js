@@ -9473,7 +9473,20 @@ const BEST_OF_ENTRIES = [
       "Electropop",
       "Hyperpop"
     ],
-    "review": "",
+    "lyric": {
+      "text": "finally when it's over / we might be even closer",
+      "song": "anthems"
+    },
+    "review": "在写了十年的派对和飙车后，Charli终于在party 4 u写出了新时代的dancing on my own。合成器在她身后悸动、变调，情感的水位不断上涨，然后在副歌的位置绽放开来——即便是最热情的party girl也有最低微、最心碎的时刻。Charli xcx不是一个擅长雕琢的词作者，但她的长处在直接的表达与到位的旋律。在HIFN有限的创作条件下，hyperpop的层层音轨和调音反倒像是解放了Charli，让她自如写出了心底最深的欲望和孤独。",
+    "reviewEn": "After a decade of writing parties and fast cars, Charli finally wrote the dancing on my own of a new era, and she wrote it on party 4 u. Synths throb and detune behind her, the water level of feeling keeps rising, and then it opens out at the chorus: even the most enthusiastic party girl has her lowest, most heartbroken moment. Charli xcx is not a lyricist who polishes, but her strength is direct expression and a melody that lands. Under the limited conditions HIFN was made in, hyperpop's stacked tracks and pitch-shifting seem to have freed her instead, letting her write out the deepest desire and loneliness in her without any effort.",
+    "reviewLinks": [
+      {
+        "zh": "dancing on my own",
+        "en": "dancing on my own",
+        "year": 2010,
+        "title": "Body Talk"
+      }
+    ],
     "context": "",
     "tracks": [],
     "yearRank": 4
@@ -21922,6 +21935,50 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "yearRank": 29
+  },
+  {
+    "type": "album",
+    "year": 1980,
+    "title": "Gyrate",
+    "artist": "Pylon",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/bd/df/da/bddfdac7-e522-475a-078f-ac71b9e2334e/607396649334.png/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/51/32/c1/5132c1a8-060b-7460-fa51-f66123b492ff/mzaf_3640976908920611123.plus.aac.p.m4a",
+    "appleMusic": "https://music.apple.com/us/album/gyrate-remastered/1527592119",
+    "label": "",
+    "audioTrack": "Precaution",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "tags": [
+      "Rock",
+      "Post Punk"
+    ],
+    "review": "一张在后朋鼎盛期和初代alt rock之间真空期的过渡专辑。音乐上，Pylon沿袭了Gang of Four、Joy Division的贝斯律动，同乡B-52s富有感染力的演唱风格。虽然风头很快会被另一支来自Athens, Georgia的乐队（REM）盖过，但我认为Pylon最大的影响力在于它证明新时代的朋克乐团不是一定要做没有旋律的hardcore，美式post punk也可以不依赖bicoastal artsy intelligentsia在当地生根。",
+    "reviewEn": "This album serves as a transitional bridge spanning the gap between the peak of post-punk and the dawn of alternative rock. Musically, Pylon adopted the bass-driven grooves of bands like Gang of Four and Joy Division, while incorporating the infectious vocal style of their fellow Athenians, The B-52s. Although they were soon overshadowed by another band from Athens, Georgia—R.E.M.—I believe Pylon’s greatest legacy lies in demonstrating that a new breed of punk band didn't have to play melody-free hardcore; they proved that American post-punk could take root locally without relying on the artsy intelligentsia of the coasts.",
+    "reviewLinks": [
+      {
+        "zh": "Gang of Four",
+        "en": "Gang of Four",
+        "year": 1979,
+        "title": "Entertainment!"
+      },
+      {
+        "zh": "Joy Division",
+        "en": "Joy Division",
+        "year": 1980,
+        "title": "Closer"
+      },
+      {
+        "zh": "REM",
+        "en": "R.E.M.",
+        "year": 1983,
+        "title": "Murmur"
+      }
+    ],
+    "context": "",
+    "tracks": [],
+    "yearRank": 12
   }
 ];
 
