@@ -74,7 +74,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 3
+    "yearRank": 1
   },
   {
     "type": "album",
@@ -632,7 +632,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "left",
-    "yearRank": 9
+    "yearRank": 8
   },
   {
     "type": "album",
@@ -793,7 +793,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "right",
-    "yearRank": 3
+    "yearRank": 4
   },
   {
     "type": "album",
@@ -3679,7 +3679,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 5
   },
   {
     "type": "album",
@@ -3989,10 +3989,19 @@ const BEST_OF_ENTRIES = [
       "Pop/R&B",
       "Neo-soul"
     ],
-    "review": "",
+    "review": "优雅、含蓄而深刻。在世纪的转折点，Erykah Badu交出了一篇融合放克、爵士精髓的新灵魂巅峰之作。从Baduizm开始，Badu建立了她与麦克风若即若离的关系，这种疏离在Mama’s Gun的几个情感的关键支点被首次打破，反而更加体现她情绪的真实和脆弱。而长达十分钟的Green Eyes是这张专辑绝对的封神时刻，它是爵士乐一百年的变迁史，更是一段感情衰败最真实的记叙。",
     "context": "",
     "tracks": [],
-    "yearRank": 1
+    "yearRank": 1,
+    "reviewEn": "Elegant, understated, deep. At the turn of the century Erykah Badu handed in a neo-soul summit built out of the essence of funk and jazz. From Baduizm onward she had held the microphone at arm's length, close and not close at the same time, and on this record that distance breaks for the first time at a few load-bearing emotional moments, which makes her feeling more real and more exposed rather than less. The ten-minute Green Eyes is the album's absolute moment of ascension: a hundred years of jazz history in one song, and past that, the truest account anyone has written of a love coming apart.",
+    "reviewLinks": [
+      {
+        "zh": "Baduizm",
+        "en": "Baduizm",
+        "year": 1997,
+        "title": "Baduizm"
+      }
+    ]
   },
   {
     "type": "album",
@@ -9555,10 +9564,13 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Folk rock"
     ],
-    "review": "",
+    "review": "作为独立摇滚向Americana风格的一次“归根”尝试，Waxahatchee在专辑一开头就抓住了“村乐”的两大要素：具象的表达（“iron the edges of the darkest sky”，多美的比喻）和引人入胜的优美旋律；后半截的歌更安静一些，却更凸显她歌词的诗性，沉淀出岁月流逝的带来的平静美",
     "context": "",
     "tracks": [],
-    "yearRank": 6
+    "yearRank": 6,
+    "label": "",
+    "audioTrack": "",
+    "reviewEn": "In a \"return-to-roots\" foray from indie rock into Americana, Waxahatchee captures two hallmarks of the genre right from the album's opening: evocative imagery—such as the beautiful metaphor \"iron the edges of the darkest sky\"—and captivating, graceful melodies. The songs in the latter half are more subdued, yet they further highlight the poetic quality of her lyrics, distilling a serene beauty born of the passage of time."
   },
   {
     "type": "album",
@@ -15682,7 +15694,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 2
   },
   {
     "type": "album",
@@ -15704,7 +15716,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 5
+    "yearRank": 3
   },
   {
     "type": "album",
@@ -15726,7 +15738,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 6
+    "yearRank": 4
   },
   {
     "type": "album",
@@ -17774,7 +17786,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 10
+    "yearRank": 9
   },
   {
     "type": "album",
@@ -17795,7 +17807,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 8
+    "yearRank": 10
   },
   {
     "type": "album",
@@ -18011,7 +18023,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 5
   },
   {
     "type": "album",
@@ -20920,12 +20932,16 @@ const BEST_OF_ENTRIES = [
     "rating": 4,
     "tags": [
       "Rock",
-      "Experimental"
+      "Experimental",
+      "Digital Hardcore"
     ],
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 2
+    "yearRank": 2,
+    "appleMusic": "",
+    "audioTrack": "",
+    "reviewEn": ""
   },
   {
     "type": "album",

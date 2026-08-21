@@ -1,0 +1,60 @@
+#!/bin/sh
+# Serve this repo at http://localhost:8123 so the editor runs in a secure context.
+#
+# The editor needs that for two things: the File System Access API behind `save to repo`, which
+# simply does not exist on file://, and a stable origin - localStorage is per-origin, so file://,
+# localhost:8123 and 127.0.0.1:8123 are three separate copies of your work. Always this one.
+#
+#   ./serve          start it, print the URLs
+#   ./serve --open   also open the editor in Chrome
+#
+# Ctrl-C stops it. Safe to run twice: if it is already up, this says so rather than failing on a
+# port clash.
+set -e
+DIR=$(cd "$(dirname "$0")" && pwd)
+PORT=8123
+URL="http://localhost:$PORT"
+
+open_if_asked() {
+  case "$1" in
+    --open|-o) open -a "Google Chrome" "$URL/editor.html" 2>/dev/null \
+                 || open "$URL/editor.html" 2>/dev/null || true ;;
+  esac
+}
+
+# Already serving? Don't fight over the port - just point at it.
+if curl -s -o /dev/null -m 2 "$URL/editor.html"; then
+  echo "already running"
+  echo "  editor  $URL/editor.html"
+  echo "  reader  $URL/"
+  open_if_asked "$1"
+  exit 0
+fi
+
+# Port taken by something that is not us.
+if lsof -nP -iTCP:$PORT -sTCP:LISTEN >/dev/null 2>&1; then
+  echo "port $PORT is in use by something that is not this server:" >&2
+  lsof -nP -iTCP:$PORT -sTCP:LISTEN >&2
+  exit 1
+fi
+
+echo "serving $DIR"
+echo "  editor  $URL/editor.html"
+echo "  reader  $URL/"
+echo "  (ctrl-c to stop)"
+open_if_asked "$1"
+
+# Bound to 127.0.0.1 rather than all interfaces: this carries an editor with delete buttons, and it
+# has no business being reachable from the rest of the network.
+# ThreadingHTTPServer, NOT socketserver.TCPServer. The plain one is single-threaded, so a single
+# keep-alive connection that a browser holds open blocks every later request forever - the process
+# stays alive, keeps the listening socket, and answers nothing. That looks exactly like "Chrome
+# shows nothing" while lsof cheerfully reports the server as LISTENING, which is the worst kind of
+# failure to diagnose. daemon_threads so ctrl-c does not hang waiting on those connections.
+exec python3 -c "
+import functools, http.server
+h = functools.partial(http.server.SimpleHTTPRequestHandler, directory='$DIR')
+http.server.ThreadingHTTPServer.allow_reuse_address = True
+http.server.ThreadingHTTPServer.daemon_threads = True
+http.server.ThreadingHTTPServer(('127.0.0.1', $PORT), h).serve_forever()
+"
