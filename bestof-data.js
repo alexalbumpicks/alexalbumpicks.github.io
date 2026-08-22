@@ -632,7 +632,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "left",
-    "yearRank": 8
+    "yearRank": 10
   },
   {
     "type": "album",
@@ -655,7 +655,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "right",
-    "yearRank": 3
+    "yearRank": 5
   },
   {
     "type": "album",
@@ -676,7 +676,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "right",
-    "yearRank": 11
+    "yearRank": 13
   },
   {
     "type": "album",
@@ -17744,7 +17744,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 7
   },
   {
     "type": "album",
@@ -17765,7 +17765,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 7
+    "yearRank": 6
   },
   {
     "type": "album",
@@ -17786,7 +17786,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 9
+    "yearRank": 12
   },
   {
     "type": "album",
@@ -17807,7 +17807,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 10
+    "yearRank": 11
   },
   {
     "type": "album",
@@ -17829,7 +17829,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 5
+    "yearRank": 3
   },
   {
     "type": "album",
@@ -17871,7 +17871,7 @@ const BEST_OF_ENTRIES = [
     ],
     "context": "",
     "tracks": [],
-    "yearRank": 6
+    "yearRank": 9
   },
   {
     "type": "album",
@@ -21994,7 +21994,59 @@ const BEST_OF_ENTRIES = [
     ],
     "context": "",
     "tracks": [],
-    "yearRank": 12
+    "yearRank": 14
+  },
+  {
+    "type": "album",
+    "year": 1980,
+    "title": "Dirty Mind",
+    "artist": "Prince",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c3/a5/8c/c3a58ccb-18d8-a6e4-4fb1-a3c4797806f3/886448892984.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ea/19/5f/ea195fab-54f4-f693-e02c-c2a63bf16b2f/mzaf_5348788563096302739.plus.aac.p.m4a",
+    "label": "",
+    "appleMusic": "",
+    "audioTrack": "When You Were Mine",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Pop/R&B",
+      "Rock",
+      "New wave",
+      "Electro-funk"
+    ],
+    "review": "",
+    "reviewEn": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 4
+  },
+  {
+    "type": "album",
+    "year": 1980,
+    "title": "Diana",
+    "artist": "Diana Ross",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/aa/87/1c/aa871c20-95be-38bd-97e3-ecfeb8ec404b/15UMGIM06551.rgb.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7d/58/14/7d581448-d991-5135-bee7-efd9fa12078e/mzaf_14944824030219185576.plus.aac.p.m4a",
+    "label": "",
+    "appleMusic": "",
+    "audioTrack": "I'm Coming Out",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Pop/R&B",
+      "Disco"
+    ],
+    "review": "",
+    "reviewEn": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 8
   }
 ];
 

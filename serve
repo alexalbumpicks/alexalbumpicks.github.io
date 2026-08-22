@@ -11,7 +11,12 @@
 # Ctrl-C stops it. Safe to run twice: if it is already up, this says so rather than failing on a
 # port clash.
 set -e
-DIR=$(cd "$(dirname "$0")" && pwd)
+# $0 is the path this was INVOKED as, which for the ~/.local/bin/albums symlink is the symlink
+# itself - so dirname gives ~/.local/bin and the server happily serves that instead of the repo,
+# answering 404 for every real file. realpath follows the link to the actual script. macOS ships no
+# `readlink -f`, and python3 is already a hard dependency below.
+SELF=$(python3 -c 'import os,sys; print(os.path.realpath(sys.argv[1]))' "$0")
+DIR=$(cd "$(dirname "$SELF")" && pwd)
 PORT=8123
 URL="http://localhost:$PORT"
 
@@ -22,8 +27,10 @@ open_if_asked() {
   esac
 }
 
-# Already serving? Don't fight over the port - just point at it.
-if curl -s -o /dev/null -m 2 "$URL/editor.html"; then
+# Already serving? Don't fight over the port - just point at it. `-f` matters: without it curl
+# exits 0 on a 404, so a server rooted at the wrong directory reads as a healthy one and this
+# reports "already running" while nothing the editor needs is reachable.
+if curl -sf -o /dev/null -m 2 "$URL/editor.html"; then
   echo "already running"
   echo "  editor  $URL/editor.html"
   echo "  reader  $URL/"
