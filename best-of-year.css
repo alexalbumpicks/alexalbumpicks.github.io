@@ -31,6 +31,12 @@
      hardest case for contrast, and clears 6.3:1 on white where #f00 manages 4.0 and fails. */
   --sensitive: #b3261e;
 
+  /* The map's third state. Orange rather than a second red, because it has to separate from
+     --sensitive at 6px across: two reds that close read as one colour with a size difference, and
+     the size difference is already doing work. #d4620a clears 4.6:1 on white, so the dot is a mark
+     rather than a smudge for anyone whose screen or eyes are less kind than a laptop in daylight. */
+  --map-now: #d4620a;
+
   /* Three faces, three jobs — which is the point. A stretch of this page was set entirely in
      Helvetica Neue and read as corporate; the face was not really the problem, the monoculture
      was. Neutral body text is a virtue, but neutral body text *and* headline *and* rank numeral
@@ -1026,6 +1032,81 @@ button:focus-visible {
    inside it stop needing outlines of their own. Between sidebar cards the rule drops to a
    hairline — the 2px black is reserved for boundaries between areas, so that a glance can tell
    structure from detail without a second colour. */
+/* The map lives in the sidebar, which is already sticky, so it stays put while the list scrolls
+   past it - that is the whole interaction and it costs no extra positioning.
+
+   Deliberately unlabelled. At this scale Talking Heads and The Feelies are 4px apart and any two
+   bands from one scene overprint into a smear, which is worst exactly where the map is most
+   interesting. The caption underneath names only the current one. */
+#year-map svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.map-land {
+  fill: var(--bg3);
+  stroke: var(--border2);
+  stroke-width: 0.75;
+  stroke-linejoin: round;
+}
+
+/* Three states, and the order matters as much as the colours.
+
+   red      a band on THIS year's list
+   grey     a city that has already appeared in an earlier year - the memory of the decade so far
+   orange   the album currently under the heading
+
+   Orange is bigger as well as differently coloured. Colour alone would fail anyone who cannot
+   separate red from orange, which is the most common form of colour blindness there is, so the
+   radius carries the same information a second time. */
+.map-dot {
+  fill: var(--sensitive);
+  opacity: 0.8;
+  transition: opacity 0.2s, r 0.2s, fill 0.2s;
+}
+
+.map-dot.is-prior {
+  fill: var(--text3);
+  opacity: 0.35;
+}
+
+.map-dot.is-active {
+  fill: var(--map-now);
+  opacity: 1;
+  r: 7;
+}
+
+/* Reduced motion drops the tween, not the highlight: the point is knowing where the band is from,
+   and that survives losing the animation. */
+@media (prefers-reduced-motion: reduce) {
+  .map-dot { transition: none; }
+}
+
+/* Band over city, two lines. The year list also holds English, Scottish and Japanese acts that get
+   no dot at all, so a bare city name leaves you working out which album it belongs to. */
+#map-caption {
+  margin-top: 10px;
+  font-family: var(--font-meta);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  line-height: 1.55;
+}
+
+/* The band is the answer to "who is this"; the city is the answer to "where". Weight separates them
+   so the pair reads as one label rather than two facts. */
+#map-band {
+  font-weight: 500;
+  text-transform: none;
+  color: var(--text);
+}
+
+#map-city {
+  text-transform: uppercase;
+  color: var(--text2);
+}
+
 .year-sidebar {
   display: grid;
   gap: 0;

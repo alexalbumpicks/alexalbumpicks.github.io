@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="best-of-year.css?v=f0705650d8">
+<link rel="stylesheet" href="best-of-year.css?v=f5cde5792f">
 </head>
 <body>
   <div class="year-page">
@@ -44,6 +44,16 @@
           <div class="sidebar-label" id="sidebar-label">How this ranking works</div>
           <p id="ranking-note"></p>
         </div>
+        <!-- Filled in by the reader, and removed entirely for a year with no located bands, so a
+             year the origins file does not cover shows nothing rather than an empty US. -->
+        <div class="sidebar-card" id="map-card" hidden>
+          <div class="sidebar-label" id="map-label">Where they were from</div>
+          <div id="year-map"></div>
+          <div id="map-caption">
+            <div id="map-band">&nbsp;</div>
+            <div id="map-city">&nbsp;</div>
+          </div>
+        </div>
       </aside>
     </main>
   </div>
@@ -63,7 +73,8 @@
 
   <!-- The add/edit album modal that sits here on editor.html is absent, not hidden. -->
 
-  <script src="bestof-data.js?v=70d073d2f2"></script>
-  <script src="bestof-reader.js?v=de5282d24a"></script>
+  <script src="bestof-data.js?v=a32f945e7c"></script>
+  <script src="bestof-origins.js?v=5ae80a6689"></script>
+  <script src="bestof-reader.js?v=25e3000925"></script>
 </body>
 </html>

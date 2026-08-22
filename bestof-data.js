@@ -632,7 +632,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "left",
-    "yearRank": 10
+    "yearRank": 11
   },
   {
     "type": "album",
@@ -655,7 +655,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "right",
-    "yearRank": 5
+    "yearRank": 3
   },
   {
     "type": "album",
@@ -676,7 +676,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "right",
-    "yearRank": 13
+    "yearRank": 14
   },
   {
     "type": "album",
@@ -17744,7 +17744,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 7
+    "yearRank": 9
   },
   {
     "type": "album",
@@ -17765,7 +17765,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 6
+    "yearRank": 7
   },
   {
     "type": "album",
@@ -17786,7 +17786,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 12
+    "yearRank": 13
   },
   {
     "type": "album",
@@ -17807,7 +17807,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 11
+    "yearRank": 12
   },
   {
     "type": "album",
@@ -17829,7 +17829,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 3
+    "yearRank": 5
   },
   {
     "type": "album",
@@ -17871,7 +17871,7 @@ const BEST_OF_ENTRIES = [
     ],
     "context": "",
     "tracks": [],
-    "yearRank": 9
+    "yearRank": 10
   },
   {
     "type": "album",
@@ -21994,7 +21994,7 @@ const BEST_OF_ENTRIES = [
     ],
     "context": "",
     "tracks": [],
-    "yearRank": 14
+    "yearRank": 15
   },
   {
     "type": "album",
@@ -22021,7 +22021,7 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 6
   },
   {
     "type": "album",
@@ -22047,6 +22047,31 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "yearRank": 8
+  },
+  {
+    "type": "album",
+    "year": 1980,
+    "title": "Fresh Fruit for Rotting Vegetables",
+    "artist": "Dead Kennedys",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/37/b9/b9/37b9b9e1-3340-2864-e4c4-3a677a2466c4/767004290720_Cover.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/43/17/fd/4317fd01-ae20-d68d-42a6-46a45ea2255b/mzaf_3446286544098829211.plus.aac.p.m4a",
+    "appleMusic": "",
+    "label": "",
+    "audioTrack": "Holiday in Cambodia",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 4,
+    "tags": [
+      "Rock",
+      "Hardcore punk"
+    ],
+    "review": "",
+    "reviewEn": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 4
   }
 ];
 

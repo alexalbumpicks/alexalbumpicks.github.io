@@ -421,6 +421,9 @@ function renderList() {
   }
 
   const yearAlbums = sortedYearAlbums(activeYear);
+  // Drawn from the same sorted array the cards come from, so a dot's data-idx is the card's index
+  // and the scroll sync can match them without a second lookup.
+  renderYearMap(yearAlbums, activeYear);
 
   if (!yearAlbums.length) {
     list.innerHTML = `
@@ -519,6 +522,133 @@ function renderList() {
     `;
   }).join('');
 }
+
+// --- the map -----------------------------------------------------------------------------------
+// A US outline in the sidebar with one dot per located band, and the dot for whichever album is
+// currently at the top of the reading area lit up.
+//
+// City names are NOT drawn. At this scale Talking Heads and The Feelies land 4px apart and their
+// labels overprint into an unreadable smear; the same is true of any two bands from one scene,
+// which is exactly the pattern the map exists to show. So the labels come off and the caption
+// under the map names only the current one - you get the place without the clutter, and the
+// clutter would have been worst precisely where the map is most interesting.
+//
+// Everything is pre-projected in bestof-origins.js, so this draws circles at given coordinates and
+// does no geography of its own.
+let mapDots = [];
+
+// The map is cumulative, not a snapshot of one year. On the 1985 page you see 1985's bands in red,
+// every city that has already appeared since 1980 in grey, and nothing at all from 1986 onward -
+// so scrolling forward through the decade builds the picture up rather than replacing it, and the
+// grey is the memory of where the music has already been.
+//
+// Hiding the future rather than greying it is the point: a map that showed Seattle in 1980 would
+// give away that Nirvana is coming, and the whole argument is that these scenes did not know about
+// each other yet.
+function renderYearMap(albums, year) {
+  const card = document.getElementById('map-card');
+  if (!card || typeof BAND_ORIGINS === 'undefined') return;
+
+  const located = albums
+    .map((item, i) => ({ i, entry: item.entry, origin: BAND_ORIGINS[item.entry.artist] }))
+    .filter(x => x.origin);
+
+  // Cities already seen in an earlier year. Keyed by coordinate rather than by name so two spellings
+  // of one place cannot draw two dots, and deduped against this year so a city that is active now is
+  // not also drawn grey underneath.
+  const here = new Set(located.map(x => x.origin.x + ',' + x.origin.y));
+  const prior = new Map();
+  ENTRIES.forEach(e => {
+    if (e.type !== 'album' || !(e.year < year)) return;
+    const o = BAND_ORIGINS[e.artist];
+    if (!o) return;
+    const k = o.x + ',' + o.y;
+    if (!here.has(k)) prior.set(k, o);
+  });
+
+  if (!located.length && !prior.size) {
+    card.hidden = true;
+    mapDots = [];
+    return;
+  }
+  card.hidden = false;
+
+  const priorDots = [...prior.values()]
+    .map(o => `<circle class="map-dot is-prior" cx="${o.x}" cy="${o.y}" r="3"></circle>`).join('');
+  // Drawn after the grey, so a live dot is never buried under a memory of itself.
+  const nowDots = located
+    .map(x => `<circle class="map-dot" data-idx="${x.i}" cx="${x.origin.x}" cy="${x.origin.y}" r="4"></circle>`)
+    .join('');
+
+  document.getElementById('year-map').innerHTML =
+    `<svg viewBox="${US_MAP_VIEWBOX}" role="img" aria-label="Where this year's bands were from">`
+    + `<path class="map-land" d="${US_MAP_PATH}"/>${priorDots}${nowDots}</svg>`;
+
+  mapDots = located;
+  if (located.length) setMapActive(located[0].i);
+  else setMapCaption('', '');
+}
+
+function setMapCaption(band, city) {
+  const b = document.getElementById('map-band');
+  const c = document.getElementById('map-city');
+  // Both lines are always present, even when empty, so the card does not change height as you
+  // scroll past an album with no dot - a sidebar that jumps is worse than one that goes blank.
+  if (b) b.textContent = band || '\u00a0';
+  if (c) c.textContent = city || '\u00a0';
+}
+
+function setMapActive(idx) {
+  const svg = document.querySelector('#year-map svg');
+  if (!svg) return;
+  let band = '', city = '';
+  svg.querySelectorAll('.map-dot').forEach(d => {
+    const on = d.dataset.idx !== undefined && Number(d.dataset.idx) === idx;
+    d.classList.toggle('is-active', on);
+    if (on) {
+      // Move the active dot last so it paints over any dot sharing its coordinates - Los Angeles
+      // carries three bands across the decade and they are all the same pixel.
+      d.parentNode.appendChild(d);
+      const hit = mapDots.find(m => m.i === idx);
+      if (hit) { band = hit.entry.artist; city = hit.origin.city; }
+    }
+  });
+  // The band name matters as much as the city: the list also holds English and Japanese acts with no
+  // dot at all, so a bare city name leaves you guessing which album it belongs to.
+  setMapCaption(band, city);
+}
+
+// Which album is "at the top" - the last card whose top edge has passed the reading line. A fixed
+// offset rather than an IntersectionObserver: the question here is not "is this visible" but "which
+// one is currently under the heading", and that is a comparison against one line.
+function syncMapToScroll() {
+  if (!mapDots.length) return;
+  const cards = document.querySelectorAll('.year-list .year-card');
+  if (!cards.length) return;
+  const LINE = 120;
+  let current = 0;
+  cards.forEach((c, i) => {
+    if (c.getBoundingClientRect().top <= LINE) current = i;
+  });
+  // The last cards can never reach the line - there is not enough page below them to scroll their
+  // top edge that far - so without this the final album of every year would be unreachable.
+  const atBottom = window.innerHeight + window.scrollY
+                   >= document.documentElement.scrollHeight - 2;
+  if (atBottom) current = cards.length - 1;
+
+  // Hold the last located album rather than blanking, so scrolling through a run of non-US acts
+  // does not flicker the sidebar empty and back.
+  let pick = mapDots[0].i;
+  mapDots.forEach(m => { if (m.i <= current) pick = m.i; });
+  setMapActive(pick);
+}
+
+let mapTick = false;
+window.addEventListener('scroll', () => {
+  if (mapTick) return;
+  mapTick = true;
+  requestAnimationFrame(() => { mapTick = false; syncMapToScroll(); });
+}, { passive: true });
 
 function playYearAlbum(index) {
   const yearAlbums = sortedYearAlbums(activeYear);

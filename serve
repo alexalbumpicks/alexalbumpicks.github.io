@@ -60,7 +60,20 @@ open_if_asked "$1"
 # failure to diagnose. daemon_threads so ctrl-c does not hang waiting on those connections.
 exec python3 -c "
 import functools, http.server
-h = functools.partial(http.server.SimpleHTTPRequestHandler, directory='$DIR')
+
+# HTML is served no-store. The CSS and JS carry ?v= cache busters that stamp.py maintains, so a
+# changed asset is a changed URL and the browser refetches it - but the HTML that POINTS at those
+# URLs carries no buster of its own, and SimpleHTTPRequestHandler sends only Last-Modified. A page
+# cached while the server was down or wedged is then served back from disk indefinitely, pointing
+# at stale asset URLs, and the site appears frozen at an old version no matter how many times you
+# reload. That has cost three separate debugging sessions; this ends it for local development.
+class H(http.server.SimpleHTTPRequestHandler):
+    def end_headers(self):
+        if self.path.split('?')[0].endswith(('.html', '/')):
+            self.send_header('Cache-Control', 'no-store, must-revalidate')
+        super().end_headers()
+
+h = functools.partial(H, directory='$DIR')
 http.server.ThreadingHTTPServer.allow_reuse_address = True
 http.server.ThreadingHTTPServer.daemon_threads = True
 http.server.ThreadingHTTPServer(('127.0.0.1', $PORT), h).serve_forever()
