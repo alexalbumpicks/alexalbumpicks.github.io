@@ -538,13 +538,21 @@ function renderList() {
 let mapDots = [];
 
 // The map is cumulative, not a snapshot of one year. On the 1985 page you see 1985's bands in red,
-// every city that has already appeared since 1980 in grey, and nothing at all from 1986 onward -
-// so scrolling forward through the decade builds the picture up rather than replacing it, and the
-// grey is the memory of where the music has already been.
+// every city that has already appeared since 1980 in grey, and nothing at all from 1986 onward - so
+// scrolling forward builds the picture up rather than replacing it, and the grey is the memory of
+// where the music has already been. Hiding the future rather than greying it is the point: a map
+// showing Aberdeen in 1980 would give away that Nirvana is coming, and the argument is that these
+// scenes did not know about each other yet.
 //
-// Hiding the future rather than greying it is the point: a map that showed Seattle in 1980 would
-// give away that Nirvana is coming, and the whole argument is that these scenes did not know about
-// each other yet.
+// TWO MAPS, one visible at a time, swapped by the country of whichever band is being read. Both are
+// built up front and toggled, rather than re-rendered on every scroll - a 12KB path string rebuilt
+// sixty times a second is not free, and the swap has to be instant to read as one panel changing
+// rather than two panels fighting.
+const MAP_DEFS = {
+  US: { viewBox: typeof US_MAP_VIEWBOX !== 'undefined' ? US_MAP_VIEWBOX : '', path: typeof US_MAP_PATH !== 'undefined' ? US_MAP_PATH : '' },
+  GB: { viewBox: typeof UK_MAP_VIEWBOX !== 'undefined' ? UK_MAP_VIEWBOX : '', path: typeof UK_MAP_PATH !== 'undefined' ? UK_MAP_PATH : '' }
+};
+
 function renderYearMap(albums, year) {
   const card = document.getElementById('map-card');
   if (!card || typeof BAND_ORIGINS === 'undefined') return;
@@ -553,16 +561,16 @@ function renderYearMap(albums, year) {
     .map((item, i) => ({ i, entry: item.entry, origin: BAND_ORIGINS[item.entry.artist] }))
     .filter(x => x.origin);
 
-  // Cities already seen in an earlier year. Keyed by coordinate rather than by name so two spellings
-  // of one place cannot draw two dots, and deduped against this year so a city that is active now is
-  // not also drawn grey underneath.
-  const here = new Set(located.map(x => x.origin.x + ',' + x.origin.y));
+  // Cities already seen in an earlier year, per country. Keyed by coordinate rather than by name so
+  // two spellings of one place cannot draw two dots, and deduped against this year so a city that is
+  // active now is not also drawn grey underneath it.
+  const here = new Set(located.map(x => x.origin.country + ':' + x.origin.x + ',' + x.origin.y));
   const prior = new Map();
   ENTRIES.forEach(e => {
     if (e.type !== 'album' || !(e.year < year)) return;
     const o = BAND_ORIGINS[e.artist];
     if (!o) return;
-    const k = o.x + ',' + o.y;
+    const k = o.country + ':' + o.x + ',' + o.y;
     if (!here.has(k)) prior.set(k, o);
   });
 
@@ -573,54 +581,121 @@ function renderYearMap(albums, year) {
   }
   card.hidden = false;
 
-  const priorDots = [...prior.values()]
-    .map(o => `<circle class="map-dot is-prior" cx="${o.x}" cy="${o.y}" r="3"></circle>`).join('');
-  // Drawn after the grey, so a live dot is never buried under a memory of itself.
-  const nowDots = located
-    .map(x => `<circle class="map-dot" data-idx="${x.i}" cx="${x.origin.x}" cy="${x.origin.y}" r="4"></circle>`)
-    .join('');
+  const svgs = Object.keys(MAP_DEFS).map(country => {
+    const def = MAP_DEFS[country];
+    if (!def.path) return '';
+    const greys = [...prior.values()].filter(o => o.country === country)
+      .map(o => `<circle class="map-dot is-prior" cx="${o.x}" cy="${o.y}" r="3"></circle>`).join('');
+    // Drawn after the grey so a live dot is never buried under a memory of itself.
+    const reds = located.filter(x => x.origin.country === country)
+      .map(x => `<circle class="map-dot" data-idx="${x.i}" cx="${x.origin.x}" cy="${x.origin.y}" r="4"></circle>`)
+      .join('');
+    return `<svg class="map-svg" data-country="${country}" viewBox="${def.viewBox}" hidden`
+         + ` role="img" aria-label="Where this year's bands were from">`
+         + `<path class="map-land" d="${def.path}"/>${greys}${reds}</svg>`;
+  }).join('');
 
-  document.getElementById('year-map').innerHTML =
-    `<svg viewBox="${US_MAP_VIEWBOX}" role="img" aria-label="Where this year's bands were from">`
-    + `<path class="map-land" d="${US_MAP_PATH}"/>${priorDots}${nowDots}</svg>`;
-
+  document.getElementById('year-map').innerHTML = svgs;
+  // A new year rebuilds the svgs, so the remembered country no longer refers to a live element.
+  mapCountryShown = null;
   mapDots = located;
   if (located.length) setMapActive(located[0].i);
-  else setMapCaption('', '');
+  else showMapFor([...prior.values()][0].country, '', '');
 }
 
-function setMapCaption(band, city) {
+// Only one country on screen. Called on every highlight change, so the common case - same country,
+// different band - must be cheap: it updates two lines of text and returns.
+//
+// A country CHANGE cross-fades. The two maps are different shapes, 631x400 against 330x400, which
+// at sidebar width is 162px tall against 310px - so a fade alone would dissolve one map into
+// another while the panel jumped 148px and shoved the caption up with it. The height is therefore
+// transitioned at the same time, and both maps are stacked absolutely so neither reserves space.
+let mapCountryShown = null;
+let mapFadeToken = 0;
+
+function mapHeightFor(svg, wrapWidth) {
+  // From the viewBox, not from a measurement: the incoming map is invisible and may be display:none
+  // at the moment we need its height, so there is nothing to measure yet.
+  const vb = (svg.getAttribute('viewBox') || '').split(/\s+/).map(Number);
+  if (vb.length !== 4 || !vb[2]) return 0;
+  return wrapWidth * (vb[3] / vb[2]);
+}
+
+function showMapFor(country, band, city) {
   const b = document.getElementById('map-band');
   const c = document.getElementById('map-city');
-  // Both lines are always present, even when empty, so the card does not change height as you
-  // scroll past an album with no dot - a sidebar that jumps is worse than one that goes blank.
+  // Both lines always present, even empty, so the card does not change height as you scroll past an
+  // album with no dot - a sidebar that jumps is worse than one that goes blank.
   if (b) b.textContent = band || '\u00a0';
   if (c) c.textContent = city || '\u00a0';
+
+  if (country === mapCountryShown) return;
+
+  const wrap = document.getElementById('year-map');
+  if (!wrap) return;
+  const svgs = [...wrap.querySelectorAll('.map-svg')];
+  const next = svgs.find(s => s.dataset.country === country);
+  if (!next) return;
+
+  const show = () => {
+    svgs.forEach(svg => {
+      // setAttribute, NOT svg.hidden. `hidden` is defined on HTMLElement and an <svg> is an
+      // SVGElement, so `svg.hidden = false` silently creates a plain JS property and leaves the
+      // attribute in place - the element then reports hidden === false while [hidden] still
+      // matches and display stays none. It looks like a CSS bug and is not one.
+      if (svg === next) svg.removeAttribute('hidden');
+      else svg.setAttribute('hidden', '');
+    });
+    wrap.style.height = mapHeightFor(next, wrap.clientWidth) + 'px';
+  };
+
+  const first = mapCountryShown === null;
+  mapCountryShown = country;
+
+  // First paint, or reduced motion: swap outright. Nothing has been seen yet in the first case, and
+  // in the second the animation is the part being declined, not the map.
+  if (first || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    show();
+    wrap.classList.remove('is-fading');
+    return;
+  }
+
+  // Fade THROUGH blank rather than cross-fading. Two maps dissolving into each other at different
+  // sizes reads as a glitch; going out and back in reads as one panel changing its mind. The height
+  // moves during the blank half, so the caption below never visibly jumps.
+  const token = ++mapFadeToken;
+  wrap.classList.add('is-fading');
+  setTimeout(() => {
+    if (token !== mapFadeToken) return;   // a faster scroll already asked for a different country
+    show();
+    // Force a style flush so the browser sees opacity 0 with the NEW map in place before it sees
+    // opacity 1 - without a flush the two changes coalesce into one frame and there is nothing to
+    // animate from. Deliberately not requestAnimationFrame: rAF does not fire in a backgrounded
+    // tab, and if the un-fade never runs the map is left invisible with no way back until the next
+    // country change. A forced reflow is synchronous and cannot be skipped.
+    void wrap.offsetHeight;
+    wrap.classList.remove('is-fading');
+  }, 160);
 }
 
 function setMapActive(idx) {
-  const svg = document.querySelector('#year-map svg');
-  if (!svg) return;
-  let band = '', city = '';
-  svg.querySelectorAll('.map-dot').forEach(d => {
+  const hit = mapDots.find(m => m.i === idx);
+  if (!hit) return;
+  document.querySelectorAll('#year-map .map-dot').forEach(d => {
     const on = d.dataset.idx !== undefined && Number(d.dataset.idx) === idx;
     d.classList.toggle('is-active', on);
-    if (on) {
-      // Move the active dot last so it paints over any dot sharing its coordinates - Los Angeles
-      // carries three bands across the decade and they are all the same pixel.
-      d.parentNode.appendChild(d);
-      const hit = mapDots.find(m => m.i === idx);
-      if (hit) { band = hit.entry.artist; city = hit.origin.city; }
-    }
+    // Move the active dot last so it paints over any dot sharing its coordinates - Los Angeles
+    // carries three bands across the decade and London rather more, all on one pixel.
+    if (on) d.parentNode.appendChild(d);
   });
-  // The band name matters as much as the city: the list also holds English and Japanese acts with no
-  // dot at all, so a bare city name leaves you guessing which album it belongs to.
-  setMapCaption(band, city);
+  // The band name matters as much as the city: the year lists also hold acts with no dot at all, so
+  // a bare city name leaves you working out which album it belongs to.
+  showMapFor(hit.origin.country, hit.entry.artist, hit.origin.city);
 }
 
 // Which album is "at the top" - the last card whose top edge has passed the reading line. A fixed
-// offset rather than an IntersectionObserver: the question here is not "is this visible" but "which
-// one is currently under the heading", and that is a comparison against one line.
+// offset rather than an IntersectionObserver: the question is not "is this visible" but "which one
+// is currently under the heading", and that is a comparison against one line.
 function syncMapToScroll() {
   if (!mapDots.length) return;
   const cards = document.querySelectorAll('.year-list .year-card');
@@ -636,8 +711,8 @@ function syncMapToScroll() {
                    >= document.documentElement.scrollHeight - 2;
   if (atBottom) current = cards.length - 1;
 
-  // Hold the last located album rather than blanking, so scrolling through a run of non-US acts
-  // does not flicker the sidebar empty and back.
+  // Hold the last located album rather than blanking, so scrolling through a run of acts with no
+  // dot does not flicker the sidebar empty and back.
   let pick = mapDots[0].i;
   mapDots.forEach(m => { if (m.i <= current) pick = m.i; });
   setMapActive(pick);

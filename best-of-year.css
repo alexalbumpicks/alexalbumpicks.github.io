@@ -1038,11 +1038,44 @@ button:focus-visible {
    Deliberately unlabelled. At this scale Talking Heads and The Feelies are 4px apart and any two
    bands from one scene overprint into a smear, which is worst exactly where the map is most
    interesting. The caption underneath names only the current one. */
-#year-map svg {
+/* Both countries are rendered and one is hidden, rather than the svg being rebuilt on every
+   highlight change - a 12KB path string re-parsed sixty times a second is not free.
+   Each map carries its own viewBox shaped to that country, so width:100% fills the sidebar with
+   Britain or with the United States and never with empty box.
+
+   The wrapper owns the height because the two maps are different shapes: 162px tall against 310px
+   at sidebar width. JS sets it from the incoming viewBox and both properties transition together,
+   so the panel resizes while it is blank and the caption underneath never visibly jumps. */
+#year-map {
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.16s ease, height 0.28s ease;
+}
+
+#year-map.is-fading {
+  opacity: 0;
+}
+
+/* Absolute so the outgoing map stops reserving space the moment the incoming one is measured -
+   in flow they would briefly stack and the wrapper would size to both at once. */
+#year-map .map-svg {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: auto;
   overflow: visible;
+}
+
+#year-map .map-svg[hidden] {
+  display: none;
+}
+
+/* The fade is decoration; the map is not. Reduced motion swaps outright - handled in JS too, so the
+   height is set without a transition rather than animating past a disabled opacity. */
+@media (prefers-reduced-motion: reduce) {
+  #year-map { transition: none; }
 }
 
 .map-land {
