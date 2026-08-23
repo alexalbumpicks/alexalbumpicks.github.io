@@ -10,9 +10,26 @@ same sentence, both survive. If a sentence reads like it has a slip in it, menti
 Every write script that touches a blurb verifies the stored text byte-for-byte against what he
 pasted, and prints `VERBATIM OK` or refuses.
 
-House style applies only to **English that Claude writes** - the translations. Three blurbs carry
-Alex's own English (Showgirl, Ultraviolence, Gyrate) and are exempt; `t_blurbs.js` scopes the checks
-around them by name rather than dropping them.
+House style applies only to **English that Claude writes** - the translations. Four blurbs carry
+Alex's own English (Showgirl, Ultraviolence, Gyrate, Saint Cloud) and are exempt; `t_blurbs.js`
+scopes the checks around them by name rather than dropping them.
+
+### The one exception: labels, not prose
+
+Alex has asked that mistakes be corrected rather than queried, and that song titles be preferred
+where a paste is ambiguous. That licence covers the **label** half of a paste - the album name,
+artist and song he types to identify what a blurb or lyric belongs to. Those are metadata, and being
+wrong there breaks a lookup:
+
+- `Confessions 2` -> `CONFESSIONS II`, the name retired at schema 32; the literal finds nothing
+- `cursive` -> `Cursive`, `Governor's Waltz` -> `The Governor’s Waltz`, matching the entry's own
+  `audioTrack`, because one album spelling one track two ways is worse than either spelling alone
+- `four women` -> `Four Women`, because that is the track's styling - while `anthems` and `the cure`
+  stay lowercase, for exactly the same reason
+
+**It does not extend one word into his writing.** A blurb is stored byte-for-byte as sent, typos and
+mixed apostrophes and all, and every write script still verifies it or refuses. Casing follows the
+record; prose follows Alex.
 
 ## Who edits what
 

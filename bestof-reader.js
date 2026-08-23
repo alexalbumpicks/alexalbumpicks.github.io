@@ -535,6 +535,14 @@ function renderList() {
 //
 // Everything is pre-projected in bestof-origins.js, so this draws circles at given coordinates and
 // does no geography of its own.
+// TURNED OFF. Alex found the map distracting alongside the reading list, so it does not render on
+// either page. Nothing is deleted: the code below, the sidebar card in the HTML, the styles, the
+// harness and the generated bestof-origins.js all remain, and the whole feature comes back by
+// setting this to true and restoring the two <script src="bestof-origins.js"> tags removed from
+// index.html and editor.html. Those tags are out because the file is 27KB of map data that no
+// visitor currently needs; the guard below is what makes the code inert without them.
+const SHOW_YEAR_MAP = false;
+
 let mapDots = [];
 
 // The map is cumulative, not a snapshot of one year. On the 1985 page you see 1985's bands in red,
@@ -555,7 +563,14 @@ const MAP_DEFS = {
 
 function renderYearMap(albums, year) {
   const card = document.getElementById('map-card');
-  if (!card || typeof BAND_ORIGINS === 'undefined') return;
+  if (!card) return;
+  // Two conditions, deliberately: the flag is the decision, and the typeof guard is what stops a
+  // missing bestof-origins.js throwing rather than quietly doing nothing.
+  if (!SHOW_YEAR_MAP || typeof BAND_ORIGINS === 'undefined') {
+    card.hidden = true;
+    mapDots = [];
+    return;
+  }
 
   const located = albums
     .map((item, i) => ({ i, entry: item.entry, origin: BAND_ORIGINS[item.entry.artist] }))

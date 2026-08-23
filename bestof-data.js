@@ -258,10 +258,15 @@ const BEST_OF_ENTRIES = [
       "Folk",
       "Baroque folk"
     ],
-    "review": "",
+    "review": "如果你最喜欢的indie girl今天发一张这样的迷幻氛围民谣，大概能在pitchfork拿到8.4分的best new music，可惜这是1970年。没有人买她的唱片，于是她只好退出乐坛，消失了四十年。Alas",
     "context": "",
     "tracks": [],
-    "yearRank": 1
+    "yearRank": 1,
+    "reviewEn": "If ur favorite indie girl put out a psychedelic ambient folk record like this it will probably get a 8.4 best new music on pitchfork but this was in year 1970. And no one bought her record so she had to quit music and disappeared for 40 years. Alas.",
+    "lyric": {
+      "text": "Paralelo-lelo-gram / Paralelo-lelo-lelo-lelogram",
+      "song": "Parallelograms"
+    }
   },
   {
     "type": "album",
@@ -469,7 +474,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 2
+    "yearRank": 3
   },
   {
     "type": "album",
@@ -539,7 +544,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 1
   },
   {
     "type": "album",
@@ -746,7 +751,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "right",
-    "yearRank": 6
+    "yearRank": 9
   },
   {
     "type": "album",
@@ -793,7 +798,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "right",
-    "yearRank": 4
+    "yearRank": 6
   },
   {
     "type": "album",
@@ -1272,11 +1277,20 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Sophistipop"
     ],
-    "review": "",
+    "review": "确实是很甜美、很有节奏感，仿佛每一个节拍和音符都是大写字母，让人听了会止不住开心、想跳舞的音乐。源自黑人音乐的funk和disco在这一刻被英国的摇滚乐团反哺，它比当时的美式流行乐更响、更大开大合。这种美学很快被Jam and Lewis在下一年的《control》里采纳，并演变出风靡乐坛的new jack swing",
     "context": "",
     "tracks": [],
     "side": "right",
-    "yearRank": 2
+    "yearRank": 2,
+    "reviewEn": "Sweet, yes, and full of rhythm, as though every beat and every note were a capital letter: music you cannot hear without cheering up and wanting to dance. Funk and disco came out of Black music, and here a British rock band feeds them back, louder and opening wider than the American pop of the time. Jam and Lewis took the same aesthetic into Control the year after, and out of it came the new jack swing that swept the charts.",
+    "reviewLinks": [
+      {
+        "zh": "《control》",
+        "en": "Control",
+        "year": 1986,
+        "title": "Control"
+      }
+    ]
   },
   {
     "type": "album",
@@ -15691,10 +15705,18 @@ const BEST_OF_ENTRIES = [
       "Jazz",
       "Pop/R&B"
     ],
-    "review": "",
+    "review": "“My Name is Peaches!”——当Nina Simone在Four Women的结尾近乎凄厉地吼叫出第四个女人名字的那刻，是真的有些感受到了托尼·莫里森在《所罗门之歌》里提到的“名字的魔力”：四个命途迥异的女人被相近的肤色连结在一起，Nina Simone写下她们相同又不同的痛，她赋予她们名字",
     "context": "",
     "tracks": [],
-    "yearRank": 2
+    "yearRank": 2,
+    "lyric": {
+      "text": "What do they call me? My name is Peaches!",
+      "song": "Four Women"
+    },
+    "reviewEn": "\"My Name is Peaches!\" At the moment Nina Simone almost shrieks the fourth woman's name at the end of Four Women, you do feel something of what Toni Morrison called the magic of names in Song of Solomon: four women whose lives went entirely different ways, tied together by a similar shade of skin. Nina Simone writes down their pain, the same and not the same, and she gives them their names.",
+    "label": "",
+    "appleMusic": "",
+    "audioTrack": ""
   },
   {
     "type": "album",
@@ -16863,7 +16885,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 3
+    "yearRank": 4
   },
   {
     "type": "album",
@@ -16885,7 +16907,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 1
+    "yearRank": 2
   },
   {
     "type": "album",
@@ -18001,7 +18023,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 2
+    "yearRank": 4
   },
   {
     "type": "album",
@@ -18023,7 +18045,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 5
+    "yearRank": 8
   },
   {
     "type": "album",
@@ -18065,7 +18087,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 8
+    "yearRank": 5
   },
   {
     "type": "album",
@@ -19977,7 +19999,7 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "Fine, irregular electronic pulses, with strange sounds drifting in and out behind them - like walking through a tropical dream.",
     "context": "",
     "tracks": [],
-    "yearRank": 11
+    "yearRank": 15
   },
   {
     "type": "album",
@@ -20001,7 +20023,11 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "To all the bloodshed, violence and tears on the dancefloor.",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 4,
+    "lyric": {
+      "text": "Am, stram, am stram gram / Pic et pic et colégram",
+      "song": "Cursive"
+    }
   },
   {
     "type": "album",
@@ -20040,10 +20066,11 @@ const BEST_OF_ENTRIES = [
       "Alternative rock",
       "Jangle pop"
     ],
-    "review": "",
+    "review": "Yo La Tengo的首专还在风格探索期：虽然部分曲目已经初具风貌(the pain of pain)，但专辑更像是八十年代初期Paisley Underground迷幻摇滚的延伸加一点英式独立流行的jangle，也能在旋律和配器中听到乡村乐传统的渲染",
     "context": "",
     "tracks": [],
-    "yearRank": 9
+    "yearRank": 9,
+    "reviewEn": "Yo La Tengo's first record is still working out what it is. A few tracks already have the shape of the band (the pain of pain), but the album reads more like an extension of early eighties Paisley Underground psychedelia with a little British indie-pop jangle on top, and there is a wash of country tradition in the melodies and the arrangements as well."
   },
   {
     "type": "album",
@@ -20452,7 +20479,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 9
+    "yearRank": 2
   },
   {
     "type": "album",
@@ -20779,7 +20806,11 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 10
+    "yearRank": 10,
+    "lyric": {
+      "text": "Cause all I know is how it makes me feel / And it makes me feel how it makes me feel",
+      "song": "Camera"
+    }
   },
   {
     "type": "album",
@@ -20844,7 +20875,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 12
+    "yearRank": 11
   },
   {
     "type": "album",
@@ -20868,7 +20899,11 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "In the thirteen years Boards of Canada were gone, the world caught up with the brothers. Nostalgia is no longer the sound of the era; the IDM that was once avant-garde has become lo-fi study beats, and the feeling it used to raise has been thinned out by mass-produced short-video sound design - we are being herded into a cheap haunted house themed on childhood dread. I think that is exactly what Inferno is here to tell us: nostalgia can be something beyond experience, and overusing it can be dangerous, even sinister. Listen to how much Arena Americanada plays like an apocalyptic deconstruction of vaporwave, and how much Word Becomes Flesh overturns their own style: the children's murmuring is all gone, and what is left can no longer be made out as words at all.",
     "context": "",
     "tracks": [],
-    "yearRank": 1
+    "yearRank": 1,
+    "lyric": {
+      "text": "I think that's wonderful!",
+      "song": "Father and Son"
+    }
   },
   {
     "type": "album",
@@ -20892,7 +20927,11 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "Olivia Rodrigo has finally distilled a style of her own out of the nineties alt-rock she loves most. From Liz Phair's Glory to Smashing Pumpkins' Disarm, the song builds in layers over clean but uneasy strumming, the strings arriving like colour added to heartbreak, until it breaks open at the emotional peak; and in the chaos of drums and her own scream at the end, Olivia realises all at once that self-loathing is a poison - if you cannot face your own insecurities, no amount of love will be the cure.",
     "context": "",
     "tracks": [],
-    "yearRank": 15
+    "yearRank": 13,
+    "lyric": {
+      "text": "Why can't you come stitch me up? / Why can't it ever be enough? / It's not enough",
+      "song": "the cure"
+    }
   },
   {
     "type": "album",
@@ -21065,7 +21104,11 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "Where the last record ran on quirk, this one adds a layer of grown-up reflection, so the synths still show off while the writing stays honest. With indie sleaze coming back round, she looks like one of the people worth watching in whatever the next era turns out to be.",
     "context": "",
     "tracks": [],
-    "yearRank": 14
+    "yearRank": 14,
+    "lyric": {
+      "text": "Well, baby, you're a part of this / You're not a victim of my loneliness / I will let you take it out on me / But next time, kindness over honesty",
+      "song": "Stupid Bitches"
+    }
   },
   {
     "type": "album",
@@ -21168,7 +21211,11 @@ const BEST_OF_ENTRIES = [
     ],
     "context": "",
     "tracks": [],
-    "yearRank": 3
+    "yearRank": 3,
+    "lyric": {
+      "text": "Is my face too disgusting for open casket?",
+      "song": "BRITTANY MURPHY"
+    }
   },
   {
     "type": "album",
@@ -21224,7 +21271,11 @@ const BEST_OF_ENTRIES = [
     ],
     "context": "",
     "tracks": [],
-    "yearRank": 13
+    "yearRank": 12,
+    "lyric": {
+      "text": "Being myself wasn't easy / Do it for me",
+      "song": "The Governor’s Waltz"
+    }
   },
   {
     "type": "album",
@@ -21247,7 +21298,11 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "The music is full of self-quotation, but then what is this record if not a look back over a life? Before the forty-year career and the endless number ones, Madonna was just a Lower East Side girl. So many of the family, friends and collaborators who mattered to her then have died, one after another, and she is still out there dancing to the beat - as if dancing fast enough might outrun the grief.",
     "context": "",
     "tracks": [],
-    "yearRank": 6
+    "yearRank": 6,
+    "lyric": {
+      "text": "Everybody get up and dance!",
+      "song": "Danceteria"
+    }
   },
   {
     "type": "album",
@@ -22017,11 +22072,15 @@ const BEST_OF_ENTRIES = [
       "New wave",
       "Electro-funk"
     ],
-    "review": "",
-    "reviewEn": "",
+    "review": "如今许多R&B艺人都会制作小众风格的卧室音乐，而这张在Prince家中临时录音室利用简易设备制作的Dirty Mind很可能是这个流派的第一部作品；也正是这张demo一般的专辑用电子合成器的轻盈瓦解了R&B和迪斯科舞曲重弦乐编曲、人声表现的传统，孕育了统领下一个十年的明尼阿波利斯之声，也塑造了Prince延续至今的艺术人格。",
+    "reviewEn": "A lot of R&B artists now make bedroom music in one niche style or another, and Dirty Mind, made on simple gear in a makeshift studio in Prince's own house, is very likely the first record of the kind. It is this demo of an album that used the lightness of the synthesizer to break down R&B and disco's tradition of heavy string arrangement and vocal display, that produced the Minneapolis sound which would govern the next decade, and that shaped the artistic persona Prince has carried ever since.",
     "context": "",
     "tracks": [],
-    "yearRank": 6
+    "yearRank": 6,
+    "lyric": {
+      "text": "Everybody's going uptown / It's where I want to be",
+      "song": "Uptown"
+    }
   },
   {
     "type": "album",
