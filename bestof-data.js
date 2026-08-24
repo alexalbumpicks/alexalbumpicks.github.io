@@ -637,7 +637,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "left",
-    "yearRank": 11
+    "yearRank": 12
   },
   {
     "type": "album",
@@ -681,7 +681,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "right",
-    "yearRank": 14
+    "yearRank": 17
   },
   {
     "type": "album",
@@ -723,11 +723,15 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Hardcore"
     ],
-    "review": "",
+    "review": "应该说这张专辑最大的亮点，是贡献了一套后世无数流行朋克乐队可以拿来套用的音乐范式：短而精简的tracklist，青少年的苍莽主题和独到的唱腔；如今emo复兴潮起潮落，主唱的嗓音也越来越“腻”，年轻人的狂躁心绪却一直保留了下来。",
     "context": "",
     "tracks": [],
     "side": "left",
-    "yearRank": 3
+    "yearRank": 3,
+    "label": "",
+    "appleMusic": "",
+    "audioTrack": "",
+    "reviewEn": "The biggest thing this record does is hand down a template that countless pop punk bands could simply pick up and use: a short, stripped tracklist, the untamed subject matter of adolescence, and a singular way of singing. Emo revivals come and go now, and the singer's voice sounds more and more cloying, but the manic feeling of being young has stayed exactly where it was."
   },
   {
     "type": "album",
@@ -771,11 +775,23 @@ const BEST_OF_ENTRIES = [
       "Paisley Underground",
       "Rough Trade"
     ],
-    "review": "",
+    "review": "太好听了！从朋克的余波里冲出，带着顶好的旋律和crazy horse的松弛，还有一首歌迷之slowcore。感觉是另类摇滚幼年期非常有开创性的作品",
     "context": "",
     "tracks": [],
     "side": "left",
-    "yearRank": 1
+    "yearRank": 1,
+    "label": "",
+    "appleMusic": "",
+    "audioTrack": "",
+    "reviewEn": "This sounds so good! It comes bursting out of the aftermath of punk with first-rate melodies and the looseness of Crazy Horse, plus one inexplicably slowcore song. It feels like a genuinely pioneering record from the infancy of alternative rock.",
+    "reviewLinks": [
+      {
+        "zh": "crazy horse",
+        "en": "Crazy Horse",
+        "year": 1969,
+        "title": "Everybody knows this is nowhere"
+      }
+    ]
   },
   {
     "type": "album",
@@ -2237,7 +2253,11 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "Feeling so strong it cannot be reined in... Coming back to it, my favourite is still Dinner Bells, and the most beautiful part is the coda that arrives after the words run out, where there is no spring and no winter, only guitars holding their last notes out and flickering synths, only the howl of wind in the background.",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 4,
+    "lyric": {
+      "text": "There'll be no more dinner bells / Left for you to ring / There'll be no more dinner bells / Dinner bells to ring",
+      "song": "Dinner Bells"
+    }
   },
   {
     "type": "album",
@@ -5057,7 +5077,7 @@ const BEST_OF_ENTRIES = [
     "artist": "Kanye West",
     "tagline": "",
     "art": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0e/90/3c/0e903c43-9d81-f91b-90f1-727a58f7fb2c/00602498824030.rgb.jpg/600x600bb.jpg",
-    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5c/95/29/5c9529a6-1c77-6825-080e-77baffbb4a17/mzaf_9431500476050963515.plus.aac.p.m4a",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ee/ac/ae/eeacaeb1-2323-aece-f0a0-785dd97e23d2/mzaf_11505090353784970353.plus.aac.p.m4a",
     "tier": "",
     "artBg": "#181818",
     "artColor": "#999",
@@ -5066,10 +5086,16 @@ const BEST_OF_ENTRIES = [
       "Hip-hop",
       "Pop/R&B"
     ],
-    "review": "",
+    "review": "很难想象会有这样一个时期kanye west会被看作是美国的良心——但是，late registration真的赤子之心拳拳到位，字里行间的疯癫也为他日后脱轨的才华埋下伏笔。",
     "context": "",
     "tracks": [],
-    "yearRank": 7
+    "yearRank": 7,
+    "lyric": {
+      "text": "Why everything that's supposed to be bad make me feel so good / Everything they told me not to is exactly what I would",
+      "song": "Addiction"
+    },
+    "reviewEn": "It is hard to imagine there was ever a period when Kanye West could be taken for the conscience of America. But Late Registration really does land its guileless sincerity exactly where it means to, and the derangement between its lines is already laying the ground for the talent that would later come off the rails.",
+    "audioTrack": "Heard 'Em Say"
   },
   {
     "type": "album",
@@ -5086,10 +5112,25 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Electronic"
     ],
-    "review": "",
+    "review": "如果说一专是空灵的怀旧感伤，二专是鬼魅的神秘学梦魇，那三专的主题可能是围炉夜话的温暖。吉他元素的大量运用是专辑的大胆之处，美中不足是B side有些拉垮，以及cover art疑似炒一专冷饭",
     "context": "",
     "tracks": [],
-    "yearRank": 8
+    "yearRank": 8,
+    "reviewEn": "If the debut was an ethereal, nostalgic sadness and the second a spectral occult nightmare, the third might be about the warmth of talking round a fire at night. The heavy use of guitar is the bold move here. What lets it down is a B side that sags somewhat, and cover art that looks suspiciously like reheating the first album.",
+    "reviewLinks": [
+      {
+        "zh": "二专",
+        "en": "the second",
+        "year": 2002,
+        "title": "Geogaddi"
+      },
+      {
+        "zh": "炒一专冷饭",
+        "en": "reheating the first album",
+        "year": 1998,
+        "title": "Music Has the Right to Children"
+      }
+    ]
   },
   {
     "type": "album",
@@ -5139,7 +5180,14 @@ const BEST_OF_ENTRIES = [
     ],
     "context": "",
     "tracks": [],
-    "yearRank": 10
+    "yearRank": 10,
+    "lyric": {
+      "text": "London, quieten down / I need to make a sound",
+      "song": "Bucky Done Gun"
+    },
+    "label": "",
+    "appleMusic": "",
+    "audioTrack": ""
   },
   {
     "type": "album",
@@ -5158,10 +5206,15 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Experimental pop"
     ],
-    "review": "",
+    "review": "Broadcast的最后一张专辑人员精简，少了盯鞋吉他的氛围感，只剩下仿古的synthline和鼓机的乍响。Tender Buttons最美的时刻是吉他偶尔的拨弦和Trish Keenan“潮湿”的声音，仿佛她的嗓音也成为了吉他声音材质的一部分。发完这张专辑女主唱就去世了，只剩下终曲I found the end令人不安的下行音阶——所以，她发现了什么？",
     "context": "",
     "tracks": [],
-    "yearRank": 11
+    "yearRank": 11,
+    "lyric": {
+      "text": "The long-distance runner has stopped on the corner",
+      "song": "Tears in the Typing Pool"
+    },
+    "reviewEn": "Broadcast's last album is a pared-down thing: the shoegaze guitar atmosphere is gone, leaving antique synth lines and the sudden crack of a drum machine. The most beautiful moments on Tender Buttons are the occasional plucked guitar and Trish Keenan's damp voice, as though her voice had become part of the material the guitar is made of. After this record the singer died, leaving only the uneasy descending scale of the closing track, I Found the End. So what did she find?"
   },
   {
     "type": "album",
@@ -5224,7 +5277,11 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "By every measure Extraordinary Machine is a transitional record. A lot of the songwriters I love pass from writing about what (describing how they react inside a situation) to writing about why (reflecting on why they react that way), and Fiona here sits exactly between the two states. Musically the soft rock of the first two albums gives way to a chamber pop led by its groove, lighter in timbre but more complicated in structure. Even on her weakest album, Fiona's writing is still honest.",
     "context": "",
     "tracks": [],
-    "yearRank": 12
+    "yearRank": 12,
+    "lyric": {
+      "text": "Oh, you silly stupid pastime of mine / You were always good for a rhyme",
+      "song": "Parting Gift"
+    }
   },
   {
     "type": "album",
@@ -6062,10 +6119,11 @@ const BEST_OF_ENTRIES = [
       "Electronic",
       "Rock"
     ],
-    "review": "",
+    "review": "八十年代往事情怀在也许08年还可以卖作，但如今听只觉得每首歌的仿摹都太刻意。就像你沿着回忆的残片溯源自己的童年，到了迷梦的尽头却发现那边什么都没有。",
     "context": "",
     "tracks": [],
-    "yearRank": 16
+    "yearRank": 16,
+    "reviewEn": "Eighties nostalgia might still have sold in 2008, but listening now, the pastiche in every song feels too deliberate. Like following the fragments of memory back towards your own childhood and finding, at the end of the dream, that there is nothing on the other side."
   },
   {
     "type": "album",
@@ -8623,10 +8681,23 @@ const BEST_OF_ENTRIES = [
     "tags": [
       "Pop/R&B"
     ],
-    "review": "",
+    "review": "我宣布这是Robyn最棒的专辑。植根于90年代的deep house和techno，Honey的情绪是静水流深的，它没有Body Talk闪烁的高点，但它温暖馥郁、充满层次，每一层合成器背后都是一道渴望；出道二十年后，Robyn终于再次拥抱了她R&B的一面，在舞池的中央，她向内心观照",
     "context": "",
     "tracks": [],
-    "yearRank": 3
+    "yearRank": 3,
+    "lyric": {
+      "text": "But down in the deep, the honey is sweeter",
+      "song": "Honey"
+    },
+    "reviewEn": "I hereby declare this the best Robyn album. Rooted in nineties deep house and techno, Honey runs still and deep. It has none of the flashing peaks of Body Talk, but it is warm and rich and layered, and behind every layer of synthesizer there is a longing. Twenty years into her career Robyn has finally embraced her R&B side again, and in the middle of the dance floor she turns and looks inward.",
+    "reviewLinks": [
+      {
+        "zh": "Body Talk",
+        "en": "Body Talk",
+        "year": 2010,
+        "title": "Body Talk"
+      }
+    ]
   },
   {
     "type": "album",
@@ -8665,10 +8736,15 @@ const BEST_OF_ENTRIES = [
       "Pop/R&B",
       "Neo-soul"
     ],
-    "review": "",
+    "review": "Isolation的听觉调色板有多炫目，只需要看一眼制作人名单就知道：戴金牙的街霸客串、Tame Impala的七十年代标志性合成器和坏坏不好的融合爵士甚至都只能算是其众多亮点的一小部分。专辑杂糅着当代indie和传统R&B却依旧保持着惊人的整体性，不仅离不开Kali Uchis立足经典灵魂乐和爵士的创作内核，更要归功其主题的明晰——归根到底，Isolation还是一个拉美移民对自我身份的审视：Kali一直在发问：我到底是谁？我需要的又是什么？这种POC唱作人需要“自证身份”的紧迫感，我在SZA、Mitski、Twigs等人的音乐里都有听到，真的太真实了。",
     "context": "",
     "tracks": [],
-    "yearRank": 2
+    "yearRank": 2,
+    "lyric": {
+      "text": "But why would I be Kim, I could be Kanye / In the land of opportunity and palm trees",
+      "song": "Miami"
+    },
+    "reviewEn": "You only have to glance at the production credits to see how dazzling Isolation's palette is: a guest turn from gold-toothed Damon Albarn, Tame Impala's signature seventies synthesizers and BadBadNotGood's fusion jazz are only a small part of what is going on here. The record mixes contemporary indie with traditional R&B and still holds together astonishingly well, which owes as much to the classic soul and jazz at the core of how Kali Uchis writes as it does to the clarity of what the album is about. In the end Isolation is a Latin American immigrant examining her own identity: Kali keeps asking who am I, and what is it that I need? That urgency a POC songwriter feels about having to prove who she is, I hear it in SZA, in Mitski, in Twigs and others, and it rings completely true."
   },
   {
     "type": "album",
@@ -8706,10 +8782,23 @@ const BEST_OF_ENTRIES = [
       "Pop/R&B",
       "World"
     ],
-    "review": "",
+    "review": "从弗拉门戈到吹泡鼓点，从中世纪骑士文学到当代的一场bad romance，El Mal Querer实现了音乐和文本两层形式上的新旧交叠。化用地名营造时空错位感的Bagdad使我想起法海的Pyramids，Rosalia在词作上偏重场面描绘、情感渲染，恰到好处的模糊感也让这个古典的文本焕发出现代解读的生机；有趣的是，前几章爱欲嫉妒恨多是男人的视角，在故事的结尾我们才得以第一次真正走进女主人公的内心世界",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 4,
+    "lyric": {
+      "text": "Pienso en tu mirá', tu mirá' clavá' es una bala en el pecho",
+      "song": "PIENSO EN TU MIRÁ"
+    },
+    "reviewEn": "From flamenco to trap hi-hats, from medieval chivalric literature to a thoroughly contemporary bad romance, El Mal Querer layers old over new in its music and in its text at once. Bagdad, which borrows a place name to throw the listener out of time and place, reminded me of Frank Ocean's Pyramids. Rosalia writes towards scene and atmosphere rather than statement, and the vagueness is judged well enough that a classical text comes back to life open to a modern reading. What is interesting is that the desire and jealousy and hatred of the early chapters belong mostly to men, and only at the end of the story do we finally get inside the head of the woman it happens to.",
+    "reviewLinks": [
+      {
+        "zh": "法海",
+        "en": "Frank Ocean",
+        "year": 2012,
+        "title": "channel ORANGE"
+      }
+    ]
   },
   {
     "type": "album",
@@ -17808,7 +17897,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 13
+    "yearRank": 16
   },
   {
     "type": "album",
@@ -17829,7 +17918,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 12
+    "yearRank": 15
   },
   {
     "type": "album",
@@ -17893,7 +17982,7 @@ const BEST_OF_ENTRIES = [
     ],
     "context": "",
     "tracks": [],
-    "yearRank": 10
+    "yearRank": 11
   },
   {
     "type": "album",
@@ -18020,10 +18109,14 @@ const BEST_OF_ENTRIES = [
       "Country",
       "Garage rock"
     ],
-    "review": "",
+    "review": "朋克的余波后所有人都在重建摇滚乐的语法；这张1982年诞生于孟菲斯的蓝调摇滚复兴了六十年代的车库摇滚精髓，乃至更早乡村音乐的根源传统，表达上却无比先锋、自由。",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 4,
+    "label": "",
+    "appleMusic": "",
+    "audioTrack": "",
+    "reviewEn": "After punk everyone was rebuilding the grammar of rock music. This blues rock record, born in Memphis in 1982, revives the essence of sixties garage rock and the older root traditions of country music underneath it, and yet the way it expresses itself is utterly avant-garde and free."
   },
   {
     "type": "album",
@@ -20475,11 +20568,28 @@ const BEST_OF_ENTRIES = [
       "Rock",
       "Experimental"
     ],
-    "sensitive": "deliberately punishing sludge; nihilism and despair throughout",
-    "review": "",
+    "review": "和它的众多同期加州硬核乐队比起来，Flipper乍听确实更像一个英国乐队。它消极虚无主义和极具实验精神的噪音呈现都让我想起Wire和This Heat，放慢速度又在朋克的基础上耦合了金属的精粹——无论形式还是内容，Flipper都是Grunge风格的重要先驱",
     "context": "",
     "tracks": [],
-    "yearRank": 2
+    "yearRank": 2,
+    "label": "",
+    "appleMusic": "",
+    "audioTrack": "",
+    "reviewEn": "Set against the many Californian hardcore bands of the same moment, Flipper really does sound more like a British group at first. Its bleak nihilism and its deeply experimental way with noise both put me in mind of Wire and This Heat, and slowing the tempo down couples the essence of metal onto a punk foundation. In form and in content alike, Flipper is an important forerunner of grunge.",
+    "reviewLinks": [
+      {
+        "zh": "Wire",
+        "en": "Wire",
+        "year": 1977,
+        "title": "Pink Flag"
+      },
+      {
+        "zh": "This Heat",
+        "en": "This Heat",
+        "year": 1979,
+        "title": "This Heat"
+      }
+    ]
   },
   {
     "type": "album",
@@ -20931,7 +21041,21 @@ const BEST_OF_ENTRIES = [
     "lyric": {
       "text": "Why can't you come stitch me up? / Why can't it ever be enough? / It's not enough",
       "song": "the cure"
-    }
+    },
+    "reviewLinks": [
+      {
+        "zh": "Liz Phair",
+        "en": "Liz Phair",
+        "year": 1993,
+        "title": "Exile in Guyville"
+      },
+      {
+        "zh": "Smashing Pumpkins",
+        "en": "Smashing Pumpkins",
+        "year": 1993,
+        "title": "Siamese Dream"
+      }
+    ]
   },
   {
     "type": "album",
@@ -21108,7 +21232,9 @@ const BEST_OF_ENTRIES = [
     "lyric": {
       "text": "Well, baby, you're a part of this / You're not a victim of my loneliness / I will let you take it out on me / But next time, kindness over honesty",
       "song": "Stupid Bitches"
-    }
+    },
+    "appleMusic": "",
+    "audioTrack": ""
   },
   {
     "type": "album",
@@ -21157,7 +21283,11 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "Every song here settles me. These pieces seem to have been frozen in time and carried forty years forward - until the nostalgia acts imitating them became the mainstream, until the old songs took on a new sheen.",
     "context": "",
     "tracks": [],
-    "yearRank": 5
+    "yearRank": 5,
+    "lyric": {
+      "text": "First love / Then new feelings / Too strong to remember / Enjoy the cool air / Don't think of meaning",
+      "song": "FIRST LOVE (RUFFIAN MIX)"
+    }
   },
   {
     "type": "album",
@@ -22049,7 +22179,7 @@ const BEST_OF_ENTRIES = [
     ],
     "context": "",
     "tracks": [],
-    "yearRank": 15
+    "yearRank": 18
   },
   {
     "type": "album",
@@ -22131,6 +22261,104 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "yearRank": 4
+  },
+  {
+    "type": "album",
+    "year": 1980,
+    "title": "Black Sea",
+    "artist": "XTC",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/85/a6/d3/85a6d310-19a9-0a67-7dc5-b0f7aeda2222/00724385063657.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/1a/47/3e/1a473e5c-f8fd-fa70-c909-6760b286c3b8/mzaf_18241416766251169742.plus.aac.p.m4a",
+    "appleMusic": "",
+    "label": "",
+    "audioTrack": "Respectable Street",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "tags": [
+      "Rock",
+      "New wave",
+      "Post Punk"
+    ],
+    "review": "",
+    "reviewEn": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 13
+  },
+  {
+    "type": "album",
+    "year": 1980,
+    "title": "Peter Gabriel 3: Melt",
+    "artist": "Peter Gabriel",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f4/a5/7d/f4a57dc3-4941-5a90-e487-1781ed025cd6/dj.eknlykaw.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/c7/0d/70/c70d70bd-2dd3-aace-167e-9f95e186f61c/mzaf_9314726052123113606.plus.aac.p.m4a",
+    "appleMusic": "",
+    "label": "",
+    "audioTrack": "Intruder",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "tags": [
+      "Rock",
+      "Art rock",
+      "Progressive rock"
+    ],
+    "review": "",
+    "reviewEn": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 10
+  },
+  {
+    "type": "album",
+    "year": 1980,
+    "title": "Never for Ever",
+    "artist": "Kate Bush",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b9/c0/4f/b9c04f2d-8e7d-1ee3-f611-48a314ccda52/cover.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/1a/5e/d3/1a5ed306-0cc3-148a-09d3-d9d71949487b/mzaf_12398102828735165143.plus.aac.p.m4a",
+    "appleMusic": "",
+    "label": "",
+    "audioTrack": "Babooshka",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "tags": [
+      "Rock",
+      "Art pop"
+    ],
+    "review": "",
+    "reviewEn": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 14
+  },
+  {
+    "type": "album",
+    "year": 1980,
+    "title": "Group Sex",
+    "artist": "Circle Jerks",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/5b/b2/76/5bb276ee-7062-edf5-ba98-499793fe4ee6/794558800198.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/7e/64/c7/7e64c7e8-8dd3-2b2a-8a77-1b9b9b0c2026/mzaf_11826396369209070669.plus.aac.p.m4a",
+    "appleMusic": "",
+    "label": "",
+    "audioTrack": "Deny Everything",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "tags": [
+      "Rock",
+      "Hardcore punk"
+    ],
+    "review": "",
+    "reviewEn": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 19
   }
 ];
 
