@@ -566,7 +566,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 8
+    "yearRank": 9
   },
   {
     "type": "album",
@@ -593,31 +593,6 @@ const BEST_OF_ENTRIES = [
   },
   {
     "type": "album",
-    "era": "era_1776920202864",
-    "year": 1979,
-    "title": "Colossal Youth",
-    "artist": "Young Marble Giants",
-    "tagline": "",
-    "art": "https://m.media-amazon.com/images/I/51ogLqc+JjL.jpg",
-    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/2e/c9/ca/2ec9ca83-8612-e2aa-fefc-86ab103672f6/mzaf_5518240058068645118.plus.aac.p.m4a",
-    "tier": "essential",
-    "movement": "",
-    "artBg": "#181818",
-    "artColor": "#999",
-    "rating": 5,
-    "tags": [
-      "Rock",
-      "Post Punk"
-    ],
-    "review": "Colossal Youth把一个点子做到了极致：一个心不在焉的女声，几句对世界的想法，背景里两下古早合成器，节奏吉他代偿鼓手的缺席——也许这就是后朋克的另一种极简可能性",
-    "reviewEn": "Colossal Youth takes a single idea as far as it will go: an absent-minded woman's voice, a few thoughts about the world, two strokes of an ancient synthesiser in the background, a rhythm guitar making up for the missing drummer. Perhaps this is the other minimal possibility open to post-punk.",
-    "context": "",
-    "tracks": [],
-    "side": "right",
-    "yearRank": 3
-  },
-  {
-    "type": "album",
     "era": "era_1776921668462",
     "year": 1980,
     "title": "Crazy Rhythms",
@@ -637,7 +612,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "left",
-    "yearRank": 12
+    "yearRank": 14
   },
   {
     "type": "album",
@@ -660,7 +635,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "right",
-    "yearRank": 3
+    "yearRank": 5
   },
   {
     "type": "album",
@@ -681,7 +656,7 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "side": "right",
-    "yearRank": 17
+    "yearRank": 21
   },
   {
     "type": "album",
@@ -17589,7 +17564,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 3
   },
   {
     "type": "album",
@@ -17610,7 +17585,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 6
+    "yearRank": 5
   },
   {
     "type": "album",
@@ -17632,7 +17607,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 7
+    "yearRank": 6
   },
   {
     "type": "album",
@@ -17662,7 +17637,7 @@ const BEST_OF_ENTRIES = [
     ],
     "context": "",
     "tracks": [],
-    "yearRank": 5
+    "yearRank": 4
   },
   {
     "type": "album",
@@ -17683,7 +17658,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 8
+    "yearRank": 7
   },
   {
     "type": "album",
@@ -17703,7 +17678,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 11
+    "yearRank": 10
   },
   {
     "type": "album",
@@ -17725,7 +17700,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 12
+    "yearRank": 11
   },
   {
     "type": "album",
@@ -17747,7 +17722,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 10
+    "yearRank": 9
   },
   {
     "type": "album",
@@ -17768,7 +17743,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 9
+    "yearRank": 8
   },
   {
     "type": "album",
@@ -17790,7 +17765,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 13
+    "yearRank": 12
   },
   {
     "type": "album",
@@ -17833,7 +17808,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 2
+    "yearRank": 4
   },
   {
     "type": "album",
@@ -17855,7 +17830,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 9
+    "yearRank": 12
   },
   {
     "type": "album",
@@ -17876,7 +17851,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 7
+    "yearRank": 9
   },
   {
     "type": "album",
@@ -17897,7 +17872,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 16
+    "yearRank": 18
   },
   {
     "type": "album",
@@ -17918,7 +17893,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 15
+    "yearRank": 17
   },
   {
     "type": "album",
@@ -17940,7 +17915,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 5
+    "yearRank": 7
   },
   {
     "type": "album",
@@ -17982,7 +17957,7 @@ const BEST_OF_ENTRIES = [
     ],
     "context": "",
     "tracks": [],
-    "yearRank": 11
+    "yearRank": 15
   },
   {
     "type": "album",
@@ -22179,7 +22154,7 @@ const BEST_OF_ENTRIES = [
     ],
     "context": "",
     "tracks": [],
-    "yearRank": 18
+    "yearRank": 19
   },
   {
     "type": "album",
@@ -22235,7 +22210,7 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "",
     "context": "",
     "tracks": [],
-    "yearRank": 8
+    "yearRank": 10
   },
   {
     "type": "album",
@@ -22260,7 +22235,7 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 8
   },
   {
     "type": "album",
@@ -22285,7 +22260,7 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "",
     "context": "",
     "tracks": [],
-    "yearRank": 13
+    "yearRank": 20
   },
   {
     "type": "album",
@@ -22310,7 +22285,7 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "",
     "context": "",
     "tracks": [],
-    "yearRank": 10
+    "yearRank": 11
   },
   {
     "type": "album",
@@ -22334,7 +22309,7 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "",
     "context": "",
     "tracks": [],
-    "yearRank": 14
+    "yearRank": 16
   },
   {
     "type": "album",
@@ -22358,7 +22333,114 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "",
     "context": "",
     "tracks": [],
-    "yearRank": 19
+    "yearRank": 22
+  },
+  {
+    "type": "album",
+    "year": 1976,
+    "title": "The Electric Harpsichord",
+    "artist": "Catherine Christer Hennix",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/46/21/c2/4621c28d-23b7-713b-85f3-14b4f6c9c537/47204.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1b/39/68/1b3968c2-ad90-c366-53b5-edbec89acf30/mzaf_10232035260311524763.plus.aac.p.m4a",
+    "appleMusic": "",
+    "label": "",
+    "audioTrack": "Further Selections from The Electric Harpsichord",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "tags": [
+      "Classical",
+      "Minimalism",
+      "Drone"
+    ],
+    "review": "",
+    "reviewEn": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 8
+  },
+  {
+    "type": "album",
+    "era": "era_1776920202864",
+    "year": 1980,
+    "title": "Colossal Youth",
+    "artist": "Young Marble Giants",
+    "tagline": "",
+    "art": "https://m.media-amazon.com/images/I/51ogLqc+JjL.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/2e/c9/ca/2ec9ca83-8612-e2aa-fefc-86ab103672f6/mzaf_5518240058068645118.plus.aac.p.m4a",
+    "tier": "essential",
+    "movement": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 5,
+    "tags": [
+      "Rock",
+      "Post Punk"
+    ],
+    "review": "Colossal Youth把一个点子做到了极致：一个心不在焉的女声，几句对世界的想法，背景里两下古早合成器，节奏吉他代偿鼓手的缺席——也许这就是后朋克的另一种极简可能性",
+    "reviewEn": "Colossal Youth takes a single idea as far as it will go: an absent-minded woman's voice, a few thoughts about the world, two strokes of an ancient synthesiser in the background, a rhythm guitar making up for the missing drummer. Perhaps this is the other minimal possibility open to post-punk.",
+    "context": "",
+    "tracks": [],
+    "side": "right",
+    "yearRank": 2,
+    "label": "",
+    "appleMusic": "",
+    "audioTrack": "",
+    "lyric": {
+      "text": "Colossal youth is the way to go",
+      "song": "Colossal youth"
+    }
+  },
+  {
+    "type": "album",
+    "year": 1980,
+    "title": "The Expanding Universe",
+    "artist": "Laurie Spiegel",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/01/47/a0/0147a0a8-b92d-fac2-b39d-98c4065d29ce/887158195884.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/71/5d/bc/715dbcbf-6496-8672-f015-04bf89d0e239/mzaf_13587075524376137746.plus.aac.p.m4a",
+    "appleMusic": "",
+    "label": "",
+    "audioTrack": "The Expanding Universe",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "tags": [
+      "Electronic",
+      "Minimalism",
+      "Ambient"
+    ],
+    "review": "",
+    "reviewEn": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 13
+  },
+  {
+    "type": "album",
+    "year": 1980,
+    "title": "Is This Real?",
+    "artist": "Wipers",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/80/b4/07/80b40784-89cd-3f52-51e5-3dfbd6554a71/889326354345_Cover.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/2d/ec/46/2dec4611-37a2-7f24-80c4-7a814946afcb/mzaf_14158693383832591380.plus.aac.p.m4a",
+    "appleMusic": "",
+    "label": "",
+    "audioTrack": "Return of the Rat",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "tags": [
+      "Rock",
+      "Alternative rock",
+      "Hardcore"
+    ],
+    "review": "",
+    "reviewEn": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 3
   }
 ];
 
