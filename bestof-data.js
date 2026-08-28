@@ -1700,7 +1700,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 17
+    "yearRank": 16
   },
   {
     "type": "album",
@@ -1784,7 +1784,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 20
+    "yearRank": 19
   },
   {
     "type": "album",
@@ -1810,26 +1810,6 @@ const BEST_OF_ENTRIES = [
     "type": "album",
     "era": "era_1776446456442",
     "year": 2001,
-    "title": "You Forgot It In People",
-    "artist": "Broken Social Scene",
-    "tagline": "",
-    "art": "https://a1.mzstatic.com/r40/Music114/v4/c6/b1/49/c6b14990-0dc7-3763-0e4d-acf243f1b8ee/00827590010062.rgb.jpg",
-    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/fa/9c/ab/fa9cab39-4134-b128-d4ff-c22146bb6b43/mzaf_15252031253789497239.plus.aac.p.m4a",
-    "tier": "essential",
-    "movement": "canadian-confessional-big-band-rock",
-    "artBg": "#181818",
-    "artColor": "#999",
-    "rating": 5,
-    "tags": [],
-    "review": "",
-    "context": "",
-    "tracks": [],
-    "yearRank": 3
-  },
-  {
-    "type": "album",
-    "era": "era_1776446456442",
-    "year": 2001,
     "title": "Time (Revelator)",
     "artist": "Gillian Welch",
     "tagline": "",
@@ -1844,7 +1824,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 8
+    "yearRank": 7
   },
   {
     "type": "album",
@@ -1864,7 +1844,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 11
+    "yearRank": 10
   },
   {
     "type": "album",
@@ -1904,7 +1884,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 11
+    "yearRank": 12
   },
   {
     "type": "album",
@@ -2452,7 +2432,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 2
+    "yearRank": 3
   },
   {
     "type": "album",
@@ -2512,7 +2492,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 18
+    "yearRank": 17
   },
   {
     "type": "album",
@@ -2533,7 +2513,7 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "Deeply hooked on this Argentine band, who broke up in 2003. I never expected that on the other side of the continent there was a record in Spanish whose character merges perfectly with the emo indie rock of the time (Bright Eyes, Rilo Kiley), while carrying the lightness of dream pop and indietronica and a whole youthful fragility. \"cada movimiento que se pierde, se transforma en una mochila\": the things left unsaid and the things never done all become baggage in the heart, and set us apart.",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 5
   },
   {
     "type": "album",
@@ -3574,7 +3554,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 6
+    "yearRank": 5
   },
   {
     "type": "album",
@@ -3646,7 +3626,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 2
+    "yearRank": 3
   },
   {
     "type": "album",
@@ -3667,7 +3647,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 3
+    "yearRank": 4
   },
   {
     "type": "album",
@@ -3688,7 +3668,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 5
+    "yearRank": 6
   },
   {
     "type": "album",
@@ -3709,7 +3689,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 6
+    "yearRank": 7
   },
   {
     "type": "album",
@@ -3730,7 +3710,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 7
+    "yearRank": 8
   },
   {
     "type": "album",
@@ -3750,7 +3730,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 8
+    "yearRank": 9
   },
   {
     "type": "album",
@@ -3770,7 +3750,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 9
+    "yearRank": 10
   },
   {
     "type": "album",
@@ -3792,7 +3772,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 10
+    "yearRank": 11
   },
   {
     "type": "album",
@@ -3812,7 +3792,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 12
+    "yearRank": 13
   },
   {
     "type": "album",
@@ -3834,7 +3814,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 13
+    "yearRank": 14
   },
   {
     "type": "album",
@@ -3854,7 +3834,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 14
+    "yearRank": 15
   },
   {
     "type": "album",
@@ -3876,7 +3856,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 15
+    "yearRank": 16
   },
   {
     "type": "album",
@@ -3898,7 +3878,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 16
+    "yearRank": 17
   },
   {
     "type": "album",
@@ -3918,7 +3898,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 17
+    "yearRank": 18
   },
   {
     "type": "album",
@@ -3938,7 +3918,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 18
+    "yearRank": 19
   },
   {
     "type": "album",
@@ -3958,7 +3938,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 19
+    "yearRank": 20
   },
   {
     "type": "album",
@@ -4273,7 +4253,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 3
   },
   {
     "type": "album",
@@ -4294,7 +4274,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 5
+    "yearRank": 4
   },
   {
     "type": "album",
@@ -4315,7 +4295,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 9
+    "yearRank": 8
   },
   {
     "type": "album",
@@ -4336,7 +4316,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 7
+    "yearRank": 6
   },
   {
     "type": "album",
@@ -4356,7 +4336,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 10
+    "yearRank": 9
   },
   {
     "type": "album",
@@ -4378,7 +4358,7 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "The title is chosen with real wit. Songs In A Minor answers to the conservatory background of a pianist and at the same time points to a precocity beyond her years: she wrote and produced on her own, and with roots culture running so thick through the music it is no wonder the Grammys came calling. In truth, The Life aside, the record does not have many of the funk drum patterns that mark out neo soul: her strength is the fusion of traditional soul, blues and a newer hip hop beat, and the feeling in Alicia's voice that is all the stronger for how young she is.",
     "context": "",
     "tracks": [],
-    "yearRank": 16
+    "yearRank": 15
   },
   {
     "type": "album",
@@ -4399,7 +4379,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 12
+    "yearRank": 11
   },
   {
     "type": "album",
@@ -4420,7 +4400,7 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "From this self-titled record on, Britney Spears starts to pull free of assembly-line teen pop and give the music a colour of her own, letting us watch an artistic persona develop fast and a clear line of writing come through: if the dance pop of Anticipating is her tribute to Janet, and the Electronica of I Run Away takes the baton from Madonna, then Slave 4 U, made with the Neptunes, belongs wholly to a new era. When we watch her dance with the snake at the VMAs, swaying easily inside that song's flickering beat, it is exactly as she sings it: Cinderella's got to go.",
     "context": "",
     "tracks": [],
-    "yearRank": 13
+    "yearRank": 12
   },
   {
     "type": "album",
@@ -4441,7 +4421,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 14
+    "yearRank": 13
   },
   {
     "type": "album",
@@ -4462,7 +4442,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 15
+    "yearRank": 14
   },
   {
     "type": "album",
@@ -4484,7 +4464,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 19
+    "yearRank": 18
   },
   {
     "type": "album",
@@ -4505,7 +4485,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 21
+    "yearRank": 20
   },
   {
     "type": "album",
@@ -4526,7 +4506,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 22
+    "yearRank": 21
   },
   {
     "type": "album",
@@ -8379,7 +8359,7 @@ const BEST_OF_ENTRIES = [
     "artist": "Japanese Breakfast",
     "tagline": "",
     "art": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/20/47/60/20476017-7ede-d198-3ddb-1c7ae8b48105/656605143361.jpg/600x600bb.jpg",
-    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/77/c0/3c/77c03c1e-bb56-b64a-04db-98f426522f05/mzaf_15091729271272641979.plus.aac.p.m4a",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e2/ff/df/e2ffdf1c-48e8-dc48-f6fb-003ea4576428/mzaf_14425004776514597656.plus.aac.p.m4a",
     "tier": "",
     "artBg": "#181818",
     "artColor": "#999",
@@ -8390,7 +8370,8 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 4,
+    "audioTrack": "Till Death"
   },
   {
     "type": "album",
@@ -8399,7 +8380,7 @@ const BEST_OF_ENTRIES = [
     "artist": "St. Vincent",
     "tagline": "",
     "art": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ea/5d/7f/ea5d7f85-ca7d-bad8-a4b0-f73e916b4b30/17CRGIM04239.rgb.jpg/600x600bb.jpg",
-    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ff/d6/d6/ffd6d6da-cf13-cd6a-ac7f-26a694202dcc/mzaf_9996833129499625724.plus.aac.p.m4a",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ab/57/f3/ab57f3dc-55f3-53ba-3680-08d62d7dcd26/mzaf_5754516201539962387.plus.aac.p.m4a",
     "tier": "",
     "artBg": "#181818",
     "artColor": "#999",
@@ -8412,7 +8393,8 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 5
+    "yearRank": 5,
+    "audioTrack": "New York"
   },
   {
     "type": "album",
@@ -19768,7 +19750,7 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "The collaboration between Fiona Apple and Jon Brion is one of a kind: the industrial beats and shifting drum tempos are like a mind in disarray, and only she could ride them so easily and lay a bluesy topline over the top. The first five songs write out every step of the pain of pulling away and letting go, then you turn the record over for something sweeter and she is straight back to the lovestruck girl, willing to make the same mistake again, carrying herself humbly. sad but I understand her.",
     "context": "",
     "tracks": [],
-    "yearRank": 3
+    "yearRank": 2
   },
   {
     "type": "album",
@@ -22206,11 +22188,29 @@ const BEST_OF_ENTRIES = [
       "Pop/R&B",
       "Disco"
     ],
-    "review": "",
-    "reviewEn": "",
+    "review": "The last days of Disco. 我永远记得在惠特·斯特尔曼的这部电影里第一次听到Diana Ross那嘹亮、充满激情的嗓音是多么令人振奋，却又多么令人感怀：两位衣着入时的姑娘在bouncer的注视下挤入派对起舞，全然不知迪斯科时代行将结束，派对也将随着失业潮的到来而散场。也许一位现代流行女明星的形象要到三年后横空出世的Madonna才会被定义，但当中年事业陷入停滞的Diana Ross主动选择Chic的制作人组合围绕自身经历创作歌曲，在时兴曲风中融合个人的特色，她又怎么不是新时代的第一位female popstar。",
+    "reviewEn": "The Last Days of Disco. I will always remember how exhilarating it was to hear that bright, impassioned Diana Ross voice for the first time in Whit Stillman's film, and how sad it was too: two fashionably dressed young women squeeze past the bouncer into the party and start dancing, with no idea that the disco era is about to end and that the party will break up as the layoffs arrive. The image of the modern female pop star may not have been settled until Madonna arrived out of nowhere three years later, but when Diana Ross, her career stalled in middle age, went out and chose the production team from Chic to write songs around her own life, folding what was particular to her into the sound of the moment - how is she not the first female popstar of the new era.",
     "context": "",
     "tracks": [],
-    "yearRank": 10
+    "yearRank": 10,
+    "lyric": {
+      "text": "I'm coming out / I want the world to know / Got to let it show",
+      "song": "I'm Coming Out"
+    },
+    "reviewLinks": [
+      {
+        "zh": "Chic",
+        "en": "Chic",
+        "year": 1979,
+        "title": "Risque"
+      },
+      {
+        "zh": "Madonna",
+        "en": "Madonna",
+        "year": 1983,
+        "title": "Madonna"
+      }
+    ]
   },
   {
     "type": "album",
@@ -22389,7 +22389,7 @@ const BEST_OF_ENTRIES = [
     "audioTrack": "",
     "lyric": {
       "text": "Colossal youth is the way to go",
-      "song": "Colossal youth"
+      "song": "Colossal Youth"
     }
   },
   {
@@ -22436,11 +22436,43 @@ const BEST_OF_ENTRIES = [
       "Alternative rock",
       "Hardcore"
     ],
-    "review": "",
-    "reviewEn": "",
+    "review": "《Is this real?》实在难以用当时的流派来界定：它杂糅六十年代的车库摇滚和迷幻乐，从七十年代的前卫摇滚里汲取吉他solo的灵感，但它在内容和形式上却又实实在在是一张朋克专辑；它既是Ramones，又是Jimi Hendrix。在后朋和独立摇滚之间的真空期，当全美各地的乐队还在做嘶吼为主的hardcore，这支远离音乐中心的波特兰乐队无形中预言了十多年后摇滚的走向，它大声宣告：朋克精神和音乐性是新摇滚的一体两面。",
+    "reviewEn": "Is This Real? is genuinely hard to place among the genres available to it at the time: it mixes sixties garage rock with psychedelia and takes the idea of the guitar solo from seventies prog, and yet in what it says and in how it is built it really is a punk record; it is Ramones and Jimi Hendrix at once. In the vacuum between post-punk and indie rock, while bands across America were still making hardcore built on screaming, this Portland band a long way from any centre of music quietly predicted where rock would go more than a decade later. It says it out loud: the punk spirit and musicianship are two sides of the same new rock.",
     "context": "",
     "tracks": [],
-    "yearRank": 3
+    "yearRank": 3,
+    "reviewLinks": [
+      {
+        "zh": "Ramones",
+        "en": "Ramones",
+        "year": 1976,
+        "title": "Ramones"
+      }
+    ],
+    "lyric": {
+      "text": "What we do when we 're always rejected? What we feel when we're always subjected?",
+      "song": "Don't Know What I Am"
+    }
+  },
+  {
+    "type": "album",
+    "era": "era_1776446456442",
+    "year": 2002,
+    "title": "You Forgot It In People",
+    "artist": "Broken Social Scene",
+    "tagline": "",
+    "art": "https://a1.mzstatic.com/r40/Music114/v4/c6/b1/49/c6b14990-0dc7-3763-0e4d-acf243f1b8ee/00827590010062.rgb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/fa/9c/ab/fa9cab39-4134-b128-d4ff-c22146bb6b43/mzaf_15252031253789497239.plus.aac.p.m4a",
+    "tier": "essential",
+    "movement": "canadian-confessional-big-band-rock",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "rating": 5,
+    "tags": [],
+    "review": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 2
   }
 ];
 

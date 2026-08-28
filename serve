@@ -30,12 +30,28 @@ open_if_asked() {
 # Already serving? Don't fight over the port - just point at it. `-f` matters: without it curl
 # exits 0 on a 404, so a server rooted at the wrong directory reads as a healthy one and this
 # reports "already running" while nothing the editor needs is reachable.
-if curl -sf -o /dev/null -m 2 "$URL/editor.html"; then
+#
+# Both stacks are checked, not just one. `localhost` resolves to ::1 before 127.0.0.1 on macOS, so a
+# server listening only on IPv4 answers curl (which falls back) and refuses Chrome (which does not,
+# reliably) - the failure looks like the site being down while every check from the shell says it is
+# up. Anything answering on one stack and not the other is reported as broken rather than healthy.
+# Read from curl's EXIT STATUS, not from -w: curl writes the -w string even when the transfer
+# failed outright, so `V4=$(curl ... -w ok || true)` is the constant "ok" and this reported a
+# healthy server against a dead port. Caught by the server refusing to start rather than by a test.
+if curl -sf -4 -o /dev/null -m 2 "$URL/editor.html"; then V4=ok; else V4=; fi
+if curl -sf -6 -o /dev/null -m 2 "$URL/editor.html"; then V6=ok; else V6=; fi
+if [ "$V4" = ok ] && [ "$V6" = ok ]; then
   echo "already running"
   echo "  editor  $URL/editor.html"
   echo "  reader  $URL/"
   open_if_asked "$1"
   exit 0
+fi
+if [ "$V4" = ok ] || [ "$V6" = ok ]; then
+  echo "a server is up on $URL but answers only over IPv${V6:+6}${V4:+4}." >&2
+  echo "Chrome resolves localhost to ::1 first, so it will not load. Stop the old one and rerun:" >&2
+  lsof -nP -iTCP:$PORT -sTCP:LISTEN >&2 || true
+  exit 1
 fi
 
 # Port taken by something that is not us.
@@ -51,15 +67,19 @@ echo "  reader  $URL/"
 echo "  (ctrl-c to stop)"
 open_if_asked "$1"
 
-# Bound to 127.0.0.1 rather than all interfaces: this carries an editor with delete buttons, and it
-# has no business being reachable from the rest of the network.
+# Bound to loopback rather than all interfaces: this carries an editor with delete buttons, and it
+# has no business being reachable from the rest of the network. BOTH loopback addresses, though -
+# 127.0.0.1 and ::1 - because macOS resolves `localhost` to ::1 first, and an IPv4-only server is
+# therefore refused by Chrome while curl and Safari fall back and appear to work. Two listeners on
+# the same port rather than one socket bound to `::`, which would take v4-mapped connections from
+# the whole network and give up the property the previous paragraph is about.
 # ThreadingHTTPServer, NOT socketserver.TCPServer. The plain one is single-threaded, so a single
 # keep-alive connection that a browser holds open blocks every later request forever - the process
 # stays alive, keeps the listening socket, and answers nothing. That looks exactly like "Chrome
 # shows nothing" while lsof cheerfully reports the server as LISTENING, which is the worst kind of
 # failure to diagnose. daemon_threads so ctrl-c does not hang waiting on those connections.
 exec python3 -c "
-import functools, http.server
+import functools, http.server, socket, threading
 
 # HTML is served no-store. The CSS and JS carry ?v= cache busters that stamp.py maintains, so a
 # changed asset is a changed URL and the browser refetches it - but the HTML that POINTS at those
@@ -76,5 +96,18 @@ class H(http.server.SimpleHTTPRequestHandler):
 h = functools.partial(H, directory='$DIR')
 http.server.ThreadingHTTPServer.allow_reuse_address = True
 http.server.ThreadingHTTPServer.daemon_threads = True
+
+class V6(http.server.ThreadingHTTPServer):
+    address_family = socket.AF_INET6
+
+# IPv6 first and in a background thread, IPv4 in the foreground so ctrl-c still reaches the process.
+# A host with IPv6 disabled raises here; that is a warning rather than an error, since the IPv4
+# listener alone is enough for Safari and for curl.
+try:
+    v6 = V6(('::1', $PORT), h)
+    threading.Thread(target=v6.serve_forever, daemon=True).start()
+except OSError as err:
+    print('warning: no IPv6 listener (%s) - Chrome may refuse to connect' % err)
+
 http.server.ThreadingHTTPServer(('127.0.0.1', $PORT), h).serve_forever()
 "
