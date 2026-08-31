@@ -2432,7 +2432,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 3
+    "yearRank": 4
   },
   {
     "type": "album",
@@ -19771,7 +19771,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 4
+    "yearRank": 5
   },
   {
     "type": "album",
@@ -19792,7 +19792,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 5
+    "yearRank": 6
   },
   {
     "type": "album",
@@ -19814,7 +19814,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 6
+    "yearRank": 7
   },
   {
     "type": "album",
@@ -19835,7 +19835,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 7
+    "yearRank": 8
   },
   {
     "type": "album",
@@ -19856,7 +19856,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 8
+    "yearRank": 9
   },
   {
     "type": "album",
@@ -19877,7 +19877,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 9
+    "yearRank": 10
   },
   {
     "type": "album",
@@ -19897,7 +19897,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 10
+    "yearRank": 11
   },
   {
     "type": "album",
@@ -22498,6 +22498,56 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "yearRank": 16
+  },
+  {
+    "type": "album",
+    "year": 1981,
+    "title": "Beauty and the Beat",
+    "artist": "The Go-Go's",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/10/24/fc/1024fcc2-7cbe-fcee-90ce-f906292f9832/06UMGIM00679.rgb.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/49/40/25/49402510-aa18-f4ea-c1ca-7fb3d148c75c/mzaf_9609998685124642393.plus.aac.p.m4a",
+    "appleMusic": "",
+    "label": "",
+    "audioTrack": "We Got the Beat",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "tags": [
+      "Rock",
+      "Pop",
+      "New-wave"
+    ],
+    "review": "明白为什么这张新浪潮专辑只在美国卖的好了……因为它根本就不是新浪潮，更像是1970s中期LA glam punk的延伸",
+    "reviewEn": "Now it is clear why this new wave record only sold well in America. It is not new wave at all; it is closer to an extension of mid-1970s LA glam punk.",
+    "context": "",
+    "tracks": [],
+    "yearRank": 7
+  },
+  {
+    "type": "album",
+    "year": 1999,
+    "title": "13",
+    "artist": "Blur",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/9a/5d/8f/9a5d8f6d-a570-84b7-321f-315e4d97a127/5099997227151.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/26/56/69/26566993-b480-cce8-82d9-a2ef289b74cd/mzaf_7043943443330270977.plus.aac.p.m4a",
+    "appleMusic": "",
+    "label": "",
+    "audioTrack": "Tender",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "tags": [
+      "Rock",
+      "Alternative rock",
+      "Britpop"
+    ],
+    "review": "",
+    "reviewEn": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 3
   }
 ];
 
