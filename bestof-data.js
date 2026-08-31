@@ -17833,7 +17833,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 9
+    "yearRank": 11
   },
   {
     "type": "album",
@@ -17854,7 +17854,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 18
+    "yearRank": 19
   },
   {
     "type": "album",
@@ -17875,7 +17875,7 @@ const BEST_OF_ENTRIES = [
     "review": "",
     "context": "",
     "tracks": [],
-    "yearRank": 17
+    "yearRank": 18
   },
   {
     "type": "album",
@@ -22136,7 +22136,7 @@ const BEST_OF_ENTRIES = [
     ],
     "context": "",
     "tracks": [],
-    "yearRank": 19
+    "yearRank": 20
   },
   {
     "type": "album",
@@ -22260,7 +22260,7 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "",
     "context": "",
     "tracks": [],
-    "yearRank": 20
+    "yearRank": 23
   },
   {
     "type": "album",
@@ -22285,7 +22285,7 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "",
     "context": "",
     "tracks": [],
-    "yearRank": 11
+    "yearRank": 9
   },
   {
     "type": "album",
@@ -22309,7 +22309,7 @@ const BEST_OF_ENTRIES = [
     "reviewEn": "",
     "context": "",
     "tracks": [],
-    "yearRank": 16
+    "yearRank": 17
   },
   {
     "type": "album",
@@ -22473,6 +22473,31 @@ const BEST_OF_ENTRIES = [
     "context": "",
     "tracks": [],
     "yearRank": 2
+  },
+  {
+    "type": "album",
+    "year": 1980,
+    "title": "Give Me the Night",
+    "artist": "George Benson",
+    "tagline": "",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/77/ef/c2/77efc2f1-1296-4117-94f2-bab1d27db761/mzi.bqejlnju.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/73/00/b8/7300b8c1-26b8-0a83-b6d7-f87d4fd76f43/mzaf_17613119398188182835.plus.aac.p.m4a",
+    "appleMusic": "",
+    "label": "",
+    "audioTrack": "Give Me the Night",
+    "tier": "",
+    "artBg": "#181818",
+    "artColor": "#999",
+    "tags": [
+      "Jazz",
+      "Soul/Funk",
+      "Disco"
+    ],
+    "review": "",
+    "reviewEn": "",
+    "context": "",
+    "tracks": [],
+    "yearRank": 16
   }
 ];
 
